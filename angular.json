@@ -1,6 +1,361 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "neoflora": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/neoflora",
+      "sourceRoot": "projects/neoflora/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/neoflora",
+            "index": "projects/neoflora/src/index.html",
+            "main": "projects/neoflora/src/main.ts",
+            "polyfills": "projects/neoflora/src/polyfills.ts",
+            "tsConfig": "projects/neoflora/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/neoflora/src/favicon.ico",
+              "projects/neoflora/src/assets"
+            ],
+            "styles": [
+              "projects/neoflora/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/neoflora/src/environments/environment.ts",
+                  "with": "projects/neoflora/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "neoflora:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "neoflora:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "neoflora:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/neoflora/src/test.ts",
+            "polyfills": "projects/neoflora/src/polyfills.ts",
+            "tsConfig": "projects/neoflora/tsconfig.spec.json",
+            "karmaConfig": "projects/neoflora/karma.conf.js",
+            "assets": [
+              "projects/neoflora/src/favicon.ico",
+              "projects/neoflora/src/assets"
+            ],
+            "styles": [
+              "projects/neoflora/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/neoflora/tsconfig.app.json",
+              "projects/neoflora/tsconfig.spec.json",
+              "projects/neoflora/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/neoflora/e2e/protractor.conf.js",
+            "devServerTarget": "neoflora:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "neoflora:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "eneoflora": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/eneoflora",
+      "sourceRoot": "projects/eneoflora/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/eneoflora",
+            "index": "projects/eneoflora/src/index.html",
+            "main": "projects/eneoflora/src/main.ts",
+            "polyfills": "projects/eneoflora/src/polyfills.ts",
+            "tsConfig": "projects/eneoflora/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/eneoflora/src/favicon.ico",
+              "projects/eneoflora/src/assets"
+            ],
+            "styles": [
+              "projects/eneoflora/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/eneoflora/src/environments/environment.ts",
+                  "with": "projects/eneoflora/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "eneoflora:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "eneoflora:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "eneoflora:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/eneoflora/src/test.ts",
+            "polyfills": "projects/eneoflora/src/polyfills.ts",
+            "tsConfig": "projects/eneoflora/tsconfig.spec.json",
+            "karmaConfig": "projects/eneoflora/karma.conf.js",
+            "assets": [
+              "projects/eneoflora/src/favicon.ico",
+              "projects/eneoflora/src/assets"
+            ],
+            "styles": [
+              "projects/eneoflora/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/eneoflora/tsconfig.app.json",
+              "projects/eneoflora/tsconfig.spec.json",
+              "projects/eneoflora/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/eneoflora/e2e/protractor.conf.js",
+            "devServerTarget": "eneoflora:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "eneoflora:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "neoprogeny": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/neoprogeny",
+      "sourceRoot": "projects/neoprogeny/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/neoprogeny",
+            "index": "projects/neoprogeny/src/index.html",
+            "main": "projects/neoprogeny/src/main.ts",
+            "polyfills": "projects/neoprogeny/src/polyfills.ts",
+            "tsConfig": "projects/neoprogeny/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/neoprogeny/src/favicon.ico",
+              "projects/neoprogeny/src/assets"
+            ],
+            "styles": [
+              "projects/neoprogeny/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/neoprogeny/src/environments/environment.ts",
+                  "with": "projects/neoprogeny/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "neoprogeny:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "neoprogeny:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "neoprogeny:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/neoprogeny/src/test.ts",
+            "polyfills": "projects/neoprogeny/src/polyfills.ts",
+            "tsConfig": "projects/neoprogeny/tsconfig.spec.json",
+            "karmaConfig": "projects/neoprogeny/karma.conf.js",
+            "assets": [
+              "projects/neoprogeny/src/favicon.ico",
+              "projects/neoprogeny/src/assets"
+            ],
+            "styles": [
+              "projects/neoprogeny/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/neoprogeny/tsconfig.app.json",
+              "projects/neoprogeny/tsconfig.spec.json",
+              "projects/neoprogeny/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/neoprogeny/e2e/protractor.conf.js",
+            "devServerTarget": "neoprogeny:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "neoprogeny:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "cli": {
+    "analytics": "38504a16-e3a3-481b-a44f-1362ea904c04"
+  },
+  "defaultProject": "neoflora"
 }
