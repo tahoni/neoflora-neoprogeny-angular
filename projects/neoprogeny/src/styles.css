@@ -85,3 +85,22 @@ header, footer, main {
   background-color: white;
   -webkit-mask-image: url("../src/assets/img/icons/calla-icon.png");
 }
+
+/* Legends */
+.seed, .seed-none, .seed-dull {
+}
+
+.offspring, .offspring-none {
+}
+
+.seed-none, .offspring-none {
+  color: red;
+}
+
+.seed-dull {
+  color: gray;
+}
+
+.seed, .offspring {
+  color: green;
+}

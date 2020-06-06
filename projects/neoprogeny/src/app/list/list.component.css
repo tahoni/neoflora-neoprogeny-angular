@@ -1,1 +1,55 @@
 /* Component-specific styling */
+
+/* Colours */
+.table-row-header, .table-row, .table-column-header, .table-column {
+  border-color: #551165;
+}
+
+.table-row-header {
+  background-color: #816b9a;
+}
+
+.table-row {
+  background-color: #9b89af;
+}
+
+/* Grid */
+.seed-column, .offspring-column, .more-column {
+  text-align: center;
+  align-items: center;
+  flex: 1;
+}
+
+.seed-column, .offspring-column {
+  flex: 1;
+}
+
+.cross-column {
+  text-align: center;
+  align-items: center;
+  flex: 1;
+  order: 1;
+}
+
+.parent-column {
+  text-align: center;
+  flex: 2;
+  order: 2;
+}
+
+.description-column {
+  flex: 3;
+  order: 3;
+}
+
+.seed-column {
+  order: 4;
+}
+
+.offspring-column {
+  order: 5;
+}
+
+.more-column {
+  order: 6;
+}
