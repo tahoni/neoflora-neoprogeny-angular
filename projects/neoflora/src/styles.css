@@ -1,1 +1,87 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styling */
+
+/* Colours */
+* {
+  /* font-family: 'Source Sans Pro', 'Arial', 'sans-serif'; */
+  color: #551165;
+}
+
+body {
+  background-color: #9b89af !important;
+}
+
+h1, h2, h3 {
+  color: #551165;
+}
+
+.container {
+  background-color: #e8e4ed;
+}
+
+.btn-primary {
+  background-color: #551165 !important;
+}
+
+.btn-secondary {
+  background-color: #816b9a;
+}
+
+.fah {
+  color: #551165;
+}
+
+/* Sections */
+.container {
+  min-height: 96vh !important;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  padding: 0 !important;
+  align-items: stretch;
+}
+
+header, footer, main {
+  margin: 0;
+  padding: 0;
+  border-style: double;
+  border-width: thin;
+}
+
+/* Buttons */
+.btn-primary {
+  font-weight: bold !important;
+}
+
+.fa-button {
+  border-style: solid;
+  border-width: thin;
+}
+
+/* Logo */
+.logo {
+  box-sizing: border-box;
+  height: 136px;
+  padding: 4px;
+  text-align: left;
+}
+
+/* Icons */
+.icon, .calla-icon, .h-calla-icon, .white-calla-icon {
+  width: 32px;
+  height: 34px;
+  padding: 4px;
+}
+
+.calla-icon {
+  background-color: #816b9a;
+  -webkit-mask-image: url("../src/assets/img/icons/calla-icon.png");
+}
+
+.h-calla-icon {
+  background-color: #551165;
+  -webkit-mask-image: url("../src/assets/img/icons/calla-icon.png");
+}
+
+.white-calla-icon {
+  background-color: white;
+  -webkit-mask-image: url("../src/assets/img/icons/calla-icon.png");
+}

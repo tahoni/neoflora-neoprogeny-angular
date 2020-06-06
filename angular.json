@@ -24,9 +24,12 @@
               "projects/neoflora/src/assets"
             ],
             "styles": [
-              "projects/neoflora/src/styles.css"
+              "projects/neoflora/src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -88,9 +91,12 @@
               "projects/neoflora/src/assets"
             ],
             "styles": [
-              "projects/neoflora/src/styles.css"
+              "projects/neoflora/src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           }
         },
         "lint": {
@@ -141,9 +147,12 @@
               "projects/eneoflora/src/assets"
             ],
             "styles": [
-              "projects/eneoflora/src/styles.css"
+              "projects/eneoflora/src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -205,9 +214,12 @@
               "projects/eneoflora/src/assets"
             ],
             "styles": [
-              "projects/eneoflora/src/styles.css"
+              "projects/eneoflora/src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           }
         },
         "lint": {
@@ -258,9 +270,12 @@
               "projects/neoprogeny/src/assets"
             ],
             "styles": [
-              "projects/neoprogeny/src/styles.css"
+              "projects/neoprogeny/src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -322,9 +337,12 @@
               "projects/neoprogeny/src/assets"
             ],
             "styles": [
-              "projects/neoprogeny/src/styles.css"
+              "projects/neoprogeny/src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           }
         },
         "lint": {
