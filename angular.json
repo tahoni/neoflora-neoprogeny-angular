@@ -24,8 +24,8 @@
               "projects/neoflora/src/assets"
             ],
             "styles": [
-              "projects/neoflora/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "projects/neoflora/src/styles.css"
             ],
             "scripts": [
             ]
@@ -90,8 +90,8 @@
               "projects/neoflora/src/assets"
             ],
             "styles": [
-              "projects/neoflora/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "projects/neoflora/src/styles.css"
             ],
             "scripts": [
             ]
@@ -145,8 +145,8 @@
               "projects/eneoflora/src/assets"
             ],
             "styles": [
-              "projects/eneoflora/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "projects/eneoflora/src/styles.css"
             ],
             "scripts": [
             ]
@@ -211,8 +211,8 @@
               "projects/eneoflora/src/assets"
             ],
             "styles": [
-              "projects/eneoflora/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "projects/eneoflora/src/styles.css"
             ],
             "scripts": [
             ]
@@ -266,8 +266,8 @@
               "projects/neoprogeny/src/assets"
             ],
             "styles": [
-              "projects/neoprogeny/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "projects/neoprogeny/src/styles.css"
             ],
             "scripts": [
             ]
@@ -332,8 +332,8 @@
               "projects/neoprogeny/src/assets"
             ],
             "styles": [
-              "projects/neoprogeny/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "projects/neoprogeny/src/styles.css"
             ],
             "scripts": [
             ]

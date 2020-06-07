@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #9b89af !important;
+  background-color: #9b89af;
 }
 
 h1, h2, h3 {
@@ -19,7 +19,7 @@ h1, h2, h3 {
 }
 
 .btn-primary {
-  background-color: #551165 !important;
+  background-color: #551165;
 }
 
 .btn-secondary {
@@ -32,10 +32,10 @@ h1, h2, h3 {
 
 /* Sections */
 .container {
-  min-height: 96vh !important;
+  min-height: 96vh;
   margin-top: 2vh;
   margin-bottom: 2vh;
-  padding: 0 !important;
+  padding: 0;
   align-items: stretch;
 }
 
@@ -48,7 +48,7 @@ header, footer, main {
 
 /* Buttons */
 .btn-primary {
-  font-weight: bold !important;
+  font-weight: bold;
 }
 
 .fa-button {
