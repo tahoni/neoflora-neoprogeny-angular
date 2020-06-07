@@ -9,11 +9,11 @@ import {faLeaf, faGenderless, faSeedling, faEllipsisH, faVenusMars} from '@forta
 })
 export class ListComponent implements OnInit {
 
-  faLeaf = faLeaf;
-  faGenderLess = faGenderless;
+  faDescription = faLeaf;
   faVenusMars = faVenusMars;
-  faSeedling = faSeedling;
-  faEllipsisH = faEllipsisH;
+  faSeed = faGenderless;
+  faOffspring = faSeedling;
+  faMore = faEllipsisH;
 
   constructor() { }
 

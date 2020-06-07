@@ -1,6 +1,16 @@
 import {Component, OnInit} from '@angular/core';
 
-import {faLeaf, faGenderless, faSeedling, faMars, faTimes, faVenus, faVenusMars, faImage, faStickyNote} from "@fortawesome/free-solid-svg-icons";
+import {
+  faGenderless,
+  faImage,
+  faLeaf,
+  faMars,
+  faSeedling,
+  faStickyNote,
+  faTimes,
+  faVenus,
+  faVenusMars
+} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-detail',
@@ -9,15 +19,15 @@ import {faLeaf, faGenderless, faSeedling, faMars, faTimes, faVenus, faVenusMars,
 })
 export class DetailComponent implements OnInit {
 
-  faLeaf = faLeaf;
-  faGenderless = faGenderless;
-  faSeedling = faSeedling;
+  faDescription = faLeaf;
+  faSeed = faGenderless;
+  faOffspring = faSeedling;
   faTimes = faTimes;
   faVenusMars = faVenusMars;
   faVenus = faVenus;
   faMars = faMars;
-  faImage = faImage;
-  faStickyNote = faStickyNote;
+  faPhoto = faImage;
+  faComments = faStickyNote;
 
   constructor() {
   }

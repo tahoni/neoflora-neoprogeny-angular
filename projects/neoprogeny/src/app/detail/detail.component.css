@@ -1,13 +1,17 @@
 /* Component-specific styling */
-
-/* Photos */
-.profile-photo, .photo-512, .photo-256, .photo-128, .photo {
+:host {
+  width: 100%;
 }
 
+/* Colours */
+.profile-photo, .photo-512, .photo-256, .photo-128, .photo {
+  color: white;
+}
+
+/* Photos */
 .profile-photo {
   font-size: 256px;
   font-weight: lighter;
-  color: white;
 }
 
 .photo-512 {
@@ -23,9 +27,4 @@
 }
 
 .photo {
-}
-
-/* Notes */
-.note {
-  width: 100%;
 }
