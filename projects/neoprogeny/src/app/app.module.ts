@@ -15,7 +15,6 @@ import {AdvancedSearchComponent} from './advanced-search/advanced-search.compone
 import {LookupComponent} from './lookup/lookup.component';
 import {SimpleSearchComponent} from './simple-search/simple-search.component';
 import {ViewComponent} from './view/view.component';
-import {EditComponent} from './edit/edit.component';
 import {SummaryComponent} from './summary/summary.component';
 import {NewComponent} from './new/new.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
@@ -34,7 +33,6 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
     LookupComponent,
     SimpleSearchComponent,
     ViewComponent,
-    EditComponent,
     SummaryComponent,
     NewComponent
   ],

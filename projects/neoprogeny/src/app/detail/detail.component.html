@@ -1,1 +1,120 @@
-<p>detail works!</p>
+<article>
+  <div class="row">
+    <div class="col-2">
+      <div class="calla-icon"></div>
+      <label for="cross">Nommer</label>
+    </div>
+    <div class="col-4">
+      <input id="cross" name="cross" type="text"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2">
+      <label for="parents">
+        <fa-icon [icon]="faVenusMars">Kruising</fa-icon>
+      </label>
+    </div>
+    <div class="col-4">
+      <input id="parents" name="parents" type="text"/>
+    </div>
+    <div class="col-4">
+      <label for="parents">
+        (
+        <fa-icon [icon]="faVenus"></fa-icon>&nbsp;<fa-icon [icon]="faTimes"></fa-icon>&nbsp;<fa-icon
+        [icon]="faMars"></fa-icon>
+        )
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2">
+      <label for="description">
+        <fa-icon [icon]="faLeaf"></fa-icon>
+        Beskrywing</label>
+    </div>
+    <div class="col-4">
+      <textarea class="note" id="description" name="description" rows="3"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2">
+      <label for="seed">
+        <fa-icon [icon]="faGenderless"></fa-icon>
+        Saad</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <input id="seed" name="seed" type="radio" value="seed"/>
+      <label for="seed">
+        <fa-icon [classes]="['seed']" [icon]="faGenderless"></fa-icon>
+        Saad</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <input id="seed-dull" name="seed" type="radio" value="seed-dull"/>
+      <label for="seed-dull">
+        <fa-icon [classes]="['seed-dull']" [icon]="faGenderless"></fa-icon>
+        Dowwe Saad</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <input id="seed-none" name="seed" type="radio" value="seed"/>
+      <label for="seed-none">
+        <fa-icon [classes]="['seed-none']" [icon]="faGenderless"></fa-icon>
+        Geen Saad</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2">
+      <label for="offspring">
+        <fa-icon [icon]="faSeedling"></fa-icon>
+        Nageslag
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <input id="offspring" name="offspring" type="radio"
+             value="offspring"/>
+      <label for="offspring">
+        <fa-icon [classes]="['offspring']" [icon]="faSeedling"></fa-icon>
+        Nageslag
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <input id="offspring-none" name="offspring" type="radio"
+             value="offspring-none"/>
+      <label for="offspring-none">
+        <fa-icon [classes]="['offspring']" [icon]="faSeedling"></fa-icon>
+        Geen Nageslag
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2">
+      <label for="profile-photo">
+        <fa-icon [icon]="faImage"></fa-icon>
+        Foto</label>
+    </div>
+    <div class="col-4">
+      <fa-icon [icon]="faImage" [classes]="['profile-photo']"></fa-icon>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2">
+      <label for="comments">
+        <fa-icon [icon]="faStickyNote"></fa-icon>
+        Opmerkings</label>
+    </div>
+    <div class="col-4">
+      <textarea class="note" id="comments" name="comments" rows="3"></textarea>
+    </div>
+  </div>
+  <button class="btn btn-primary" id="save" name="save" type="submit">Stoor Kruising</button>
+  <button class="btn btn-secondary" id="cancel" name="cancel">Kanselleer</button>
+</article>
