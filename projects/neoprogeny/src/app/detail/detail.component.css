@@ -3,11 +3,6 @@
   width: 100%;
 }
 
-/* Colours */
-.profile-photo, .photo-512, .photo-256, .photo-128, .photo {
-  color: white;
-}
-
 /* Photos */
 .profile-photo {
   font-size: 256px;

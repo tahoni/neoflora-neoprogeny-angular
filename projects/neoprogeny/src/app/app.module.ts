@@ -1,6 +1,8 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+
 import {AppRoutingModule} from './app-routing.module';
 
 import {AppComponent} from './app.component';
@@ -17,7 +19,6 @@ import {SimpleSearchComponent} from './simple-search/simple-search.component';
 import {ViewComponent} from './view/view.component';
 import {SummaryComponent} from './summary/summary.component';
 import {NewComponent} from './new/new.component';
-import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
