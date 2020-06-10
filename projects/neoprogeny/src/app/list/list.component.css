@@ -1,16 +1,21 @@
 /* Component-specific styling */
+:host {
+  width: 100%;
+}
 
 /* Colours */
-table {
+.table-bordered, .table-bordered tr, .table-bordered th, .table-bordered td {
   border-color: #551165;
 }
 
-thead {
+.thead-dark {
   background-color: #816b9a;
 }
 
-tr {
-  background-color: #9b89af;
+/* Content */
+span {
+  margin: 0;
+  padding: 0;
 }
 
 /* Grid */

@@ -22,7 +22,7 @@ h1, h2, h3 {
   background-color: #816b9a;
 }
 
-.fah {
+fa-icon {
   color: #551165;
 }
 
@@ -42,12 +42,25 @@ header, footer, main {
   border-width: thin;
 }
 
+/* Content */
+p {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+fa-icon {
+  vertical-align: bottom;
+}
+
 /* Buttons */
 .btn-primary {
   font-weight: bold;
 }
 
 .fa-button {
+  box-sizing: content-box;
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem 0.5rem;
   border-style: solid;
   border-width: thin;
 }
@@ -62,22 +75,24 @@ header, footer, main {
 
 /* Icons */
 .icon, .calla-icon, .h-calla-icon, .white-calla-icon {
+  display: inline-block;
   width: 32px;
   height: 34px;
-  padding: 4px;
+  padding: 2px;
+  margin: 2px;
 }
 
 .calla-icon {
   background-color: #816b9a;
-  -webkit-mask-image: url("../src/assets/img/icons/calla-icon.png");
+  -webkit-mask-image: url("assets/img/icons/calla-icon.png");
 }
 
 .h-calla-icon {
   background-color: #551165;
-  -webkit-mask-image: url("../src/assets/img/icons/calla-icon.png");
+  -webkit-mask-image: url("assets/img/icons/calla-icon.png");
 }
 
 .white-calla-icon {
   background-color: white;
-  -webkit-mask-image: url("../src/assets/img/icons/calla-icon.png");
+  -webkit-mask-image: url("assets/img/icons/calla-icon.png");
 }
