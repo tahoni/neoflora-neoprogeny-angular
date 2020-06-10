@@ -10,17 +10,18 @@ import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {BodyComponent} from './body/body.component';
 import {ContentComponent} from './content/content.component';
-import {ListComponent} from './list/list.component';
-import {SearchComponent} from './search/search.component';
 import {NewComponent} from './new/new.component';
-import {AdvancedSearchComponent} from './advanced-search/advanced-search.component';
 import {LookupComponent} from './lookup/lookup.component';
 import {SimpleSearchComponent} from './simple-search/simple-search.component';
-import {ViewComponent} from './view/view.component';
-import {SummaryComponent} from './summary/summary.component';
+import {AdvancedSearchComponent} from './advanced-search/advanced-search.component';
+import {ListComponent} from './list/list.component';
 import {DetailViewComponent} from './detail-view/detail-view.component';
 import {DetailCrudComponent} from './detail-crud/detail-crud.component';
-import { FormComponent } from './form/form.component';
+import {SearchComponent} from './search/search.component';
+import {SummaryComponent} from './summary/summary.component';
+import {FormComponent} from './form/form.component';
+import {ViewComponent} from './view/view.component';
+import {LegendsService} from "./legends.service";
 
 @NgModule({
   declarations: [
@@ -29,24 +30,26 @@ import { FormComponent } from './form/form.component';
     FooterComponent,
     BodyComponent,
     ContentComponent,
-    ListComponent,
-    SearchComponent,
-    AdvancedSearchComponent,
+    NewComponent,
     LookupComponent,
     SimpleSearchComponent,
-    NewComponent,
-    ViewComponent,
-    SummaryComponent,
-    DetailCrudComponent,
+    AdvancedSearchComponent,
+    ListComponent,
     DetailViewComponent,
-    FormComponent
+    DetailCrudComponent,
+    SearchComponent,
+    SummaryComponent,
+    FormComponent,
+    ViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [
+    LegendsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
