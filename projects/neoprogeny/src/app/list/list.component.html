@@ -1,133 +1,129 @@
-<div class="row">
-  <div class="col-12">
-    <table class="table-bordered table-striped w-100">
-      <thead class="thead-dark">
-      <tr class="flex-row">
-        <th class="cross-column">
-          Nommer
-        </th>
-        <th class="parent-column">
-          Kruising
-        </th>
-        <th class="description-column">
-          Beskrywing
-        </th>
-        <th class="seed-column">
-          Saad
-        </th>
-        <th class="offspring-column">
-          Nageslag
-        </th>
-        <th class="more-column">
-        </th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr class="flex-row">
-        <td class="cross-column">
-          <p>
-            <span class="calla-icon"></span>
-            19001
-          </p>
-        </td>
-        <td class="parent-column">
-        </td>
-        <td class="description-column">
-          <p>
-            <fa-icon [icon]="faDescription"></fa-icon>
-            Nommer 19001
-          </p>
-        </td>
-        <td class="seed-column">
-          <p>
-            <fa-icon [icon]="faSeed" class="fa-lg seed-none"></fa-icon>
-            <br>
-            Geen saad
-          </p>
-        </td>
-        <td class="offspring-column">
-          <p>
-            <fa-icon [icon]="faOffspring" class="offspring-none"></fa-icon>
-            <br>
-            Geen nageslag
-        </td>
-        <td class="more-column">
-          <a routerLink="detail">
-            <fa-icon [icon]="faMore" [classes]="['fa-button']"></fa-icon>
-          </a>
-        </td>
-      <tr>
-        <td class="cross-column">
-          <p>
-            <span class="calla-icon"></span>
-            19002
-          </p>
-        </td>
-        <td class="parent-column">
-        </td>
-        <td class="description-column">
-          <p>
-            <fa-icon [icon]="faDescription"></fa-icon>
-            Nommer 19002
-          </p>
-        </td>
-        <td class="seed-column">
-          <p>
-            <fa-icon [icon]="faSeed" class="fa-lg seed"></fa-icon>
-            <br>
-            Saad
-          </p>
-        </td>
-        <td class="offspring-column">
-          <p>
-            <fa-icon [icon]="faOffspring" class="offspring"></fa-icon>
-            <br>
-            Nageslag
-        </td>
-        <td class="more-column">
-          <a routerLink="detail">
-            <fa-icon [icon]="faMore" [classes]="['fa-button']"></fa-icon>
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td class="cross-column">
-          <p>
-            <span class="calla-icon"></span>
-            19003
-          </p>
-        </td>
-        <td class="parent-column">
-          <p>
-            <fa-icon [icon]="faVenusMars"></fa-icon>
-            19001 x 19002
-          </p>
-        </td>
-        <td class="description-column">
-          <p>
-            <fa-icon [icon]="faDescription"></fa-icon>
-            Nommer 19003 (19001 x 19002)
-          </p>
-        </td>
-        <td class="seed-column">
-          <p>
-            <fa-icon [classes]="['fa-lg', 'seed-dull']" [icon]="faSeed"></fa-icon>
-            <br>
-            Dowwe Saad
-          </p>
-        </td>
-        <td class="offspring-column">
-          <p>
-            <fa-icon [classes]="['offspring-none']" [icon]="faOffspring"></fa-icon>
-            <br>
-            Geen Nageslag
-        </td>
-        <td class="more-column">
-          <a routerLink="detail">
-            <fa-icon [classes]="['fa-button']" [icon]="faMore"></fa-icon>
-          </a>
-        </td>
-      </tbody>
-    </table>
-  </div>
-</div>
+<table class="table-bordered table-striped w-100">
+  <thead class="thead-dark">
+  <tr class="flex-row">
+    <th class="cross-column">
+      Nommer
+    </th>
+    <th class="parent-column">
+      Kruising
+    </th>
+    <th class="description-column">
+      Beskrywing
+    </th>
+    <th class="seed-column">
+      Saad
+    </th>
+    <th class="offspring-column">
+      Nageslag
+    </th>
+    <th class="more-column">
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="flex-row">
+    <td class="cross-column">
+      <p>
+        <span class="calla-icon"></span>
+        19001
+      </p>
+    </td>
+    <td class="parent-column">
+    </td>
+    <td class="description-column">
+      <p>
+        <fa-icon [icon]="faDescription"></fa-icon>
+        Nommer 19001
+      </p>
+    </td>
+    <td class="seed-column">
+      <p>
+        <fa-icon [icon]="faSeed" class="fa-lg seed-none"></fa-icon>
+        <br>
+        Geen saad
+      </p>
+    </td>
+    <td class="offspring-column">
+      <p>
+        <fa-icon [icon]="faOffspring" class="offspring-none"></fa-icon>
+        <br>
+        Geen nageslag
+    </td>
+    <td class="more-column">
+      <a routerLink="detail">
+        <fa-icon [classes]="['fa-button']" [icon]="faMore"></fa-icon>
+      </a>
+    </td>
+  <tr>
+    <td class="cross-column">
+      <p>
+        <span class="calla-icon"></span>
+        19002
+      </p>
+    </td>
+    <td class="parent-column">
+    </td>
+    <td class="description-column">
+      <p>
+        <fa-icon [icon]="faDescription"></fa-icon>
+        Nommer 19002
+      </p>
+    </td>
+    <td class="seed-column">
+      <p>
+        <fa-icon [icon]="faSeed" class="fa-lg seed"></fa-icon>
+        <br>
+        Saad
+      </p>
+    </td>
+    <td class="offspring-column">
+      <p>
+        <fa-icon [icon]="faOffspring" class="offspring"></fa-icon>
+        <br>
+        Nageslag
+    </td>
+    <td class="more-column">
+      <a routerLink="detail">
+        <fa-icon [classes]="['fa-button']" [icon]="faMore"></fa-icon>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td class="cross-column">
+      <p>
+        <span class="calla-icon"></span>
+        19003
+      </p>
+    </td>
+    <td class="parent-column">
+      <p>
+        <fa-icon [icon]="faVenusMars"></fa-icon>
+        19001 x 19002
+      </p>
+    </td>
+    <td class="description-column">
+      <p>
+        <fa-icon [icon]="faDescription"></fa-icon>
+        Nommer 19003 (19001 x 19002)
+      </p>
+    </td>
+    <td class="seed-column">
+      <p>
+        <fa-icon [classes]="['fa-lg', 'seed-dull']" [icon]="faSeed"></fa-icon>
+        <br>
+        Dowwe Saad
+      </p>
+    </td>
+    <td class="offspring-column">
+      <p>
+        <fa-icon [classes]="['offspring-none']" [icon]="faOffspring"></fa-icon>
+        <br>
+        Geen Nageslag
+    </td>
+    <td class="more-column">
+      <a routerLink="detail">
+        <fa-icon [classes]="['fa-button']" [icon]="faMore"></fa-icon>
+      </a>
+    </td>
+  </tbody>
+</table>

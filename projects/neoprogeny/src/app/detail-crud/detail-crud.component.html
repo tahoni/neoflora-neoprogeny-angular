@@ -1,0 +1,137 @@
+<div class="row">
+  <div class="col-3 offset-1">
+    <div class="calla-icon d-inline-block"></div>
+    <label for="cross">Nommer</label>
+  </div>
+  <div class="col-6">
+    <input class="w-100" id="cross" name="cross" type="text"/>
+  </div>
+</div>
+<div class="row">&nbsp;</div>
+<div class="row">
+  <div class="col-3 offset-1">
+    <label for="parents">
+      <fa-icon [icon]="faVenusMars"></fa-icon>
+      Kruising
+    </label>
+  </div>
+  <div class="col-6">
+    <input class="w-100" id="parents" name="parents" type="text"/>
+  </div>
+  <div class="col-2">
+    <label for="parents">
+      (
+      <fa-icon [icon]="faVenus"></fa-icon>&nbsp;<fa-icon [icon]="faTimes"></fa-icon>&nbsp;<fa-icon
+      [icon]="faMars"></fa-icon>
+      )
+    </label>
+  </div>
+</div>
+<div class="row">&nbsp;</div>
+<div class="row">
+  <div class="col-3 offset-1">
+    <label for="description">
+      <fa-icon [icon]="faDescription"></fa-icon>
+      Beskrywing</label>
+  </div>
+  <div class="col-6">
+    <textarea class="note w-100" id="description" name="description" rows="2"></textarea>
+  </div>
+</div>
+<div class="row">&nbsp;</div>
+<div class="row">
+  <div class="col-3 offset-1">
+    <label for="seed">
+      <fa-icon [icon]="faSeed"></fa-icon>
+      Saad</label>
+  </div>
+</div>
+<div class="row">
+  <div class="col-1 offset-3">
+    <input id="seed" name="seed" type="radio" value="seed"/>
+  </div>
+  <div class="col-3">
+    <label for="seed">
+      <fa-icon [classes]="['seed']" [icon]="faSeed"></fa-icon>
+      Saad</label>
+  </div>
+</div>
+<div class="row">
+  <div class="col-1 offset-3">
+    <input id="seed-dull" name="seed" type="radio" value="seed-dull"/>
+  </div>
+  <div class="col-3">
+    <label for="seed-dull">
+      <fa-icon [classes]="['seed-dull']" [icon]="faSeed"></fa-icon>
+      Dowwe Saad</label>
+  </div>
+</div>
+<div class="row">
+  <div class="col-1 offset-3">
+    <input id="seed-none" name="seed" type="radio" value="seed"/>
+  </div>
+  <div class="col-3">
+    <label for="seed-none">
+      <fa-icon [classes]="['seed-none']" [icon]="faSeed"></fa-icon>
+      Geen Saad</label>
+  </div>
+</div>
+<div class="row">&nbsp;</div>
+<div class="row">
+  <div class="col-3 offset-1">
+    <label for="offspring">
+      <fa-icon [icon]="faOffspring"></fa-icon>
+      Nageslag
+    </label>
+  </div>
+</div>
+<div class="row">
+  <div class="col-1 offset-3">
+    <input id="offspring" name="offspring" type="radio"
+           value="offspring"/>
+  </div>
+  <div class="col-3">
+    <label for="offspring">
+      <fa-icon [classes]="['offspring']" [icon]="faOffspring"></fa-icon>
+      Nageslag
+    </label>
+  </div>
+</div>
+<div class="row">
+  <div class="col-1 offset-3">
+    <input id="offspring-none" name="offspring" type="radio"
+           value="offspring-none"/>
+  </div>
+  <div class="col-3">
+    <label for="offspring-none">
+      <fa-icon [classes]="['offspring-none']" [icon]="faOffspring"></fa-icon>
+      Geen Nageslag
+    </label>
+  </div>
+</div>
+<div class="row">&nbsp;</div>
+<div class="row">
+  <div class="col-3 offset-1">
+    <label for="profile-photo">
+      <fa-icon [icon]="faPhoto"></fa-icon>
+      Foto</label>
+  </div>
+  <div class="col-6">
+    <fa-icon [classes]="['photo', 'profile-photo']" [icon]="faPhoto" id="profile-photo"></fa-icon>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3 offset-1">
+    <label for="comments">
+      <fa-icon [icon]="faComments"></fa-icon>
+      Opmerkings</label>
+  </div>
+  <div class="col-6">
+    <textarea class="note w-100" id="comments" name="comments" rows="5"></textarea>
+  </div>
+</div>
+<div class="row">&nbsp;</div>
+<div class="row d-flex justify-content-center">
+  <button class="btn btn-primary m-1" id="save" name="save" type="submit">Stoor Kruising</button>
+  <button class="btn btn-secondary m-1" id="cancel" name="cancel">Kanselleer</button>
+</div>

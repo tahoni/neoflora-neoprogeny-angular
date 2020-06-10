@@ -12,13 +12,15 @@ import {BodyComponent} from './body/body.component';
 import {ContentComponent} from './content/content.component';
 import {ListComponent} from './list/list.component';
 import {SearchComponent} from './search/search.component';
-import {DetailComponent} from './detail/detail.component';
+import {NewComponent} from './new/new.component';
 import {AdvancedSearchComponent} from './advanced-search/advanced-search.component';
 import {LookupComponent} from './lookup/lookup.component';
 import {SimpleSearchComponent} from './simple-search/simple-search.component';
 import {ViewComponent} from './view/view.component';
 import {SummaryComponent} from './summary/summary.component';
-import {NewComponent} from './new/new.component';
+import {DetailViewComponent} from './detail-view/detail-view.component';
+import {DetailCrudComponent} from './detail-crud/detail-crud.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +31,15 @@ import {NewComponent} from './new/new.component';
     ContentComponent,
     ListComponent,
     SearchComponent,
-    DetailComponent,
     AdvancedSearchComponent,
     LookupComponent,
     SimpleSearchComponent,
+    NewComponent,
     ViewComponent,
     SummaryComponent,
-    NewComponent
+    DetailCrudComponent,
+    DetailViewComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,7 @@ const routes: Routes = [
   {path: "", component: SummaryComponent},
   {path: "summary", loadChildren: () => import('./summary/summary.module').then(m => m.SummaryModule)},
   {path: "view", loadChildren: () => import('./view/view.module').then(m => m.ViewModule)},
-  {path: "detail", loadChildren: () => import('./detail/detail.module').then(m => m.DetailModule)},
+  {path: "detail", loadChildren: () => import('./form/form.module').then(m => m.FormModule)},
   {path: "search", loadChildren: () => import('./search/search.module').then(m => m.SearchModule)}
 ];
 

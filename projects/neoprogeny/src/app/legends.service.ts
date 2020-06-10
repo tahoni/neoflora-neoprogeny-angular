@@ -1,5 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-
+import {Injectable} from '@angular/core';
 import {
   faGenderless,
   faImage,
@@ -12,12 +11,10 @@ import {
   faVenusMars
 } from "@fortawesome/free-solid-svg-icons";
 
-@Component({
-  selector: 'app-detail',
-  templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.css']
+@Injectable({
+  providedIn: 'root'
 })
-export class DetailComponent implements OnInit {
+export class LegendsService {
 
   faDescription = faLeaf;
   faSeed = faGenderless;
@@ -31,8 +28,4 @@ export class DetailComponent implements OnInit {
 
   constructor() {
   }
-
-  ngOnInit(): void {
-  }
-
 }

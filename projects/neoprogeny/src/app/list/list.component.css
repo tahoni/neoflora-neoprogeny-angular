@@ -1,7 +1,4 @@
 /* Component-specific styling */
-:host {
-  width: 100%;
-}
 
 /* Colours */
 .table-bordered, .table-bordered tr, .table-bordered th, .table-bordered td {
@@ -13,7 +10,7 @@
 }
 
 /* Content */
-span {
+.calla-icon {
   margin: 0;
   padding: 0;
 }
