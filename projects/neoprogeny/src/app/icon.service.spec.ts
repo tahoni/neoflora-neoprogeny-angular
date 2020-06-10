@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { LegendsService } from './legends.service';
+import { IconService } from './icon.service';
 
-describe('LegendsService', () => {
-  let service: LegendsService;
+describe('IconService', () => {
+  let service: IconService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(LegendsService);
+    service = TestBed.inject(IconService);
   });
 
   it('should be created', () => {

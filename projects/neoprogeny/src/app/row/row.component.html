@@ -1,0 +1,32 @@
+<td class="hybrid-column">
+  <p>
+    <span class="calla-icon"></span>
+    19001
+  </p>
+</td>
+<td class="parent-column">
+</td>
+<td class="description-column">
+  <p>
+    <fa-icon [icon]="this.iconService.getDescriptionIcon()"></fa-icon>
+    Nommer 19001
+  </p>
+</td>
+<td class="seed-column">
+  <p>
+    <fa-icon [icon]="this.iconService.getSeedIcon()" class="fa-lg seed-none"></fa-icon>
+    <br>
+    Geen saad
+  </p>
+</td>
+<td class="offspring-column">
+  <p>
+    <fa-icon [icon]="this.iconService.getSeedIcon()" class="offspring-none"></fa-icon>
+    <br>
+    Geen nageslag
+</td>
+<td class="more-column">
+  <a routerLink="detail">
+    <fa-icon [classes]="['fa-button']" [icon]="this.iconService.getMoreIcon()"></fa-icon>
+  </a>
+</td>

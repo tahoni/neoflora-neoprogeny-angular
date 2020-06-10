@@ -21,8 +21,11 @@ import {SearchComponent} from './search/search.component';
 import {SummaryComponent} from './summary/summary.component';
 import {FormComponent} from './form/form.component';
 import {ViewComponent} from './view/view.component';
-import {LegendsService} from "./legends.service";
+
+import {IconService} from "./icon.service";
+import {LegendService} from "./legend.service";
 import {DataService} from "./data.service";
+import {RowComponent} from './row/row.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,8 @@ import {DataService} from "./data.service";
     SearchComponent,
     SummaryComponent,
     FormComponent,
-    ViewComponent
+    ViewComponent,
+    RowComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,8 @@ import {DataService} from "./data.service";
     FontAwesomeModule
   ],
   providers: [
-    LegendsService,
+    IconService,
+    LegendService,
     DataService
   ],
   bootstrap: [AppComponent]

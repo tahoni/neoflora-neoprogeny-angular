@@ -8,7 +8,7 @@ export class DataService {
   hybrids = [
     {
       id: 1,
-      cross: '19001',
+      hybrid: '19001',
       parent: '',
       description: 'Nommer 19001',
       seed: 'Geen saad',
@@ -16,7 +16,7 @@ export class DataService {
     },
     {
       id: 2,
-      cross: '19002',
+      hybrid: '19002',
       parent: '',
       description: 'Nommer 19002',
       seed: 'Saad',
@@ -24,7 +24,7 @@ export class DataService {
     },
     {
       id: 3,
-      cross: '19003',
+      hybrid: '19003',
       parent: '19001 x 19002',
       description: 'Nommer 19003 (19001 x 19002)',
       seed: 'Dowwe saad',

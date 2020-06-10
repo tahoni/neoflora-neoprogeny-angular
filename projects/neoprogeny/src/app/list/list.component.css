@@ -1,62 +1,10 @@
 /* Component-specific styling */
 
 /* Colours */
-.table-bordered, .table-bordered tr, .table-bordered th, .table-bordered td {
+.table-bordered, .table-bordered tr, .table-bordered th {
   border-color: #551165;
 }
 
 .thead-dark {
   background-color: #816b9a;
-}
-
-/* Content */
-.calla-icon {
-  margin: 0;
-  padding: 0;
-}
-
-/* Table */
-.table-bordered th {
-  padding: 0.5em;
-}
-
-/* Grid */
-.seed-column, .offspring-column, .more-column {
-  text-align: center;
-  align-items: center;
-  flex: 1;
-}
-
-.seed-column, .offspring-column {
-  flex: 1;
-}
-
-.cross-column {
-  text-align: center;
-  align-items: center;
-  flex: 1;
-  order: 1;
-}
-
-.parent-column {
-  text-align: center;
-  flex: 2;
-  order: 2;
-}
-
-.description-column {
-  flex: 3;
-  order: 3;
-}
-
-.seed-column {
-  order: 4;
-}
-
-.offspring-column {
-  order: 5;
-}
-
-.more-column {
-  order: 6;
 }

@@ -16,12 +16,12 @@ import {
 @Injectable({
   providedIn: 'root'
 })
-export class LegendsService {
+export class IconService {
 
   private iconDescription: IconDefinition = faLeaf;
   private iconSeed: IconDefinition = faGenderless;
   private iconOffspring: IconDefinition = faSeedling;
-  private iconMultiplaction: IconDefinition = faTimes;
+  private iconMultiplication: IconDefinition = faTimes;
   private iconVenusMars: IconDefinition = faVenusMars;
   private iconVenus: IconDefinition = faVenus;
   private iconMars: IconDefinition = faMars;
@@ -44,8 +44,8 @@ export class LegendsService {
     return this.iconOffspring;
   }
 
-  getMutiplicationIcon() {
-    return this.iconMultiplaction;
+  getMultiplicationIcon() {
+    return this.iconMultiplication;
   }
 
   getVenusMarsIcon() {

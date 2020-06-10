@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {LegendsService} from "../legends.service";
+import {LegendService} from "../legend.service";
+import {IconService} from "../icon.service";
 
 @Component({
   selector: 'app-detail-crud',
@@ -8,10 +9,12 @@ import {LegendsService} from "../legends.service";
 })
 export class DetailCrudComponent implements OnInit {
 
-  legendsService: LegendsService;
+  iconService: IconService;
+  legendService: LegendService;
 
-  constructor(legendsService: LegendsService) {
-    this.legendsService = legendsService;
+  constructor(iconService: IconService, legendService: LegendService) {
+    this.iconService = iconService;
+    this.legendService = legendService;
   }
 
   ngOnInit(): void {

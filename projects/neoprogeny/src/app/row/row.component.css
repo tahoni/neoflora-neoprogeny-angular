@@ -1,0 +1,12 @@
+/* Component-specific styling */
+
+/* Colours */
+tr, td {
+  border-color: #551165;
+}
+
+/* Icons */
+.calla-icon {
+  margin: 0;
+  padding: 0;
+}

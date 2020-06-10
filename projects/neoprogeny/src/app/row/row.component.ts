@@ -1,16 +1,18 @@
-import {Component, OnInit} from '@angular/core';
-import {LegendService} from "../legend.service";
+import {Component, Input, OnInit} from '@angular/core';
 import {IconService} from "../icon.service";
+import {LegendService} from "../legend.service";
 
 @Component({
-  selector: 'app-detail-view',
-  templateUrl: './detail-view.component.html',
-  styleUrls: ['./detail-view.component.css']
+  selector: 'tr[app-row]',
+  templateUrl: './row.component.html',
+  styleUrls: ['./row.component.css']
 })
-export class DetailViewComponent implements OnInit {
+export class RowComponent implements OnInit {
 
   iconService: IconService;
   legendService: LegendService;
+
+  @Input(item)
 
   constructor(iconService: IconService, legendService: LegendService) {
     this.iconService = iconService;

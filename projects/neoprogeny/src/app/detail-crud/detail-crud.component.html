@@ -1,17 +1,17 @@
 <div class="row">
   <div class="col-3 offset-1">
     <div class="calla-icon d-inline-block"></div>
-    <label for="cross">Nommer</label>
+    <label for="hybrid">Nommer</label>
   </div>
   <div class="col-6">
-    <input class="w-100" id="cross" name="cross" type="text"/>
+    <input class="w-100" id="hybrid" name="hybrid" type="text"/>
   </div>
 </div>
 <div class="row">&nbsp;</div>
 <div class="row">
   <div class="col-3 offset-1">
     <label for="parents">
-      <fa-icon [icon]="this.legendsService.getVenusMarsIcon()"></fa-icon>
+      <fa-icon [icon]="this.iconService.getVenusMarsIcon()"></fa-icon>
       Kruising
     </label>
   </div>
@@ -21,9 +21,9 @@
   <div class="col-2">
     <label for="parents">
       (
-      <fa-icon [icon]="this.legendsService.getVenusIcon()"></fa-icon>&nbsp;<fa-icon
-      [icon]="this.legendsService.getMutiplicationIcon()"></fa-icon>&nbsp;<fa-icon
-      [icon]="this.legendsService.getMarsIcon()"></fa-icon>
+      <fa-icon [icon]="this.iconService.getVenusIcon()"></fa-icon>&nbsp;<fa-icon
+      [icon]="this.iconService.getMultiplicationIcon()"></fa-icon>&nbsp;<fa-icon
+      [icon]="this.iconService.getMarsIcon()"></fa-icon>
       )
     </label>
   </div>
@@ -32,7 +32,7 @@
 <div class="row">
   <div class="col-3 offset-1">
     <label for="description">
-      <fa-icon [icon]="this.legendsService.getDescriptionIcon()"></fa-icon>
+      <fa-icon [icon]="this.iconService.getDescriptionIcon()"></fa-icon>
       Beskrywing</label>
   </div>
   <div class="col-6">
@@ -43,7 +43,7 @@
 <div class="row">
   <div class="col-3 offset-1">
     <label for="seed">
-      <fa-icon [icon]="this.legendsService.getSeedIcon()"></fa-icon>
+      <fa-icon [icon]="this.iconService.getSeedIcon()"></fa-icon>
       Saad</label>
   </div>
 </div>
@@ -53,7 +53,7 @@
   </div>
   <div class="col-3">
     <label for="seed">
-      <fa-icon [classes]="['seed']" [icon]="this.legendsService.getSeedIcon()"></fa-icon>
+      <fa-icon [classes]="['seed']" [icon]="this.iconService.getSeedIcon()"></fa-icon>
       Saad</label>
   </div>
 </div>
@@ -63,7 +63,7 @@
   </div>
   <div class="col-3">
     <label for="seed-dull">
-      <fa-icon [classes]="['seed-dull']" [icon]="this.legendsService.getSeedIcon()"></fa-icon>
+      <fa-icon [classes]="['seed-dull']" [icon]="this.iconService.getSeedIcon()"></fa-icon>
       Dowwe Saad</label>
   </div>
 </div>
@@ -73,7 +73,7 @@
   </div>
   <div class="col-3">
     <label for="seed-none">
-      <fa-icon [classes]="['seed-none']" [icon]="this.legendsService.getSeedIcon()"></fa-icon>
+      <fa-icon [classes]="['seed-none']" [icon]="this.iconService.getSeedIcon()"></fa-icon>
       Geen Saad</label>
   </div>
 </div>
@@ -81,7 +81,7 @@
 <div class="row">
   <div class="col-3 offset-1">
     <label for="offspring">
-      <fa-icon [icon]="this.legendsService.getOffspringIcon()"></fa-icon>
+      <fa-icon [icon]="this.iconService.getOffspringIcon()"></fa-icon>
       Nageslag
     </label>
   </div>
@@ -93,7 +93,7 @@
   </div>
   <div class="col-3">
     <label for="offspring">
-      <fa-icon [classes]="['offspring']" [icon]="this.legendsService.getOffspringIcon()"></fa-icon>
+      <fa-icon [classes]="['offspring']" [icon]="this.iconService.getOffspringIcon()"></fa-icon>
       Nageslag
     </label>
   </div>
@@ -105,7 +105,7 @@
   </div>
   <div class="col-3">
     <label for="offspring-none">
-      <fa-icon [classes]="['offspring-none']" [icon]="this.legendsService.getOffspringIcon()"></fa-icon>
+      <fa-icon [classes]="['offspring-none']" [icon]="this.iconService.getOffspringIcon()"></fa-icon>
       Geen Nageslag
     </label>
   </div>
@@ -114,18 +114,18 @@
 <div class="row">
   <div class="col-3 offset-1">
     <label for="profile-photo">
-      <fa-icon [icon]="this.legendsService.getPhotoIcon()"></fa-icon>
+      <fa-icon [icon]="this.iconService.getPhotoIcon()"></fa-icon>
       Foto</label>
   </div>
   <div class="col-6">
-    <fa-icon [classes]="['photo', 'profile-photo']" [icon]="this.legendsService.getPhotoIcon()"
+    <fa-icon [classes]="['photo', 'profile-photo']" [icon]="this.iconService.getPhotoIcon()"
              id="profile-photo"></fa-icon>
   </div>
 </div>
 <div class="row">
   <div class="col-3 offset-1">
     <label for="comments">
-      <fa-icon [icon]="this.legendsService.getCommentsIcon()"></fa-icon>
+      <fa-icon [icon]="this.iconService.getCommentsIcon()"></fa-icon>
       Opmerkings</label>
   </div>
   <div class="col-6">
