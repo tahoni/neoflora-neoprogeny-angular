@@ -3,11 +3,11 @@ import {IconService} from "../icon.service";
 import {LegendService} from "../legend.service";
 
 @Component({
-  selector: 'tr[app-row]',
-  templateUrl: './row.component.html',
-  styleUrls: ['./row.component.css']
+  selector: 'tr[app-list-row]',
+  templateUrl: './list-row.component.html',
+  styleUrls: ['./list-row.component.css']
 })
-export class RowComponent implements OnInit {
+export class ListRowComponent implements OnInit {
 
   iconService: IconService;
   legendService: LegendService;

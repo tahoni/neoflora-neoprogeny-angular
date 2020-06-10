@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {LegendService} from "../legend.service";
 import {IconService} from "../icon.service";
 
@@ -11,6 +11,8 @@ export class DetailViewComponent implements OnInit {
 
   iconService: IconService;
   legendService: LegendService;
+
+  @Input() item;
 
   constructor(iconService: IconService, legendService: LegendService) {
     this.iconService = iconService;

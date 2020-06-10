@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SimpleSearchComponent } from './simple-search.component';
+import { ListHeadComponent } from './list-head.component';
 
-describe('SimpleSearchComponent', () => {
-  let component: SimpleSearchComponent;
-  let fixture: ComponentFixture<SimpleSearchComponent>;
+describe('ListHeadComponent', () => {
+  let component: ListHeadComponent;
+  let fixture: ComponentFixture<ListHeadComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SimpleSearchComponent ]
+      declarations: [ ListHeadComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SimpleSearchComponent);
+    fixture = TestBed.createComponent(ListHeadComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

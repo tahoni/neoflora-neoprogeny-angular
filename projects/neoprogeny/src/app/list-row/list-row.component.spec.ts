@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdvancedSearchComponent } from './advanced-search.component';
+import { ListRowComponent } from './list-row.component';
 
-describe('AdvancedSearchComponent', () => {
-  let component: AdvancedSearchComponent;
-  let fixture: ComponentFixture<AdvancedSearchComponent>;
+describe('ListRowComponent', () => {
+  let component: ListRowComponent;
+  let fixture: ComponentFixture<ListRowComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdvancedSearchComponent ]
+      declarations: [ ListRowComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdvancedSearchComponent);
+    fixture = TestBed.createComponent(ListRowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

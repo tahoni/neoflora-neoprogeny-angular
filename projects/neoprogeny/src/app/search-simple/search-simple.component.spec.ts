@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RowComponent } from './row.component';
+import { SearchSimpleComponent } from './search-simple.component';
 
-describe('RowComponent', () => {
-  let component: RowComponent;
-  let fixture: ComponentFixture<RowComponent>;
+describe('SearchSimpleComponent', () => {
+  let component: SearchSimpleComponent;
+  let fixture: ComponentFixture<SearchSimpleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RowComponent ]
+      declarations: [ SearchSimpleComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RowComponent);
+    fixture = TestBed.createComponent(SearchSimpleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

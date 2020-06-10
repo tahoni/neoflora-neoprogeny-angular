@@ -5,20 +5,20 @@ import {Injectable} from '@angular/core';
 })
 export class LegendService {
 
-  seed = [
+  private seed = [
     'Saad'
   ]
-  seed_none = [
+  private seed_none = [
     'Geen saad'
   ]
-  seed_dull = [
+  private seed_dull = [
     'Dowwe saad'
   ]
 
-  offspring = [
+  private offspring = [
     'Nageslag'
   ]
-  offspring_none = [
+  private offspring_none = [
     'Geen nageslag'
   ]
 
