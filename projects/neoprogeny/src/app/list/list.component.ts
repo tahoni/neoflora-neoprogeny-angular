@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
-import {faLeaf, faGenderless, faSeedling, faEllipsisH, faVenusMars} from '@fortawesome/free-solid-svg-icons';
+import {Component, OnInit} from '@angular/core';
+import {LegendsService} from "../legends.service";
 
 @Component({
   selector: 'app-list',
@@ -9,13 +8,11 @@ import {faLeaf, faGenderless, faSeedling, faEllipsisH, faVenusMars} from '@forta
 })
 export class ListComponent implements OnInit {
 
-  faDescription = faLeaf;
-  faVenusMars = faVenusMars;
-  faSeed = faGenderless;
-  faOffspring = faSeedling;
-  faMore = faEllipsisH;
+  legendsService: LegendsService;
 
-  constructor() { }
+  constructor(legendsService: LegendsService) {
+    this.legendsService = legendsService;
+  }
 
   ngOnInit(): void {
   }

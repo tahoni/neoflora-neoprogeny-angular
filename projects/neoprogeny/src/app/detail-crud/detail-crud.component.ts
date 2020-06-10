@@ -1,15 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {
-  faGenderless,
-  faImage,
-  faLeaf,
-  faMars,
-  faSeedling,
-  faStickyNote,
-  faTimes,
-  faVenus,
-  faVenusMars
-} from "@fortawesome/free-solid-svg-icons";
+import {LegendsService} from "../legends.service";
 
 @Component({
   selector: 'app-detail-crud',
@@ -18,17 +8,10 @@ import {
 })
 export class DetailCrudComponent implements OnInit {
 
-  faDescription = faLeaf;
-  faSeed = faGenderless;
-  faOffspring = faSeedling;
-  faTimes = faTimes;
-  faVenusMars = faVenusMars;
-  faVenus = faVenus;
-  faMars = faMars;
-  faPhoto = faImage;
-  faComments = faStickyNote;
+  legendsService: LegendsService;
 
-  constructor() {
+  constructor(legendsService: LegendsService) {
+    this.legendsService = legendsService;
   }
 
   ngOnInit(): void {
