@@ -22,6 +22,7 @@ import {SummaryComponent} from './summary/summary.component';
 import {FormComponent} from './form/form.component';
 import {ViewComponent} from './view/view.component';
 import {LegendsService} from "./legends.service";
+import {DataService} from "./data.service";
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import {LegendsService} from "./legends.service";
     FontAwesomeModule
   ],
   providers: [
-    LegendsService
+    LegendsService,
+    DataService
   ],
   bootstrap: [AppComponent]
 })

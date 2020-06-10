@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {LegendsService} from "../legends.service";
+import {DataService} from "../data.service";
 
 @Component({
   selector: 'app-list',
@@ -9,9 +10,11 @@ import {LegendsService} from "../legends.service";
 export class ListComponent implements OnInit {
 
   legendsService: LegendsService;
+  hybridService: DataService;
 
-  constructor(legendsService: LegendsService) {
+  constructor(legendsService: LegendsService, hybridService: DataService) {
     this.legendsService = legendsService;
+    this.hybridService = hybridService;
   }
 
   ngOnInit(): void {
