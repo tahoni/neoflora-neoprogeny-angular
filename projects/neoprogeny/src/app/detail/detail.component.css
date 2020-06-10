@@ -2,24 +2,3 @@
 :host {
   width: 100%;
 }
-
-/* Photos */
-.profile-photo {
-  font-size: 256px;
-  font-weight: lighter;
-}
-
-.photo-512 {
-  font-size: 512px;
-}
-
-.photo-256 {
-  font-size: 256px;
-}
-
-.photo-128 {
-  font-size: 128px;
-}
-
-.photo {
-}

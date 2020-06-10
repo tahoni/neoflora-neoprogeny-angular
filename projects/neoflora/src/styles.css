@@ -1,13 +1,9 @@
 /* Global styling */
 
 /* Colours */
-* {
-  /* font-family: 'Source Sans Pro', 'Arial', 'sans-serif'; */
-  color: #551165;
-}
-
 body {
   background-color: #9b89af;
+  color: #551165;
 }
 
 h1, h2, h3 {

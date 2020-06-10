@@ -1,15 +1,15 @@
 /* Component-specific styling */
 
 /* Colours */
-.table-row-header, .table-row, .table-column-header, .table-column {
+table {
   border-color: #551165;
 }
 
-.table-row-header {
+thead {
   background-color: #816b9a;
 }
 
-.table-row {
+tr {
   background-color: #9b89af;
 }
 
