@@ -18,6 +18,11 @@ span {
   padding: 0;
 }
 
+/* Table */
+.table-bordered th {
+  padding: 0.5em;
+}
+
 /* Grid */
 .seed-column, .offspring-column, .more-column {
   text-align: center;
