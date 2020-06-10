@@ -1,29 +1,32 @@
 <td class="hybrid-column">
   <p>
     <span class="calla-icon"></span>
-    19001
+    {{item.hybrid}}
   </p>
 </td>
 <td class="parent-column">
+  {{item.parent}}
 </td>
 <td class="description-column">
   <p>
     <fa-icon [icon]="this.iconService.getDescriptionIcon()"></fa-icon>
-    Nommer 19001
+    {{item.description}}
   </p>
 </td>
 <td class="seed-column">
   <p>
-    <fa-icon [icon]="this.iconService.getSeedIcon()" class="fa-lg seed-none"></fa-icon>
+    <fa-icon [classes]="['fa-lg']"
+             [icon]="this.iconService.getSeedIcon()"
+             [ngClass]="{'seed': this.legendService.hasSeed(item.seed), 'seed-none': this.legendService.hasNoSeed(item.seed), 'seed-dull': this.legendService.hasDullSeed(item.seed)}"></fa-icon>
     <br>
-    Geen saad
+    {{item.seed}}
   </p>
 </td>
 <td class="offspring-column">
   <p>
-    <fa-icon [icon]="this.iconService.getSeedIcon()" class="offspring-none"></fa-icon>
-    <br>
-    Geen nageslag
+    <fa-icon [icon]="this.iconService.getOffspringIcon()"
+             [ngClass]="{'offspring': this.legendService.hasOffspring(item.offspring), 'offspring-none': this.legendService.hasNoOffspring(item.offspring)}"></fa-icon>
+    {{item.offspring}}
 </td>
 <td class="more-column">
   <a routerLink="detail">

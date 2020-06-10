@@ -12,7 +12,7 @@ export class RowComponent implements OnInit {
   iconService: IconService;
   legendService: LegendService;
 
-  @Input(item)
+  @Input() item;
 
   constructor(iconService: IconService, legendService: LegendService) {
     this.iconService = iconService;

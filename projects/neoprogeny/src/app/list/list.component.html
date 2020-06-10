@@ -21,7 +21,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let hybrid of this.dataService.getHybrids()" app-row class="flex-row"></tr>
+  <tr *ngFor="let hybrid of this.dataService.getHybrids()" [item]="hybrid" app-row class="flex-row"></tr>
   </tbody>
 </table>
 <!--
