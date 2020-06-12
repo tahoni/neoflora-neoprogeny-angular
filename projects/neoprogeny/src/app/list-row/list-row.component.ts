@@ -3,7 +3,7 @@ import {IconService} from "../icon.service";
 import {LegendService} from "../legend.service";
 
 @Component({
-  selector: 'tr[app-list-row]',
+  selector: 'app-list-row',
   templateUrl: './list-row.component.html',
   styleUrls: ['./list-row.component.css']
 })

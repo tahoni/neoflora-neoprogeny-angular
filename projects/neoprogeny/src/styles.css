@@ -44,8 +44,11 @@ header, footer, main {
 
 /* Content */
 p {
-  margin-left: 1em;
-  margin-right: 1em;
+  margin: 0.5em 1em;
+}
+
+label {
+  margin: 0;
 }
 
 fa-icon {
@@ -63,11 +66,6 @@ fa-icon {
   margin: 0.25rem 0.5rem;
   border-style: solid;
   border-width: thin;
-}
-
-/* Table */
-.table-bordered th {
-  padding: 0.5em;
 }
 
 /* Logo */
@@ -104,30 +102,22 @@ fa-icon {
 
 /* Columns */
 .seed-column, .offspring-column, .more-column {
-  text-align: center;
-  align-items: center;
-  flex: 1;
-}
-
-.seed-column, .offspring-column {
-  flex: 1;
+  flex: 2;
 }
 
 .hybrid-column {
-  text-align: center;
-  align-items: center;
-  flex: 1;
+  flex: 2;
   order: 1;
 }
 
 .parent-column {
-  text-align: center;
-  flex: 2;
+  flex: 3;
   order: 2;
 }
 
 .description-column {
-  flex: 3;
+  align-content: start;
+  flex: 5;
   order: 3;
 }
 
@@ -162,7 +152,7 @@ fa-icon {
   color: green;
 }
 
-/* Photos */
+/* Images */
 .profile-photo {
   font-size: 256px;
   font-weight: lighter;

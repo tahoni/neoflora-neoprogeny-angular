@@ -1,1 +1,13 @@
 /* Component-specific styling */
+
+/* Content */
+p {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/* Icons */
+.calla-icon {
+  margin: 0;
+  padding: 0;
+}

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'tr[app-list-head]',
+  selector: 'app-list-head',
   templateUrl: './list-head.component.html',
   styleUrls: ['./list-head.component.css']
 })

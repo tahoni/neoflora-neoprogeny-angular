@@ -1,35 +1,44 @@
-<td class="hybrid-column">
-  <p>
-    <span class="calla-icon"></span>
-    {{item.hybrid}}
-  </p>
-</td>
-<td class="parent-column">
-  {{item.parent}}
-</td>
-<td class="description-column">
-  <p>
-    <fa-icon [icon]="this.iconService.getDescriptionIcon()"></fa-icon>
-    {{item.description}}
-  </p>
-</td>
-<td class="seed-column">
-  <p>
-    <fa-icon [classes]="['fa-lg']"
-             [icon]="this.iconService.getSeedIcon()"
-             [ngClass]="{'seed': this.legendService.hasSeed(item.seed), 'seed-none': this.legendService.hasNoSeed(item.seed), 'seed-dull': this.legendService.hasDullSeed(item.seed)}"></fa-icon>
-    <br>
-    {{item.seed}}
-  </p>
-</td>
-<td class="offspring-column">
-  <p>
-    <fa-icon [icon]="this.iconService.getOffspringIcon()"
-             [ngClass]="{'offspring': this.legendService.hasOffspring(item.offspring), 'offspring-none': this.legendService.hasNoOffspring(item.offspring)}"></fa-icon>
-    {{item.offspring}}
-</td>
-<td class="more-column">
-  <a routerLink="detail">
-    <fa-icon [classes]="['fa-button']" [icon]="this.iconService.getMoreIcon()"></fa-icon>
-  </a>
-</td>
+<div class="d-flex d-row">
+  <div class="d-flex d-column hybrid-column">
+    <p>
+      <span class="calla-icon"></span>
+      <br>
+      {{item.hybrid}}
+    </p>
+  </div>
+  <div class="d-flex d-column parent-column">
+    <p>
+      {{item.parent}}
+    </p>
+  </div>
+  <div class="d-flex d-column description-column">
+    <p>
+      <fa-icon [icon]="this.iconService.getDescriptionIcon()"></fa-icon>
+      {{item.description}}
+    </p>
+  </div>
+  <div class="d-flex d-column seed-column">
+    <p>
+      <fa-icon [classes]="['fa-lg']"
+               [icon]="this.iconService.getSeedIcon()"
+               [ngClass]="{'seed': this.legendService.hasSeed(item.seed), 'seed-none': this.legendService.hasNoSeed(item.seed), 'seed-dull': this.legendService.hasDullSeed(item.seed)}"></fa-icon>
+      <br>
+      {{item.seed}}
+    </p>
+  </div>
+  <div class="d-flex d-column offspring-column">
+    <p>
+      <fa-icon [icon]="this.iconService.getOffspringIcon()"
+               [ngClass]="{'offspring': this.legendService.hasOffspring(item.offspring), 'offspring-none': this.legendService.hasNoOffspring(item.offspring)}"></fa-icon>
+      <br>
+      {{item.offspring}}
+    </p>
+  </div>
+  <div class="d-flex d-column more-column">
+    <p>
+      <a routerLink="detail">
+        <fa-icon [classes]="['fa-button']" [icon]="this.iconService.getMoreIcon()"></fa-icon>
+      </a>
+    </p>
+  </div>
+</div>
