@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import {cloneDeep} from 'lodash';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class HybridService {
     {
       id: 0,
       code: '',
-      parents: '',
+      parent: '',
       description: '',
       seed: '',
       offspring: ''
@@ -54,6 +55,6 @@ export class HybridService {
     if (id > 0) {
       hybrid = this.hybrids.find(hybrid => hybrid.id == id);
     }
-    return hybrid.clone();
+    return cloneDeep(hybrid);
   }
 }

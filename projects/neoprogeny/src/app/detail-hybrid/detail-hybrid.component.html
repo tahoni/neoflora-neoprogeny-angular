@@ -16,7 +16,7 @@
     </label>
   </div>
   <div class="col-6">
-    <input class="w-100" id="parents" name="parents" type="text"/>
+    <input class="w-100" id="parents" name="parents" type="text" [value]="hybrid.parent"/>
   </div>
   <div class="col-2">
     <label for="parents">
@@ -36,7 +36,7 @@
       Beskrywing</label>
   </div>
   <div class="col-6">
-    <textarea class="note w-100" id="description" name="description" rows="2"></textarea>
+    <textarea class="note w-100" id="description" name="description" rows="2" [value]="hybrid.description"></textarea>
   </div>
 </div>
 <div class="row">&nbsp;</div>
