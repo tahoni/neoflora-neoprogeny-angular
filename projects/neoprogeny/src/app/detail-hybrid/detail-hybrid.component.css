@@ -1,9 +1,8 @@
 /* Component-specific styling */
 
-/* Content */
-p {
-  margin-left: 1em;
-  margin-right: 1em;
+/* Legends */
+.code {
+  padding-left: .25rem;
 }
 
 /* Icons */

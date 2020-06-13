@@ -1,3 +1,5 @@
-<label for="search">Soek</label>
-<input type="text" id="search" name="search"/>
-<fa-icon [icon]="faSearch" [classes]="['fa-button']"></fa-icon>
+<div class="d-flex align-items-baseline">
+  <p><label for="search">Soek</label></p>
+  <p><input id="search" name="search" type="text"/></p>
+  <p><fa-icon [classes]="['btn-icon', 'btn-search']" [icon]="faSearch"></fa-icon></p>
+</div>
