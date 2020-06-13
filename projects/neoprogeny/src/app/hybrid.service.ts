@@ -60,11 +60,24 @@ export class HybridService {
   }
 
   getHybrid(id: number) {
-    let hybrid: any = this.default_hybrid;
+    let thisHybrid: any = this.default_hybrid;
     if (id > 0) {
-      hybrid = this.hybrids.find(hybrid => hybrid.id == id);
+      thisHybrid = this.hybrids.find(aHybrid => aHybrid.id == id);
     }
-    return cloneDeep(hybrid);
+    return cloneDeep(thisHybrid);
+  }
+
+  putHybrid(hybrid: any): boolean {
+    let thisHybrid: any = null;
+    if (hybrid.id > 0) {
+      thisHybrid = this.hybrids.find(aHybrid => aHybrid.id == hybrid.id)
+    }
+    if (thisHybrid != null) {
+      thisHybrid = hybrid;
+    } else {
+      this.hybrids.push(hybrid);
+    }
+    return true
   }
 
   initHybrids(): void {
