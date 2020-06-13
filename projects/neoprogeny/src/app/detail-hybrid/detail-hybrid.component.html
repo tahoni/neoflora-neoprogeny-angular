@@ -123,11 +123,11 @@
   </div>
   <div class="col-6">
     <div *ngIf="hybrid.image == ''">
-      <fa-icon [classes]="['photo', 'profile-photo']" [icon]="this.iconService.getPhotoIcon()"
+      <fa-icon [classes]="['image-icon', 'image-icon-main']" [icon]="this.iconService.getPhotoIcon()"
                id="profile-photo"></fa-icon>
     </div>
     <div *ngIf="hybrid.image != ''">
-      <img alt="{{hybrid.code}} Photo" class="image-256" src="data:image/jpg;base64,{{hybrid.image}}"/>
+      <img alt="{{hybrid.code}} Photo" class="image image-main" src="data:image/jpg;base64,{{hybrid.image}}"/>
     </div>
   </div>
 </div>

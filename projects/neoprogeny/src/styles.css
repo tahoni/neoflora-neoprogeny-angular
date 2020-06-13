@@ -148,25 +148,54 @@ fa-icon {
   color: green;
 }
 
-/* Images */
-.profile-photo {
+/* Image Icons */
+.image-icon-main {
   font-size: 256px;
   font-weight: lighter;
 }
 
-.photo-512 {
+.image-icon-512 {
   font-size: 512px;
 }
 
-.photo-256 {
+.image-icon-256 {
   font-size: 256px;
 }
 
-.photo-128 {
+.image-icon-128 {
   font-size: 128px;
 }
 
-.photo {
+.image-icon {
+}
+
+
+/* Images */
+img.image-main {
+  height: 256px;
+  width: auto;
+  border: 1px solid;
+}
+
+img.image-512 {
+  height: 512px;
+  width: auto;
+}
+
+img.image-256 {
+  height: 256px;
+  width: auto;
+}
+
+img.image-128 {
+  height: 128px;
+  width: auto;
+}
+
+img.image {
+  background-color: transparent;
+  padding: 14px;
+  margin-bottom: 14px;
 }
 
 /* Text */
