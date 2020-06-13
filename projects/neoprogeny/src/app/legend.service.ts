@@ -50,7 +50,7 @@ export class LegendService {
   }
 
   hasNoOffspring(itemOffspring: string) {
-    if (this.offspring.includes(itemOffspring)) {
+    if (this.offspring_none.includes(itemOffspring)) {
       return true;
     }
   }

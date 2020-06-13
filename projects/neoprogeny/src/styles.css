@@ -111,7 +111,7 @@ fa-icon {
 }
 
 .parent-column {
-  flex: 3;
+  flex: 6;
   order: 2;
 }
 
@@ -135,9 +135,11 @@ fa-icon {
 
 /* Legends */
 .seed, .seed-none, .seed-dull {
+  font-weight: bold;
 }
 
 .offspring, .offspring-none {
+  font-weight: bold;
 }
 
 .seed-none, .offspring-none {
@@ -145,7 +147,7 @@ fa-icon {
 }
 
 .seed-dull {
-  color: gray;
+  color: black;
 }
 
 .seed, .offspring {

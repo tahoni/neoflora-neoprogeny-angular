@@ -1,10 +1,8 @@
 /* Component-specific styling */
-
-/* Colours */
-.table-bordered, .table-bordered tr, .table-bordered th {
-  border-color: #551165;
+app-list-row:nth-child(even) {
+  background-color: #816b9a;
 }
 
-.thead-dark {
-  background-color: #816b9a;
+app-list-row:nth-child(odd) {
+  background-color: #9b89af;
 }

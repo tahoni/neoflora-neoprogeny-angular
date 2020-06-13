@@ -36,6 +36,6 @@ export class DataService {
   }
 
   getHybrids() {
-    return this.hybrids;
+    return this.hybrids.slice();
   }
 }

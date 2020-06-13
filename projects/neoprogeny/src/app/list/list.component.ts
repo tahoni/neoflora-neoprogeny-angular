@@ -1,7 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import {LegendService} from "../legend.service";
-import {DataService} from "../data.service";
-import {IconService} from "../icon.service";
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-list',
@@ -10,10 +7,9 @@ import {IconService} from "../icon.service";
 })
 export class ListComponent implements OnInit {
 
-  dataService: DataService;
+  @Input() hybrids;
 
-  constructor(dataService: DataService) {
-    this.dataService = dataService;
+  constructor() {
   }
 
   ngOnInit(): void {

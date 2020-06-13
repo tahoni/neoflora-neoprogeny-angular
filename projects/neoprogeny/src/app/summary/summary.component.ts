@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DataService} from "../data.service";
 
 @Component({
   selector: 'app-summary',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SummaryComponent implements OnInit {
 
-  constructor() { }
+  dataService: DataService;
+
+  hybrids = []
+
+  constructor(dataService: DataService) {
+    this.dataService = dataService;
+  }
 
   ngOnInit(): void {
+    this.hybrids = this.dataService.getHybrids()
   }
 
 }

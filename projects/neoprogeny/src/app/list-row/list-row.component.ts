@@ -12,7 +12,7 @@ export class ListRowComponent implements OnInit {
   iconService: IconService;
   legendService: LegendService;
 
-  @Input() item;
+  @Input() hybrid;
 
   constructor(iconService: IconService, legendService: LegendService) {
     this.iconService = iconService;

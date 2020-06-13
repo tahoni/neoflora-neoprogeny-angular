@@ -1,37 +1,39 @@
 <div class="d-flex d-row">
   <div class="d-flex d-column hybrid-column">
     <p>
-      <span class="calla-icon"></span>
-      <br>
-      {{item.hybrid}}
+      <span class="h-calla-icon"></span>
+      {{hybrid.hybrid}}
     </p>
   </div>
   <div class="d-flex d-column parent-column">
     <p>
-      {{item.parent}}
-    </p>
+      <span *ngIf="hybrid.parent != ''">
+      <fa-icon [icon]="this.iconService.getVenusMarsIcon()"></fa-icon>
+      </span>
+      {{hybrid.parent}}
+.    </p>
   </div>
-  <div class="d-flex d-column description-column">
+  <!-- <div class="d-flex d-column description-column">
     <p>
       <fa-icon [icon]="this.iconService.getDescriptionIcon()"></fa-icon>
-      {{item.description}}
+      {{hybrid.description}}
     </p>
-  </div>
+  </div> -->
   <div class="d-flex d-column seed-column">
     <p>
       <fa-icon [classes]="['fa-lg']"
                [icon]="this.iconService.getSeedIcon()"
-               [ngClass]="{'seed': this.legendService.hasSeed(item.seed), 'seed-none': this.legendService.hasNoSeed(item.seed), 'seed-dull': this.legendService.hasDullSeed(item.seed)}"></fa-icon>
-      <br>
-      {{item.seed}}
+               [ngClass]="{'seed': this.legendService.hasSeed(hybrid.seed), 'seed-none': this.legendService.hasNoSeed(hybrid.seed), 'seed-dull': this.legendService.hasDullSeed(hybrid.seed)}"></fa-icon>
+      <!-- <br>
+      {{hybrid.seed}} -->
     </p>
   </div>
   <div class="d-flex d-column offspring-column">
     <p>
       <fa-icon [icon]="this.iconService.getOffspringIcon()"
-               [ngClass]="{'offspring': this.legendService.hasOffspring(item.offspring), 'offspring-none': this.legendService.hasNoOffspring(item.offspring)}"></fa-icon>
-      <br>
-      {{item.offspring}}
+               [ngClass]="{'offspring': this.legendService.hasOffspring(hybrid.offspring), 'offspring-none': this.legendService.hasNoOffspring(hybrid.offspring)}"></fa-icon>
+      <!-- <br>
+      {{hybrid.offspring}} -->
     </p>
   </div>
   <div class="d-flex d-column more-column">

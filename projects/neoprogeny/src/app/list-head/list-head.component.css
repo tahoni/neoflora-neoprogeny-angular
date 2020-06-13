@@ -16,12 +16,12 @@ p {
 
 /* Tables */
 .d-row {
+  background-color: #551165;
   margin: 0;
   padding: 0;
 }
 
 .d-column {
   color: white;
-  background-color: #551165;
   padding: 0.5em 0;
 }
