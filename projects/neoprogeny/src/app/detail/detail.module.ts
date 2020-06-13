@@ -6,9 +6,9 @@ import {DetailComponent} from "./detail.component";
 
 const routes: Routes = [
   {
-    path: "", component: DetailComponent, children: [
-      {path: "", redirectTo: "0", pathMatch: "full"},
-      {path: ":id", component: DetailHybridComponent}
+    path: '', component: DetailComponent, children: [
+      {path: '', redirectTo: '0', pathMatch: 'full'},
+      {path: ':id', component: DetailHybridComponent}
     ]
   }
 ];

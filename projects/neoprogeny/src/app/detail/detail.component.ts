@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
+  activatedRoute : ActivatedRoute;
+
+  constructor(activatedRoute: ActivatedRoute) {
+    this.activatedRoute = activatedRoute;
+  }
 
   ngOnInit(): void {
+    this.activatedRoute.params.subscribe();
   }
 
 }
