@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-detail',
@@ -7,14 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  activatedRoute : ActivatedRoute;
-
-  constructor(activatedRoute: ActivatedRoute) {
-    this.activatedRoute = activatedRoute;
+  constructor() {
   }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe();
   }
 
 }

@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DataService } from './data.service';
+import { HybridService } from './hybrid.service';
 
-describe('DataService', () => {
-  let service: DataService;
+describe('HybridService', () => {
+  let service: HybridService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(DataService);
+    service = TestBed.inject(HybridService);
   });
 
   it('should be created', () => {

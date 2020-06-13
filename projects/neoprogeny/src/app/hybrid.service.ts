@@ -3,12 +3,22 @@ import {Injectable} from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class DataService {
+export class HybridService {
+
+  default_hybrid =
+    {
+      id: 0,
+      code: '',
+      parents: '',
+      description: '',
+      seed: '',
+      offspring: ''
+    };
 
   hybrids = [
     {
       id: 1,
-      hybrid: '19001',
+      code: '19001',
       parent: '',
       description: 'Nommer 19001',
       seed: 'Geen saad',
@@ -16,7 +26,7 @@ export class DataService {
     },
     {
       id: 2,
-      hybrid: '19002',
+      code: '19002',
       parent: '',
       description: 'Nommer 19002',
       seed: 'Saad',
@@ -24,7 +34,7 @@ export class DataService {
     },
     {
       id: 3,
-      hybrid: '19003',
+      code: '19003',
       parent: '19001 x 19002',
       description: 'Nommer 19003 (19001 x 19002)',
       seed: 'Dowwe saad',
@@ -37,5 +47,12 @@ export class DataService {
 
   getHybrids() {
     return this.hybrids.slice();
+  }
+
+  getHybrid(id: number) {
+    if (id == 0) {
+      return this.default_hybrid;
+    }
+    return this.hybrids.find(hybrid => hybrid.id == id);
   }
 }

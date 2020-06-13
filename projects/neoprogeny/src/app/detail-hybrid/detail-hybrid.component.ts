@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {LegendService} from "../legend.service";
 import {IconService} from "../icon.service";
+import {ActivatedRoute} from "@angular/router";
+import {HybridService} from "../hybrid.service";
 
 @Component({
   selector: 'app-detail-crud',
@@ -9,18 +11,31 @@ import {IconService} from "../icon.service";
 })
 export class DetailHybridComponent implements OnInit {
 
+  activatedRoute: ActivatedRoute;
+
   iconService: IconService;
   legendService: LegendService;
+  hybridService: HybridService;
 
-  @Input() item =
-    {id: 0, hybrid: '', parents: '', description: '', seed: '', offspring: ''};
+  hybridId: number;
+  hybrid: any;
 
-  constructor(iconService: IconService, legendService: LegendService) {
+  constructor(activatedRoute: ActivatedRoute,
+              iconService: IconService, legendService: LegendService, hybridService: HybridService) {
+    this.activatedRoute = activatedRoute;
     this.iconService = iconService;
     this.legendService = legendService;
+    this.hybridService = hybridService;
   }
 
   ngOnInit(): void {
+    this.activatedRoute.params.subscribe(
+      (params) => {
+        this.hybridId = params.id;
+        this.hybrid = this.hybridService.getHybrid(this.hybridId);
+        console.log('Id: ' + this.hybridId);
+        console.log('Hybrid: ' + this.hybrid);
+      });
   }
 
 }

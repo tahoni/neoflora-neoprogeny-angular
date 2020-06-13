@@ -28,7 +28,7 @@ import {ViewComponent} from './view/view.component';
 
 import {IconService} from "./icon.service";
 import {LegendService} from "./legend.service";
-import {DataService} from "./data.service";
+import {HybridService} from "./hybrid.service";
 
 @NgModule({
   declarations: [
@@ -59,7 +59,7 @@ import {DataService} from "./data.service";
   providers: [
     IconService,
     LegendService,
-    DataService
+    HybridService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {DataService} from "../data.service";
+import {HybridService} from "../hybrid.service";
 
 @Component({
   selector: 'app-summary',
@@ -8,16 +8,16 @@ import {DataService} from "../data.service";
 })
 export class SummaryComponent implements OnInit {
 
-  dataService: DataService;
+  hybridService: HybridService;
 
-  hybrids = []
+  hybrids = [];
 
-  constructor(dataService: DataService) {
-    this.dataService = dataService;
+  constructor(hybridService: HybridService) {
+    this.hybridService = hybridService;
   }
 
   ngOnInit(): void {
-    this.hybrids = this.dataService.getHybrids()
+    this.hybrids = this.hybridService.getHybrids()
   }
 
 }
