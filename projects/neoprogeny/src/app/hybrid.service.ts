@@ -50,9 +50,10 @@ export class HybridService {
   }
 
   getHybrid(id: number) {
-    if (id == 0) {
-      return this.default_hybrid;
+    let hybrid: any = this.default_hybrid;
+    if (id > 0) {
+      hybrid = this.hybrids.find(hybrid => hybrid.id == id);
     }
-    return this.hybrids.find(hybrid => hybrid.id == id);
+    return hybrid.clone();
   }
 }
