@@ -26,7 +26,7 @@ export class IconService {
   private iconVenus: IconDefinition = faVenus;
   private iconMars: IconDefinition = faMars;
   private iconPhoto: IconDefinition = faImage;
-  private iconComments: IconDefinition = faStickyNote;
+  private iconComment: IconDefinition = faStickyNote;
   private iconMore: IconDefinition = faEllipsisH;
 
   constructor() {
@@ -64,8 +64,8 @@ export class IconService {
     return this.iconPhoto;
   }
 
-  getCommentsIcon() {
-    return this.iconComments
+  getCommentIcon() {
+    return this.iconComment
   }
 
   getMoreIcon() {

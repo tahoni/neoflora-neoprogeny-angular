@@ -267,9 +267,13 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/sweetalert2/dist/sweetalert2.css",
               "projects/neoprogeny/src/styles.css"
             ],
             "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
+              "node_modules/sweetalert2/dist/sweetalert2.all.js"
             ]
           },
           "configurations": {

@@ -4,6 +4,7 @@ import {IconService} from "../icon.service";
 import {ActivatedRoute} from "@angular/router";
 import {HybridService} from "../hybrid.service";
 import {SharedService} from "../shared.service";
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-detail-crud',
@@ -37,14 +38,30 @@ export class DetailHybridComponent implements OnInit {
       });
   }
 
-  saveHybrid(event) {
-    let result: boolean = this.hybridService.putHybrid(this.hybrid)
-    if (result) {
-      this.sharedService.redirect('/');
+  saveHybrid(hybridForm) {
+    let result: boolean = true;
+    console.log(hybridForm);
+    console.log(hybridForm.value);
+    console.log(hybridForm.value.seed);
+    console.log(hybridForm.value.offspring);
+    if (hybridForm.invalid) {
+      Swal.fire('Error', 'Not valid', 'error')
+      result = false;
     }
+    let hybrid = {
+      id: this.hybrid.id,
+      code: hybridForm.value.code,
+      parent: hybridForm.value.parent,
+      description: hybridForm.value.description,
+      seed: hybridForm.value.seed,
+      offspring: hybridForm.value.offspring,
+      image: this.hybrid.image,
+      comment: hybridForm.value.comment
+    }
+    result = this.hybridService.putHybrid(hybrid);
   }
 
-  cancelHybrid(event) {
+  cancelHybrid() {
     this.sharedService.redirect('/');
   }
 }

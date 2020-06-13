@@ -29,6 +29,7 @@ import {ViewComponent} from './view/view.component';
 import {IconService} from "./icon.service";
 import {LegendService} from "./legend.service";
 import {HybridService} from "./hybrid.service";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -51,11 +52,12 @@ import {HybridService} from "./hybrid.service";
     ViewComponent,
     DetailComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FontAwesomeModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FontAwesomeModule,
+        FormsModule
+    ],
   providers: [
     IconService,
     LegendService,

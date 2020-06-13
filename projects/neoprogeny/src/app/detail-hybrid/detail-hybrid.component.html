@@ -1,149 +1,164 @@
-<div class="row">
-  <div class="col-3 offset-1 code">
-    <div class="calla-icon d-inline-block m-0"></div>
-    <label for="code">Nommer</label>
-  </div>
-  <div class="col-6">
-    <input [value]="hybrid.code" class="w-100" id="code" name="code" required="required" type="text"/>
-  </div>
-</div>
-<div class="row">&nbsp;</div>
-<div class="row">
-  <div class="col-3 offset-1">
-    <label for="parents">
-      <fa-icon [icon]="this.iconService.getVenusMarsIcon()"></fa-icon>
-      Kruising
-    </label>
-  </div>
-  <div class="col-6">
-    <input [value]="hybrid.parent" class="w-100" id="parents" name="parents" type="text"/>
-  </div>
-  <div class="col-2">
-    <label for="parents">
-      (
-      <fa-icon [icon]="this.iconService.getVenusIcon()"></fa-icon>&nbsp;<fa-icon
-      [icon]="this.iconService.getMultiplicationIcon()"></fa-icon>&nbsp;<fa-icon
-      [icon]="this.iconService.getMarsIcon()"></fa-icon>
-      )
-    </label>
-  </div>
-</div>
-<div class="row">&nbsp;</div>
-<div class="row">
-  <div class="col-3 offset-1">
-    <label for="description">
-      <fa-icon [icon]="this.iconService.getDescriptionIcon()"></fa-icon>
-      Beskrywing</label>
-  </div>
-  <div class="col-6">
-    <textarea [value]="hybrid.description" class="note w-100" id="description" name="description" rows="2"></textarea>
-  </div>
-</div>
-<div class="row">&nbsp;</div>
-<div class="row">
-  <div class="col-3 offset-1">
-    <label for="seed">
-      <fa-icon [icon]="this.iconService.getSeedIcon()"></fa-icon>
-      Saad</label>
-  </div>
-</div>
-<div class="row">
-  <div class="col-1 offset-4">
-    <input [checked]="this.legendService.hasSeed(hybrid.seed)" id="seed" name="seed" type="radio"/>
-  </div>
-  <div class="col-3">
-    <label for="seed">
-      <fa-icon [classes]="['seed']" [icon]="this.iconService.getSeedIcon()"></fa-icon>
-      &nbsp;
-      Saad</label>
-  </div>
-</div>
-<div class="row">
-  <div class="col-1 offset-4">
-    <input [checked]="this.legendService.hasDullSeed(hybrid.seed)" id="seed-dull" name="seed" type="radio"/>
-  </div>
-  <div class="col-3">
-    <label for="seed-dull">
-      <fa-icon [classes]="['seed-dull']" [icon]="this.iconService.getSeedIcon()"></fa-icon>
-      &nbsp;
-      Dowwe Saad</label>
-  </div>
-</div>
-<div class="row">
-  <div class="col-1 offset-4">
-    <input [checked]="this.legendService.hasNoSeed(hybrid.seed)" id="seed-none" name="seed" type="radio"/>
-  </div>
-  <div class="col-3">
-    <label for="seed-none">
-      <fa-icon [classes]="['seed-none']" [icon]="this.iconService.getSeedIcon()"></fa-icon>
-      &nbsp;
-      Geen Saad</label>
-  </div>
-</div>
-<div class="row">&nbsp;</div>
-<div class="row">
-  <div class="col-3 offset-1">
-    <label for="offspring">
-      <fa-icon [icon]="this.iconService.getOffspringIcon()"></fa-icon>
-      Nageslag
-    </label>
-  </div>
-</div>
-<div class="row">
-  <div class="col-1 offset-4">
-    <input [checked]="this.legendService.hasOffspring(hybrid.offspring)" id="offspring" name="offspring" type="radio"/>
-  </div>
-  <div class="col-3">
-    <label for="offspring">
-      <fa-icon [classes]="['offspring']" [icon]="this.iconService.getOffspringIcon()"></fa-icon>
-      &nbsp;
-      Nageslag
-    </label>
-  </div>
-</div>
-<div class="row">
-  <div class="col-1 offset-4">
-    <input [checked]="this.legendService.hasNoOffspring(hybrid.offspring)" id="offspring-none" name="offspring"
-           type="radio"/>
-  </div>
-  <div class="col-3">
-    <label for="offspring-none">
-      <fa-icon [classes]="['offspring-none']" [icon]="this.iconService.getOffspringIcon()"></fa-icon>
-      &nbsp;
-      Geen Nageslag
-    </label>
-  </div>
-</div>
-<div class="row">&nbsp;</div>
-<div class="row">
-  <div class="col-3 offset-1">
-    <label for="profile-photo">
-      <fa-icon [icon]="this.iconService.getPhotoIcon()"></fa-icon>
-      Foto</label>
-  </div>
-  <div class="col-6">
-    <div *ngIf="hybrid.image == ''">
-      <fa-icon [classes]="['image-icon', 'image-icon-main']" [icon]="this.iconService.getPhotoIcon()"
-               id="profile-photo"></fa-icon>
+<form #form="ngForm" (ngSubmit)="saveHybrid(form)">
+  <div class="row">
+    <div class="col-3 offset-1 code form-group">
+      <div class="calla-icon d-inline-block m-0"></div>
+      <label for="code">Nommer</label>
     </div>
-    <div *ngIf="hybrid.image != ''">
-      <img alt="{{hybrid.code}} Photo" class="image image-main" src="data:image/jpg;base64,{{hybrid.image}}"/>
+    <div class="col-6">
+      <input class="w-100" id="code" name="code" [ngModel]="hybrid.code" required type="text"/>
     </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-3 offset-1">
-    <label for="comments">
-      <fa-icon [icon]="this.iconService.getCommentsIcon()"></fa-icon>
-      Opmerkings</label>
+  <div class="row">&nbsp;</div>
+
+  <div class="row form-group">
+    <div class="col-3 offset-1">
+      <label for="parent">
+        <fa-icon [icon]="this.iconService.getVenusMarsIcon()"></fa-icon>
+        Kruising
+      </label>
+    </div>
+    <div class="col-6">
+      <input [ngModel]="hybrid.parent" class="w-100" id="parent" name="parent" type="text"/>
+    </div>
+    <div class="col-2">
+      <label for="parent">
+        (
+        <fa-icon [icon]="this.iconService.getVenusIcon()"></fa-icon>&nbsp;<fa-icon
+        [icon]="this.iconService.getMultiplicationIcon()"></fa-icon>&nbsp;<fa-icon
+        [icon]="this.iconService.getMarsIcon()"></fa-icon>
+        )
+      </label>
+    </div>
   </div>
-  <div class="col-6">
-    <textarea [value]="hybrid.comments" class="note w-100" id="comments" name="comments" rows="5"></textarea>
+  <div class="row">&nbsp;</div>
+
+  <div class="row">
+    <div class="col-3 offset-1">
+      <label for="description">
+        <fa-icon [icon]="this.iconService.getDescriptionIcon()"></fa-icon>
+        Beskrywing</label>
+    </div>
+    <div class="col-6">
+      <textarea [value]="hybrid.description" class="note w-100" id="description" name="description" ngModel
+                rows="2"></textarea>
+    </div>
   </div>
-</div>
-<div class="row">&nbsp;</div>
-<div class="row d-flex justify-content-center">
-  <button (click)="saveHybrid($event);" class="btn btn-primary m-1" id="save" name="save" type="submit">Stoor Kruising
-  </button>
-  <button (click)="cancelHybrid($event);" class="btn btn-secondary m-1" id="cancel" name="cancel">Kanselleer</button>
-</div>
+  <div class="row">&nbsp;</div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-3 offset-1">
+        <label for="seed">
+          <fa-icon [icon]="this.iconService.getSeedIcon()"></fa-icon>
+          Saad</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-1 offset-4">
+        <input id="seed" name="seed" ngModel="hybrid.seed" type="radio" value="seed"/>
+      </div>
+      <div class="col-3">
+        <label for="seed">
+          <fa-icon [classes]="['seed']" [icon]="this.iconService.getSeedIcon()"></fa-icon>
+          &nbsp;
+          Saad</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-1 offset-4">
+        <input id="seed-dull" name="seed" [ngModel]="hybrid.seed" type="radio" value="seed-dull"/>
+      </div>
+      <div class="col-3">
+        <label for="seed-dull">
+          <fa-icon [classes]="['seed-dull']" [icon]="this.iconService.getSeedIcon()"></fa-icon>
+          &nbsp;
+          Dowwe Saad</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-1 offset-4">
+        <input id="seed-none" name="seed" [ngModel]="hybrid.seed" type="radio" value="seed-none"/>
+      </div>
+      <div class="col-3">
+        <label for="seed-none">
+          <fa-icon [classes]="['seed-none']" [icon]="this.iconService.getSeedIcon()"></fa-icon>
+          &nbsp;
+          Geen Saad</label>
+      </div>
+    </div>
+    <div class="row">&nbsp;</div>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-3 offset-1">
+          <label for="offspring">
+            <fa-icon [icon]="this.iconService.getOffspringIcon()"></fa-icon>
+            Nageslag
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1 offset-4">
+          <input id="offspring" name="offspring" [ngModel]="hybrid.offspring" type="radio" value="offspring"/>
+        </div>
+        <div class="col-3">
+          <label for="offspring">
+            <fa-icon [classes]="['offspring']" [icon]="this.iconService.getOffspringIcon()"></fa-icon>
+            &nbsp;
+            Nageslag
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1 offset-4">
+          <input id="offspring-none" name="offspring" [ngModel]="hybrid.offspring" type="radio" value="offspring-none"/>
+        </div>
+        <div class="col-3">
+          <label for="offspring-none">
+            <fa-icon [classes]="['offspring-none']" [icon]="this.iconService.getOffspringIcon()"></fa-icon>
+            &nbsp;
+            Geen Nageslag
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">&nbsp;</div>
+
+  <div class="row">
+    <div class="col-3 offset-1">
+      <label for="profile-photo">
+        <fa-icon [icon]="this.iconService.getPhotoIcon()"></fa-icon>
+        Foto</label>
+    </div>
+    <div class="col-6">
+      <div *ngIf="hybrid.image == ''">
+        <fa-icon [classes]="['image-icon', 'image-icon-main']" [icon]="this.iconService.getPhotoIcon()"
+                 id="profile-photo"></fa-icon>
+      </div>
+      <div *ngIf="hybrid.image != ''">
+        <img alt="{{hybrid.code}} Photo" class="image image-main" src="data:image/jpg;base64,{{hybrid.image}}"/>
+      </div>
+    </div>
+  </div>
+  <div class="row">&nbsp;</div>
+
+  <div class="row form-group">
+    <div class="col-3 offset-1">
+      <label for="comment">
+        <fa-icon [icon]="this.iconService.getCommentIcon()"></fa-icon>
+        Opmerkings</label>
+    </div>
+    <div class="col-6">
+      <textarea class="note w-100" id="comment" name="comment" [ngModel]="hybrid.comment" rows="5"></textarea>
+    </div>
+  </div>
+  <div class="row">&nbsp;</div>
+
+  <div class="row d-flex justify-content-center">
+    <button class="btn btn-primary m-1" id="save" name="save" type="submit">Stoor Kruising
+    </button>
+    <button (click)="cancelHybrid();" class="btn btn-secondary m-1" id="cancel" name="cancel">Kanselleer
+    </button>
+  </div>
+</form>

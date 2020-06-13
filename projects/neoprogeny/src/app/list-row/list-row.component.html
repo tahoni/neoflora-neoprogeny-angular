@@ -17,13 +17,13 @@
     <p>
       <fa-icon [classes]="['fa-lg']"
                [icon]="this.iconService.getSeedIcon()"
-               [ngClass]="this.legendService.getSeedClass(hybrid.seed)"></fa-icon>
+               [ngClass]="hybrid.seed"></fa-icon>
     </p>
   </div>
   <div class="d-flex d-column offspring-column">
     <p>
       <fa-icon [icon]="this.iconService.getOffspringIcon()"
-               [ngClass]="this.legendService.getOffspringClass(hybrid.offspring)"></fa-icon>
+               [ngClass]="hybrid.offspring"></fa-icon>
     </p>
   </div>
   <div class="d-flex d-column more-column">

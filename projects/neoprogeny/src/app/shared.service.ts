@@ -5,9 +5,9 @@ import {Injectable} from '@angular/core';
 })
 export class SharedService {
 
-  constructor() { }
+  constructor() {
+  }
 
   redirect(url: string) {
-    window.location.href = url;
   }
 }

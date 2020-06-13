@@ -15,7 +15,7 @@ export class HybridService {
       seed: '',
       offspring: '',
       image: '',
-      comments: ''
+      comment: ''
     };
 
   hybrids = [
@@ -24,30 +24,30 @@ export class HybridService {
       code: '19001',
       parent: '',
       description: 'Nommer 19001',
-      seed: 'Geen saad',
-      offspring: 'Geen nageslag',
+      seed: 'seed-none',
+      offspring: 'seed-offspring',
       image: '',
-      comments: ''
+      comment: ''
     },
     {
       id: 2,
       code: '19002',
       parent: '',
       description: 'Nommer 19002',
-      seed: 'Saad',
-      offspring: 'Nageslag',
+      seed: 'seed',
+      offspring: 'offspring',
       image: '',
-      comments: ''
+      comment: ''
     },
     {
       id: 3,
       code: '19003',
       parent: '19001 x 19002',
       description: 'Nommer 19003 (19001 x 19002)',
-      seed: 'Dowwe saad',
-      offspring: 'Geen nageslag',
+      seed: 'seed-dull',
+      offspring: 'offspring-none',
       image: '',
-      comments: ''
+      comment: ''
     }
   ]
 
@@ -60,23 +60,36 @@ export class HybridService {
   }
 
   getHybrid(id: number) {
-    let thisHybrid: any = this.default_hybrid;
+    let hybrid: any = this.default_hybrid;
     if (id > 0) {
-      thisHybrid = this.hybrids.find(aHybrid => aHybrid.id == id);
+      hybrid = this.hybrids.find(it => it.id == id);
     }
-    return cloneDeep(thisHybrid);
+    return cloneDeep(hybrid);
   }
 
   putHybrid(hybrid: any): boolean {
-    let thisHybrid: any = null;
+    let newHybrid: any = null;
+    let existingHybrid: any = null;
     if (hybrid.id > 0) {
-      thisHybrid = this.hybrids.find(aHybrid => aHybrid.id == hybrid.id)
+      existingHybrid = this.hybrids.find(it => it.id == hybrid.id)
     }
-    if (thisHybrid != null) {
-      thisHybrid = hybrid;
+    newHybrid = {
+      id: hybrid.id,
+      code: hybrid.code ? hybrid.code : '',
+      parent: hybrid.parent ? hybrid.parent : '',
+      description: hybrid.description ? hybrid.description : '',
+      seed: hybrid.seed ? hybrid.seed : '',
+      offspring: hybrid.offspring ? hybrid.offspring : '',
+      image: hybrid.image ? hybrid.image : '',
+      comment: hybrid.comment ? hybrid.comment : ''
+    }
+    if (existingHybrid) {
+      this.hybrids.splice(this.hybrids.indexOf(existingHybrid), 1, newHybrid)
+
     } else {
       this.hybrids.push(hybrid);
     }
+    console.log(this.hybrids);
     return true
   }
 
