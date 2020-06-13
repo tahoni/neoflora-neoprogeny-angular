@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {LegendService} from "../legend.service";
 import {IconService} from "../icon.service";
 import {ActivatedRoute} from "@angular/router";
@@ -33,9 +33,14 @@ export class DetailHybridComponent implements OnInit {
       (params) => {
         this.hybridId = params.id;
         this.hybrid = this.hybridService.getHybrid(this.hybridId);
-        console.log('Id: ' + this.hybridId);
-        console.log('Hybrid: ' + this.hybrid);
       });
   }
 
+  saveHybrid(event) {
+
+  }
+
+  cancelHybrid(event) {
+
+  }
 }
