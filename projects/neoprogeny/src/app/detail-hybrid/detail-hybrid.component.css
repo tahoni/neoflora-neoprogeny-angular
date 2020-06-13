@@ -10,3 +10,13 @@
   margin: 0;
   padding: 0;
 }
+
+/* Images */
+img.image-256 {
+  background-color: transparent;
+  height: 256px;
+  width: auto;
+  border: 1px solid;
+  padding: 14px;
+  margin: 14px;
+}

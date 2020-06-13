@@ -122,8 +122,13 @@
       Foto</label>
   </div>
   <div class="col-6">
-    <fa-icon [classes]="['photo', 'profile-photo']" [icon]="this.iconService.getPhotoIcon()"
-             id="profile-photo"></fa-icon>
+    <div *ngIf="hybrid.image == ''">
+      <fa-icon [classes]="['photo', 'profile-photo']" [icon]="this.iconService.getPhotoIcon()"
+               id="profile-photo"></fa-icon>
+    </div>
+    <div *ngIf="hybrid.image != ''">
+      <img alt="{{hybrid.code}} Photo" class="image-256" src="data:image/jpg;charset=utf-8;base64,{{hybrid.image}}"/>
+    </div>
   </div>
 </div>
 <div class="row">
@@ -133,7 +138,7 @@
       Opmerkings</label>
   </div>
   <div class="col-6">
-    <textarea class="note w-100" id="comments" name="comments" rows="5"></textarea>
+    <textarea [value]="hybrid.comments" class="note w-100" id="comments" name="comments" rows="5"></textarea>
   </div>
 </div>
 <div class="row">&nbsp;</div>

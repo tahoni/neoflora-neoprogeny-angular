@@ -13,7 +13,9 @@ export class HybridService {
       parent: '',
       description: '',
       seed: '',
-      offspring: ''
+      offspring: '',
+      image: '',
+      comments: ''
     };
 
   hybrids = [
@@ -23,7 +25,9 @@ export class HybridService {
       parent: '',
       description: 'Nommer 19001',
       seed: 'Geen saad',
-      offspring: 'Geen nageslag'
+      offspring: 'Geen nageslag',
+      image: '',
+      comments: ''
     },
     {
       id: 2,
@@ -31,7 +35,9 @@ export class HybridService {
       parent: '',
       description: 'Nommer 19002',
       seed: 'Saad',
-      offspring: 'Nageslag'
+      offspring: 'Nageslag',
+      image: '',
+      comments: ''
     },
     {
       id: 3,
@@ -39,11 +45,14 @@ export class HybridService {
       parent: '19001 x 19002',
       description: 'Nommer 19003 (19001 x 19002)',
       seed: 'Dowwe saad',
-      offspring: 'Geen nageslag'
+      offspring: 'Geen nageslag',
+      image: '',
+      comments: ''
     }
   ]
 
   constructor() {
+    this.initHybrids();
   }
 
   getHybrids() {
