@@ -115,22 +115,16 @@ fa-icon {
   order: 2;
 }
 
-.description-column {
-  align-content: start;
-  flex: 5;
+.seed-column {
   order: 3;
 }
 
-.seed-column {
+.offspring-column {
   order: 4;
 }
 
-.offspring-column {
-  order: 5;
-}
-
 .more-column {
-  order: 6;
+  order: 5;
 }
 
 /* Legends */

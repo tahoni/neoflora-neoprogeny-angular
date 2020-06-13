@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DetailCrudComponent } from './detail-crud.component';
+import { DetailHybridComponent } from './detail-hybrid.component';
 
 describe('DetailCrudComponent', () => {
-  let component: DetailCrudComponent;
-  let fixture: ComponentFixture<DetailCrudComponent>;
+  let component: DetailHybridComponent;
+  let fixture: ComponentFixture<DetailHybridComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DetailCrudComponent ]
+      declarations: [ DetailHybridComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DetailCrudComponent);
+    fixture = TestBed.createComponent(DetailHybridComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

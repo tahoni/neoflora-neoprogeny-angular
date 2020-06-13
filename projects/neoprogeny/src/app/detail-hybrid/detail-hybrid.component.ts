@@ -4,10 +4,10 @@ import {IconService} from "../icon.service";
 
 @Component({
   selector: 'app-detail-crud',
-  templateUrl: './detail-crud.component.html',
-  styleUrls: ['./detail-crud.component.css']
+  templateUrl: './detail-hybrid.component.html',
+  styleUrls: ['./detail-hybrid.component.css']
 })
-export class DetailCrudComponent implements OnInit {
+export class DetailHybridComponent implements OnInit {
 
   iconService: IconService;
   legendService: LegendService;

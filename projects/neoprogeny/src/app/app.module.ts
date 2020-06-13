@@ -18,12 +18,12 @@ import {SearchAdvancedComponent} from './search-advanced/search-advanced.compone
 import {ListComponent} from './list/list.component';
 import {ListHeadComponent} from './list-head/list-head.component';
 import {ListRowComponent} from './list-row/list-row.component';
-import {DetailViewComponent} from './detail-view/detail-view.component';
-import {DetailCrudComponent} from './detail-crud/detail-crud.component';
+import {ViewHybridComponent} from './view-hybrid/view-hybrid.component';
+import {DetailHybridComponent} from './detail-hybrid/detail-hybrid.component';
 import {SearchComponent} from './search/search.component';
 
 import {SummaryComponent} from './summary/summary.component';
-import {FormComponent} from './form/form.component';
+import {DetailComponent} from './detail/detail.component';
 import {ViewComponent} from './view/view.component';
 
 import {IconService} from "./icon.service";
@@ -44,12 +44,12 @@ import {DataService} from "./data.service";
     ListComponent,
     ListHeadComponent,
     ListRowComponent,
-    DetailViewComponent,
-    DetailCrudComponent,
+    ViewHybridComponent,
+    DetailHybridComponent,
     SearchComponent,
     SummaryComponent,
-    FormComponent,
     ViewComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,

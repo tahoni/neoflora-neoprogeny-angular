@@ -4,10 +4,10 @@ import {IconService} from "../icon.service";
 
 @Component({
   selector: 'app-detail-view',
-  templateUrl: './detail-view.component.html',
-  styleUrls: ['./detail-view.component.css']
+  templateUrl: './view-hybrid.component.html',
+  styleUrls: ['./view-hybrid.component.css']
 })
-export class DetailViewComponent implements OnInit {
+export class ViewHybridComponent implements OnInit {
 
   iconService: IconService;
   legendService: LegendService;
