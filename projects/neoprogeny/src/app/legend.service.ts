@@ -25,31 +25,55 @@ export class LegendService {
   constructor() {
   }
 
-  hasSeed(itemSeed: string) {
+  getSeedClass(itemSeed: string): string {
+    let itemSeedClass: string = '';
+    if (this.hasSeed(itemSeed)) {
+      itemSeedClass = 'seed';
+    } else if (this.hasNoSeed(itemSeed)) {
+      itemSeedClass = 'seed-none';
+    } else if (this.hasDullSeed(itemSeed)) {
+      itemSeedClass = 'seed-dull';
+    }
+    console.log(itemSeedClass);
+    return itemSeedClass;
+  }
+
+  getOffspringClass(itemOffspring: string): string {
+    let itemOffspringClass = '';
+    if (this.hasOffspring(itemOffspring)) {
+      itemOffspringClass = 'offspring';
+    } else if (this.hasNoOffspring(itemOffspring)) {
+      itemOffspringClass = 'offspring-none';
+    }
+    console.log(itemOffspringClass);
+    return itemOffspringClass;
+  }
+
+  private hasSeed(itemSeed: string): boolean {
     if (this.seed.includes(itemSeed)) {
       return true;
     }
   }
 
-  hasNoSeed(itemSeed: string) {
+ private hasNoSeed(itemSeed: string): boolean {
     if (this.seed_none.includes(itemSeed)) {
       return true;
     }
   }
 
-  hasDullSeed(itemSeed: string) {
+ private hasDullSeed(itemSeed: string): boolean {
     if (this.seed_dull.includes(itemSeed)) {
       return true;
     }
   }
 
-  hasOffspring(itemOffspring: string) {
+ private hasOffspring(itemOffspring: string): boolean {
     if (this.offspring.includes(itemOffspring)) {
       return true;
     }
   }
 
-  hasNoOffspring(itemOffspring: string) {
+ private hasNoOffspring(itemOffspring: string): boolean {
     if (this.offspring_none.includes(itemOffspring)) {
       return true;
     }

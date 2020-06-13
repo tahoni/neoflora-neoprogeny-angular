@@ -37,10 +37,8 @@ export class DetailHybridComponent implements OnInit {
   }
 
   saveHybrid(event) {
-
   }
 
   cancelHybrid(event) {
-
   }
 }
