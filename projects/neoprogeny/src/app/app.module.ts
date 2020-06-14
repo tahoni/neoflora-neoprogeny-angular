@@ -32,6 +32,7 @@ import {LegendService} from "./legend.service";
 import {HybridService} from "./hybrid.service";
 import { FocusOnErrorDirective } from './focus-on-error.directive';
 import { TouchOnErrorDirective } from './touch-on-error.directive';
+import { MessageOnErrorDirective } from './message-on-error.directive';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { TouchOnErrorDirective } from './touch-on-error.directive';
     DetailComponent,
     FocusOnErrorDirective,
     TouchOnErrorDirective,
+    MessageOnErrorDirective,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
-<form #form="ngForm" (ngSubmit)="saveHybrid(form)" appFocusOnError appTouchOnError>
-  <div class="row">
+<form #form="ngForm" (ngSubmit)="saveHybrid(form)" appFocusOnError appMessageOnError appTouchOnError>
+  <div class="form-row">
     <div class="col-3 offset-1 code form-group">
       <div class="calla-icon d-inline-block m-0"></div>
       <label for="code">Nommer</label>
@@ -7,10 +7,12 @@
     <div class="col-6">
       <input [ngModel]="hybrid?.code" class="w-100 form-input" id="code" name="code" required type="text"/>
     </div>
+    <div class="col-6 offset-4">
+      <label for="code" id="codeMessage" style="color: red;"></label>
+    </div>
   </div>
-  <div class="row">&nbsp;</div>
 
-  <div class="row form-group">
+  <div class="form-row form-group">
     <div class="col-3 offset-1">
       <label for="parent">
         <fa-icon [icon]="this.iconService.getVenusMarsIcon()"></fa-icon>
@@ -30,9 +32,8 @@
       </label>
     </div>
   </div>
-  <div class="row">&nbsp;</div>
 
-  <div class="row">
+  <div class="form-row">
     <div class="col-3 offset-1">
       <label for="description">
         <fa-icon [icon]="this.iconService.getDescriptionIcon()"></fa-icon>
@@ -43,17 +44,16 @@
                 rows="2"></textarea>
     </div>
   </div>
-  <div class="row">&nbsp;</div>
 
   <div class="form-group">
-    <div class="row">
+    <div class="form-row">
       <div class="col-3 offset-1">
         <label [for]="this.legendService.getDefaultSeed()">
           <fa-icon [icon]="this.iconService.getSeedIcon()"></fa-icon>
           Saad</label>
       </div>
     </div>
-    <div *ngFor="let seedType of this.legendService.getSeed()" class="row">
+    <div *ngFor="let seedType of this.legendService.getSeed()" class="form-row">
       <div class="col-1 offset-4">
         <input [id]="seedType.code" [ngModel]="hybrid?.seed" [value]="seedType.code" class="form-input" name="seed"
                type="radio"/>
@@ -66,10 +66,9 @@
       </div>
     </div>
   </div>
-  <div class="row">&nbsp;</div>
 
   <div class="form-group">
-    <div class="row">
+    <div class="form-row">
       <div class="col-3 offset-1">
         <label [for]="this.legendService.getDefaultOffspring()">
           <fa-icon [icon]="this.iconService.getOffspringIcon()"></fa-icon>
@@ -77,7 +76,7 @@
         </label>
       </div>
     </div>
-    <div *ngFor="let offspringType of this.legendService.getOffspring()" class="row">
+    <div *ngFor="let offspringType of this.legendService.getOffspring()" class="form-row">
       <div class="col-1 offset-4">
         <input [id]="offspringType.code" [ngModel]="hybrid?.offspring" [value]="offspringType.code" class="form-input"
                name="offspring" type="radio"/>
@@ -91,9 +90,8 @@
       </div>
     </div>
   </div>
-  <div class="row">&nbsp;</div>
 
-  <div class="row">
+  <div class="form-row">
     <div class="col-3 offset-1">
       <label for="profile-photo">
         <fa-icon [icon]="this.iconService.getPhotoIcon()"></fa-icon>
@@ -109,9 +107,8 @@
       </div>
     </div>
   </div>
-  <div class="row">&nbsp;</div>
 
-  <div class="row form-group">
+  <div class="form-row form-group">
     <div class="col-3 offset-1">
       <label for="comment">
         <fa-icon [icon]="this.iconService.getCommentIcon()"></fa-icon>
@@ -122,9 +119,8 @@
                 rows="5"></textarea>
     </div>
   </div>
-  <div class="row">&nbsp;</div>
 
-  <div class="row d-flex justify-content-center">
+  <div class="form-row d-flex justify-content-center">
     <button class="btn btn-primary m-1" id="save" name="save" type="submit">Stoor Kruising
     </button>
     <button (click)="cancelHybrid();" class="btn btn-secondary m-1" id="cancel" name="cancel">Kanselleer

@@ -1,5 +1,10 @@
 /* Component-specific styling */
 
+/* Form */
+.form-group {
+  padding-bottom: 1.5em;
+}
+
 /* Legends */
 .code {
   padding-left: .25rem;
