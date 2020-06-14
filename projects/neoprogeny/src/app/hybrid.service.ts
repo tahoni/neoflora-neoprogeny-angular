@@ -6,18 +6,6 @@ import {cloneDeep} from 'lodash';
 })
 export class HybridService {
 
-  default_hybrid =
-    {
-      id: 0,
-      code: '',
-      parent: '',
-      description: '',
-      seed: '',
-      offspring: '',
-      image: '',
-      comment: ''
-    };
-
   hybrids = [
     {
       id: 1,
@@ -60,7 +48,7 @@ export class HybridService {
   }
 
   getHybrid(id: number) {
-    let hybrid: any = this.default_hybrid;
+    let hybrid: any = {};
     if (id > 0) {
       hybrid = this.hybrids.find(it => it.id == id);
     }
