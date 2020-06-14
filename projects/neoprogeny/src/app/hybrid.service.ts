@@ -25,7 +25,7 @@ export class HybridService {
       parent: '',
       description: 'Nommer 19001',
       seed: 'seed-none',
-      offspring: 'seed-offspring',
+      offspring: 'offspring',
       image: '',
       comment: ''
     },
@@ -48,7 +48,7 @@ export class HybridService {
       offspring: 'offspring-none',
       image: '',
       comment: ''
-    }
+    },
   ]
 
   constructor() {

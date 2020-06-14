@@ -5,7 +5,7 @@
       <label for="code">Nommer</label>
     </div>
     <div class="col-6">
-      <input class="w-100" id="code" name="code" [ngModel]="hybrid.code" required type="text"/>
+      <input [ngModel]="hybrid.code" class="w-100" id="code" name="code" required type="text"/>
     </div>
   </div>
   <div class="row">&nbsp;</div>
@@ -48,78 +48,45 @@
   <div class="form-group">
     <div class="row">
       <div class="col-3 offset-1">
-        <label for="seed">
+        <label [for]="this.legendService.getDefaultSeed()">
           <fa-icon [icon]="this.iconService.getSeedIcon()"></fa-icon>
           Saad</label>
       </div>
     </div>
-    <div class="row">
+    <div *ngFor="let seedType of this.legendService.getSeed()" class="row">
       <div class="col-1 offset-4">
-        <input id="seed" name="seed" ngModel="hybrid.seed" type="radio" value="seed"/>
+        <input [id]="seedType.code" [ngModel]="hybrid.seed" [value]="seedType.code" name="seed" type="radio"/>
       </div>
       <div class="col-3">
-        <label for="seed">
-          <fa-icon [classes]="['seed']" [icon]="this.iconService.getSeedIcon()"></fa-icon>
+        <label [for]="seedType.code">
+          <fa-icon [classes]="[seedType.code]" [icon]="this.iconService.getSeedIcon()"></fa-icon>
           &nbsp;
-          Saad</label>
+          {{seedType.description}}</label>
       </div>
     </div>
-    <div class="row">
-      <div class="col-1 offset-4">
-        <input id="seed-dull" name="seed" [ngModel]="hybrid.seed" type="radio" value="seed-dull"/>
-      </div>
-      <div class="col-3">
-        <label for="seed-dull">
-          <fa-icon [classes]="['seed-dull']" [icon]="this.iconService.getSeedIcon()"></fa-icon>
-          &nbsp;
-          Dowwe Saad</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-1 offset-4">
-        <input id="seed-none" name="seed" [ngModel]="hybrid.seed" type="radio" value="seed-none"/>
-      </div>
-      <div class="col-3">
-        <label for="seed-none">
-          <fa-icon [classes]="['seed-none']" [icon]="this.iconService.getSeedIcon()"></fa-icon>
-          &nbsp;
-          Geen Saad</label>
-      </div>
-    </div>
-    <div class="row">&nbsp;</div>
+  </div>
+  <div class="row">&nbsp;</div>
 
-    <div class="form-group">
-      <div class="row">
-        <div class="col-3 offset-1">
-          <label for="offspring">
-            <fa-icon [icon]="this.iconService.getOffspringIcon()"></fa-icon>
-            Nageslag
-          </label>
-        </div>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-3 offset-1">
+        <label [for]="this.legendService.getDefaultOffspring()">
+          <fa-icon [icon]="this.iconService.getOffspringIcon()"></fa-icon>
+          Nageslag
+        </label>
       </div>
-      <div class="row">
-        <div class="col-1 offset-4">
-          <input id="offspring" name="offspring" [ngModel]="hybrid.offspring" type="radio" value="offspring"/>
-        </div>
-        <div class="col-3">
-          <label for="offspring">
-            <fa-icon [classes]="['offspring']" [icon]="this.iconService.getOffspringIcon()"></fa-icon>
-            &nbsp;
-            Nageslag
-          </label>
-        </div>
+    </div>
+    <div *ngFor="let offspringType of this.legendService.getOffspring()" class="row">
+      <div class="col-1 offset-4">
+        <input [id]="offspringType.code" [ngModel]="hybrid.offspring" [value]="offspringType.code" name="offspring"
+               type="radio"/>
       </div>
-      <div class="row">
-        <div class="col-1 offset-4">
-          <input id="offspring-none" name="offspring" [ngModel]="hybrid.offspring" type="radio" value="offspring-none"/>
-        </div>
-        <div class="col-3">
-          <label for="offspring-none">
-            <fa-icon [classes]="['offspring-none']" [icon]="this.iconService.getOffspringIcon()"></fa-icon>
-            &nbsp;
-            Geen Nageslag
-          </label>
-        </div>
+      <div class="col-3">
+        <label [for]="offspringType.code">
+          <fa-icon [class]="[offspringType.code]" [icon]="this.iconService.getOffspringIcon()"></fa-icon>
+          &nbsp;
+          {{offspringType.description}}
+        </label>
       </div>
     </div>
   </div>
@@ -150,7 +117,7 @@
         Opmerkings</label>
     </div>
     <div class="col-6">
-      <textarea class="note w-100" id="comment" name="comment" [ngModel]="hybrid.comment" rows="5"></textarea>
+      <textarea [ngModel]="hybrid.comment" class="note w-100" id="comment" name="comment" rows="5"></textarea>
     </div>
   </div>
   <div class="row">&nbsp;</div>
