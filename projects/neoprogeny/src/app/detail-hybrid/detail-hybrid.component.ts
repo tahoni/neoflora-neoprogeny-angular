@@ -54,7 +54,8 @@ export class DetailHybridComponent implements OnInit {
       image: this.hybrid.image,
       comment: hybridForm.value.comment
     }
-    result = this.hybridService.putHybrid(hybrid);
+    result = this.hybridService.setHybrid(hybrid);
+    return result;
   }
 
   cancelHybrid() {

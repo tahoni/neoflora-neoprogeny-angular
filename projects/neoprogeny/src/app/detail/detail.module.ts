@@ -8,9 +8,9 @@ const routes: Routes = [
   {
     path: '', component: DetailComponent, children: [
       {path: '', redirectTo: '0', pathMatch: 'full'},
-      {path: ':id', component: DetailHybridComponent}
+      {path: ':id', component: DetailHybridComponent},
     ]
-  }
+  },
 ];
 
 @NgModule({

@@ -1,9 +1,9 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {AppRoutingModule} from './app-routing.module';
+import {FormsModule} from "@angular/forms";
 
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-
-import {AppRoutingModule} from './app-routing.module';
 
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
@@ -26,10 +26,10 @@ import {SummaryComponent} from './summary/summary.component';
 import {DetailComponent} from './detail/detail.component';
 import {ViewComponent} from './view/view.component';
 
+import {SharedService} from "./shared.service";
 import {IconService} from "./icon.service";
 import {LegendService} from "./legend.service";
 import {HybridService} from "./hybrid.service";
-import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -52,16 +52,17 @@ import {FormsModule} from "@angular/forms";
     ViewComponent,
     DetailComponent,
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FontAwesomeModule,
-        FormsModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FontAwesomeModule,
+    FormsModule,
+  ],
   providers: [
+    SharedService,
     IconService,
     LegendService,
-    HybridService
+    HybridService,
   ],
   bootstrap: [AppComponent]
 })

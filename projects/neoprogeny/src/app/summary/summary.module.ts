@@ -4,7 +4,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {SummaryComponent} from "./summary.component";
 
 const routes: Routes = [
-  {path: '', component: SummaryComponent}
+  {path: '', component: SummaryComponent},
 ];
 
 @NgModule({

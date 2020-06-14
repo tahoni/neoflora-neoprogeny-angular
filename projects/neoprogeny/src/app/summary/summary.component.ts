@@ -20,10 +20,10 @@ export class SummaryComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.hybrids = this.hybridService.getHybrids()
-    this.hybridsChangedSubscription = this.hybridService.hybridsChanged.subscribe(
+    this.hybrids = this.hybridService.getHybrids();
+    this.hybridsChangedSubscription = this.hybridService.getHybridsChanged().subscribe(
       () => {
-        this.hybridService.getHybrids();
+        this.hybrids = this.hybridService.getHybrids();
       }
     )
   }
