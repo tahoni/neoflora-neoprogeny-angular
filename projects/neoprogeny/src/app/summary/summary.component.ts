@@ -1,14 +1,17 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {HybridService} from "../hybrid.service";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-summary',
   templateUrl: './summary.component.html',
   styleUrls: ['./summary.component.css']
 })
-export class SummaryComponent implements OnInit {
+export class SummaryComponent implements OnInit, OnDestroy {
 
   hybridService: HybridService;
+
+  hybridsChangedSubscription: Subscription;
 
   hybrids = [];
 
@@ -18,6 +21,15 @@ export class SummaryComponent implements OnInit {
 
   ngOnInit(): void {
     this.hybrids = this.hybridService.getHybrids()
+    this.hybridsChangedSubscription = this.hybridService.hybridsChanged.subscribe(
+      () => {
+        this.hybridService.getHybrids();
+      }
+    )
+  }
+
+  ngOnDestroy() {
+    this.hybridsChangedSubscription.unsubscribe();
   }
 
 }

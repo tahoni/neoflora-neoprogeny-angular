@@ -99,11 +99,11 @@
         Foto</label>
     </div>
     <div class="col-6">
-      <div *ngIf="hybrid?.image == ''">
+      <div *ngIf="!hybrid?.image">
         <fa-icon [classes]="['image-icon', 'image-icon-main']" [icon]="this.iconService.getPhotoIcon()"
                  id="profile-photo"></fa-icon>
       </div>
-      <div *ngIf="hybrid?.image != ''">
+      <div *ngIf="hybrid?.image">
         <img alt="{{hybrid?.code}} Photo" class="image image-main" src="data:image/jpg;base64,{{hybrid?.image}}"/>
       </div>
     </div>

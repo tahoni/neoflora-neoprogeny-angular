@@ -1,10 +1,13 @@
 import {Injectable} from '@angular/core';
 import {cloneDeep} from 'lodash';
+import {Subject} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class HybridService {
+
+  hybridsChanged = new Subject<void>();
 
   hybrids = [
     {
@@ -15,7 +18,7 @@ export class HybridService {
       seed: 'seed-none',
       offspring: 'offspring',
       image: '',
-      comment: ''
+      comment: '',
     },
     {
       id: 2,
@@ -25,7 +28,7 @@ export class HybridService {
       seed: 'seed',
       offspring: 'offspring',
       image: '',
-      comment: ''
+      comment: '',
     },
     {
       id: 3,
@@ -35,7 +38,7 @@ export class HybridService {
       seed: 'seed-dull',
       offspring: 'offspring-none',
       image: '',
-      comment: ''
+      comment: '',
     },
   ]
 
@@ -77,7 +80,7 @@ export class HybridService {
     } else {
       this.hybrids.push(hybrid);
     }
-    console.log(this.hybrids);
+    this.hybridsChanged.next();
     return true
   }
 

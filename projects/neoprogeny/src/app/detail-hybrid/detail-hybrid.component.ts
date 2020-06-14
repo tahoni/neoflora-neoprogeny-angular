@@ -40,10 +40,6 @@ export class DetailHybridComponent implements OnInit {
 
   saveHybrid(hybridForm) {
     let result: boolean = true;
-    console.log(hybridForm);
-    console.log(hybridForm.value);
-    console.log(hybridForm.value.seed);
-    console.log(hybridForm.value.offspring);
     if (hybridForm.invalid) {
       Swal.fire('Error', 'Not valid', 'error')
       result = false;
