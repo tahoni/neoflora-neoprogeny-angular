@@ -51,6 +51,15 @@ fa-icon {
   vertical-align: bottom;
 }
 
+/* Validation */
+input[type='text']:required, textarea:required {
+  border-left: 0.25em solid red;
+}
+
+input[type='text'].ng-touched.ng-invalid, textarea.ng-touched.ng-invalid {
+  border: 0.25em solid red;
+}
+
 /* Buttons */
 .btn-primary {
   font-weight: bold;

@@ -30,6 +30,8 @@ import {SharedService} from "./shared.service";
 import {IconService} from "./icon.service";
 import {LegendService} from "./legend.service";
 import {HybridService} from "./hybrid.service";
+import { FocusOnErrorDirective } from './focus-on-error.directive';
+import { TouchOnErrorDirective } from './touch-on-error.directive';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import {HybridService} from "./hybrid.service";
     SummaryComponent,
     ViewComponent,
     DetailComponent,
+    FocusOnErrorDirective,
+    TouchOnErrorDirective,
   ],
   imports: [
     BrowserModule,

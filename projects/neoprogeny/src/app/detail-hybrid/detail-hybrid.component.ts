@@ -39,23 +39,30 @@ export class DetailHybridComponent implements OnInit {
   }
 
   saveHybrid(hybridForm) {
-    let result: boolean = true;
-    if (hybridForm.invalid) {
+    let success: boolean = true;
+    let valid: boolean = hybridForm.valid;
+    let changed: boolean = hybridForm.dirty;
+
+    if (!valid) {
       Swal.fire('Error', 'Not valid', 'error')
-      result = false;
+      success = false;
     }
-    let hybrid = {
-      id: this.hybrid.id,
-      code: hybridForm.value.code,
-      parent: hybridForm.value.parent,
-      description: hybridForm.value.description,
-      seed: hybridForm.value.seed,
-      offspring: hybridForm.value.offspring,
-      image: this.hybrid.image,
-      comment: hybridForm.value.comment
+
+    if ((changed) && (valid)) {
+      const hybrid = {
+        id: this.hybrid.id,
+        code: hybridForm.value.code,
+        parent: hybridForm.value.parent,
+        description: hybridForm.value.description,
+        seed: hybridForm.value.seed,
+        offspring: hybridForm.value.offspring,
+        image: this.hybrid.image,
+        comment: hybridForm.value.comment
+      }
+      success = this.hybridService.setHybrid(hybrid);
     }
-    result = this.hybridService.setHybrid(hybrid);
-    return result;
+
+    return success;
   }
 
   cancelHybrid() {

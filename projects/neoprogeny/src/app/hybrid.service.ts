@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
-import {cloneDeep} from 'lodash';
 import {Observable, Subject} from "rxjs";
+import {cloneDeep} from 'lodash';
 
 @Injectable({
   providedIn: 'root'
