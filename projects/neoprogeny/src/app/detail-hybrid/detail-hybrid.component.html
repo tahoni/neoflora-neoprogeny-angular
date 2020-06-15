@@ -1,14 +1,12 @@
-<form #form="ngForm" (ngSubmit)="saveHybrid(form)" appFocusOnError appMessageOnError appTouchOnError>
-  <div class="form-row">
-    <div class="col-3 offset-1 code form-group">
-      <div class="calla-icon d-inline-block m-0"></div>
+<form #form="ngForm" (ngSubmit)="saveHybrid(form)" appFocusOnError class="was-validated" novalidate>
+  <div class="form-row form-group">
+    <div class="col-3 offset-1">
+      <div class="calla-icon d-inline-block"></div>
       <label for="code">Nommer</label>
     </div>
     <div class="col-6">
-      <input [ngModel]="hybrid?.code" class="w-100 form-input" id="code" name="code" required type="text"/>
-    </div>
-    <div class="col-6 offset-4">
-      <label for="code" id="codeMessage" style="color: red;"></label>
+      <input [ngModel]="hybrid?.code" class="w-100 form-control code" id="code" name="code" required type="text"/>
+      <div class="invalid-feedback"></div>
     </div>
   </div>
 
@@ -20,7 +18,8 @@
       </label>
     </div>
     <div class="col-6">
-      <input [ngModel]="hybrid?.parent" class="w-100 form-input" id="parent" name="parent" type="text"/>
+      <input [ngModel]="hybrid?.parent" class="w-100 form-control" id="parent" name="parent" required type="text"/>
+      <div class="invalid-feedback"></div>
     </div>
     <div class="col-2">
       <label for="parent">
@@ -40,7 +39,8 @@
         Beskrywing</label>
     </div>
     <div class="col-6">
-      <textarea [value]="hybrid?.description" class="note w-100 form-input" id="description" name="description" ngModel
+      <textarea [value]="hybrid?.description" class="note w-100 form-control" id="description" name="description"
+                ngModel
                 rows="2"></textarea>
     </div>
   </div>
@@ -55,7 +55,7 @@
     </div>
     <div *ngFor="let seedType of this.legendService.getSeed()" class="form-row">
       <div class="col-1 offset-4">
-        <input [id]="seedType.code" [ngModel]="hybrid?.seed" [value]="seedType.code" class="form-input" name="seed"
+        <input [id]="seedType.code" [ngModel]="hybrid?.seed" [value]="seedType.code" class="form-control-sm" name="seed"
                type="radio"/>
       </div>
       <div class="col-3">
@@ -78,7 +78,8 @@
     </div>
     <div *ngFor="let offspringType of this.legendService.getOffspring()" class="form-row">
       <div class="col-1 offset-4">
-        <input [id]="offspringType.code" [ngModel]="hybrid?.offspring" [value]="offspringType.code" class="form-input"
+        <input [id]="offspringType.code" [ngModel]="hybrid?.offspring" [value]="offspringType.code"
+               class="form-control-sm"
                name="offspring" type="radio"/>
       </div>
       <div class="col-3">
@@ -93,14 +94,14 @@
 
   <div class="form-row">
     <div class="col-3 offset-1">
-      <label for="profile-photo">
+      <label for="profilePhoto">
         <fa-icon [icon]="this.iconService.getPhotoIcon()"></fa-icon>
         Foto</label>
     </div>
     <div class="col-6">
       <div *ngIf="!hybrid?.image">
         <fa-icon [classes]="['image-icon', 'image-icon-main']" [icon]="this.iconService.getPhotoIcon()"
-                 id="profile-photo"></fa-icon>
+                 id="profilePhoto"></fa-icon>
       </div>
       <div *ngIf="hybrid?.image">
         <img alt="{{hybrid?.code}} Photo" class="image image-main" src="data:image/jpg;base64,{{hybrid?.image}}"/>
@@ -115,7 +116,7 @@
         Opmerkings</label>
     </div>
     <div class="col-6">
-      <textarea [ngModel]="hybrid?.comment" class="note w-100 form-input" id="comment" name="comment" required
+      <textarea [ngModel]="hybrid?.comment" class="note w-100 form-control" id="comment" name="comment"
                 rows="5"></textarea>
     </div>
   </div>

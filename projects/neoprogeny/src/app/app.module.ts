@@ -5,6 +5,9 @@ import {FormsModule} from "@angular/forms";
 
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
+import {FocusOnErrorDirective} from './focus-on-error.directive';
+import {TouchOnErrorDirective} from './touch-on-error.directive';
+
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
@@ -30,9 +33,6 @@ import {SharedService} from "./shared.service";
 import {IconService} from "./icon.service";
 import {LegendService} from "./legend.service";
 import {HybridService} from "./hybrid.service";
-import { FocusOnErrorDirective } from './focus-on-error.directive';
-import { TouchOnErrorDirective } from './touch-on-error.directive';
-import { MessageOnErrorDirective } from './message-on-error.directive';
 
 @NgModule({
   declarations: [
@@ -56,7 +56,6 @@ import { MessageOnErrorDirective } from './message-on-error.directive';
     DetailComponent,
     FocusOnErrorDirective,
     TouchOnErrorDirective,
-    MessageOnErrorDirective,
   ],
   imports: [
     BrowserModule,

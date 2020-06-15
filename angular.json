@@ -337,9 +337,13 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/sweetalert2/dist/sweetalert2.css",
               "projects/neoprogeny/src/styles.css"
             ],
             "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
+              "node_modules/sweetalert2/dist/sweetalert2.all.js"
             ]
           }
         },
@@ -369,7 +373,8 @@
           }
         }
       }
-    }},
+    }
+  },
   "cli": {
     "analytics": "38504a16-e3a3-481b-a44f-1362ea904c04"
   },
