@@ -5,7 +5,7 @@
       <label for="code">Nommer</label>
     </div>
     <div class="col-6">
-      <input [ngModel]="hybrid?.code" class="w-100 form-control code" id="code" name="code" required type="text"/>
+      <input [ngModel]="hybrid?.code" class="w-100 form-control code" id="code" name="code" required type="number"/>
       <div class="invalid-feedback"></div>
     </div>
   </div>
@@ -101,10 +101,10 @@
     <div class="col-6">
       <div *ngIf="!hybrid?.image">
         <fa-icon [classes]="['image-icon', 'image-icon-main']" [icon]="this.iconService.getPhotoIcon()"
-                 id="profilePhoto"></fa-icon>
+                 id="profilePhoto" (click)="uploadHybridPhoto()"></fa-icon>
       </div>
       <div *ngIf="hybrid?.image">
-        <img alt="{{hybrid?.code}} Photo" class="image image-main" src="data:image/jpg;base64,{{hybrid?.image}}"/>
+        <img alt="{{hybrid?.code}} Photo" class="image image-main" src="data:image/jpg;base64,{{hybrid?.image}}" (click)="uploadHybridPhoto()"/>
       </div>
     </div>
   </div>
