@@ -5,6 +5,7 @@ import {IconService} from "../../icon.service";
 import {HybridService} from "../hybrid.service";
 
 import Swal from 'sweetalert2';
+import {ImageService} from "../../image.service";
 
 @Component({
   selector: 'app-hybrid-form',
@@ -16,16 +17,9 @@ export class HybridFormComponent implements OnInit {
   hybrid: any;
   hybridId: number;
 
-  imageFileOptions = {
-    allowedFileTypes: ['image/png', 'image/jpg', 'image/jpeg'],
-    maxSize: 20971520,
-    maxHeight: 25600,
-    maxWidth: 25600,
-  }
-
-  constructor(private activatedRoute: ActivatedRoute,
-              public iconService: IconService, public legendService: LegendService,
-              private hybridService: HybridService) {
+  constructor(private activatedRoute: ActivatedRoute, private hybridService: HybridService,
+              public iconService: IconService, public imageService: ImageService,
+              public legendService: LegendService) {
   }
 
   ngOnInit(): void {
