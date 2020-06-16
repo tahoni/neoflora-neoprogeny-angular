@@ -5,43 +5,29 @@
       <label for="code">Nommer</label>
     </div>
     <div class="col-6">
-      <input [ngModel]="hybrid?.code" class="w-100 form-control code" id="code" name="code" required type="number"/>
+      <input [ngModel]="hybrid?.code" class="form-control code" id="code" name="code" required type="number"/>
       <div class="invalid-feedback"></div>
     </div>
   </div>
 
   <div class="form-row form-group">
     <div class="col-3 offset-1">
-      <label for="parent">
+      <label for="parentMother">
         <fa-icon [icon]="this.iconService.getVenusMarsIcon()"></fa-icon>
         Kruising
       </label>
     </div>
-    <div class="col-6">
-      <input [ngModel]="hybrid?.parent" class="w-100 form-control" id="parent" name="parent" required type="text"/>
-      <div class="invalid-feedback"></div>
-    </div>
-    <div class="col-2">
-      <label for="parent">
-        (
-        <fa-icon [icon]="this.iconService.getVenusIcon()"></fa-icon>&nbsp;<fa-icon
-        [icon]="this.iconService.getMultiplicationIcon()"></fa-icon>&nbsp;<fa-icon
-        [icon]="this.iconService.getMarsIcon()"></fa-icon>
-        )
+    <div class="col-6 input-group">
+      <label for="parentMother">
+        <fa-icon [icon]="this.iconService.getVenusIcon()"></fa-icon>
       </label>
-    </div>
-  </div>
-
-  <div class="form-row">
-    <div class="col-3 offset-1">
-      <label for="description">
-        <fa-icon [icon]="this.iconService.getDescriptionIcon()"></fa-icon>
-        Beskrywing</label>
-    </div>
-    <div class="col-6">
-      <textarea [value]="hybrid?.description" class="note w-100 form-control" id="description" name="description"
-                ngModel
-                rows="2"></textarea>
+      <input [ngModel]="hybrid?.parent" class="form-control" id="parentMother" name="parent" required type="text"/>
+      <fa-icon [icon]="this.iconService.getMultiplicationIcon()"></fa-icon>
+      <input [ngModel]="hybrid?.parent" class="form-control" id="parentFather" name="parent" required type="text"/>
+      <label for="parentFather">
+        <fa-icon [icon]="this.iconService.getMarsIcon()"></fa-icon>
+      </label>
+      <div class="invalid-feedback"></div>
     </div>
   </div>
 
@@ -92,23 +78,6 @@
     </div>
   </div>
 
-  <div class="form-row">
-    <div class="col-3 offset-1">
-      <label for="profilePhoto">
-        <fa-icon [icon]="this.iconService.getPhotoIcon()"></fa-icon>
-        Foto</label>
-    </div>
-    <div class="col-6">
-      <div *ngIf="!hybrid?.image">
-        <fa-icon [classes]="['image-icon', 'image-icon-main']" [icon]="this.iconService.getPhotoIcon()"
-                 id="profilePhoto" (click)="uploadHybridPhoto()"></fa-icon>
-      </div>
-      <div *ngIf="hybrid?.image">
-        <img alt="{{hybrid?.code}} Photo" class="image image-main" src="data:image/jpg;base64,{{hybrid?.image}}" (click)="uploadHybridPhoto()"/>
-      </div>
-    </div>
-  </div>
-
   <div class="form-row form-group">
     <div class="col-3 offset-1">
       <label for="comment">
@@ -116,12 +85,30 @@
         Opmerkings</label>
     </div>
     <div class="col-6">
-      <textarea [ngModel]="hybrid?.comment" class="note w-100 form-control" id="comment" name="comment"
-                rows="5"></textarea>
+      <textarea [ngModel]="hybrid?.comment" class="note form-control" id="comment" name="comment"
+                rows="3"></textarea>
     </div>
   </div>
 
-  <div class="form-row d-flex justify-content-center">
+  <div class="form-row form-group">
+    <div class="col-3 offset-1">
+      <label for="profilePhoto">
+        <fa-icon [icon]="this.iconService.getPhotoIcon()"></fa-icon>
+        Foto</label>
+    </div>
+    <div class="col-6">
+      <div *ngIf="!hybrid?.image">
+        <fa-icon (click)="uploadHybridPhoto()" [classes]="['image-icon', 'image-icon-main']"
+                 [icon]="this.iconService.getPhotoIcon()" id="profilePhoto"></fa-icon>
+      </div>
+      <div *ngIf="hybrid?.image">
+        <img (click)="uploadHybridPhoto()" alt="{{hybrid?.code}} Photo" class="image image-main"
+             src="data:image/jpg;base64,{{hybrid?.image}}"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row form-group d-flex justify-content-center">
     <button class="btn btn-primary m-1" id="save" name="save" type="submit">Stoor Kruising
     </button>
     <button (click)="cancelHybrid();" class="btn btn-secondary m-1" id="cancel" name="cancel">Kanselleer
