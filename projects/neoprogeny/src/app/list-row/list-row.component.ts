@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {IconService} from "../icon.service";
-import {LegendService} from "../legend.service";
 
 @Component({
   selector: 'app-list-row',
@@ -11,7 +10,7 @@ export class ListRowComponent implements OnInit {
 
   @Input() hybrid;
 
-  constructor(private iconService: IconService, private legendService: LegendService) {
+  constructor(public iconService: IconService) {
   }
 
   ngOnInit(): void {
