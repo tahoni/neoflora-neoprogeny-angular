@@ -77,4 +77,5 @@ export class IconService {
   getSearchIcon() {
     return this.iconSearch;
   }
+
 }

@@ -34,4 +34,5 @@ export class LegendService {
   getOffspring() {
     return this.offspring;
   }
+
 }
