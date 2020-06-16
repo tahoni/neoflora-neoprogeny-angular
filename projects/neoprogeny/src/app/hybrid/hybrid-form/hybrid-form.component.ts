@@ -59,4 +59,8 @@ export class HybridFormComponent implements OnInit {
   onCancelClicked() {
   }
 
+  onImageFileUploadedEvent(image) {
+    this.hybrid.image = image;
+  }
+
 }

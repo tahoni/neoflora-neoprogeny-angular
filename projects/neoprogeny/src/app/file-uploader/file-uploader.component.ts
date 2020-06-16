@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-file-uploader',
@@ -6,6 +6,9 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./file-uploader.component.css']
 })
 export class FileUploaderComponent implements OnInit {
+
+  @Output()
+  public fileUploadedEvent = new EventEmitter<string>();
 
   constructor() {
   }
@@ -16,13 +19,12 @@ export class FileUploaderComponent implements OnInit {
   onFileInputChanged(event) {
     const filesToUpload: FileList = event.target.files;
     if (filesToUpload && filesToUpload[0]) {
-      let me = this;
-      let file = event.target.files[0];
-      let reader = new FileReader();
+      const me = this;
+      const file = event.target.files[0];
+      const reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onload = function () {
-        // TODO: emit event
-        console.log(reader.result);
+        me.fileUploadedEvent.next(reader.result.toString());
       };
       reader.onerror = function (error) {
         console.log('Error: ', error);
@@ -31,6 +33,7 @@ export class FileUploaderComponent implements OnInit {
   }
 
 }
+
 /*
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'lodash';

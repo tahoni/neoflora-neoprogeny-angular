@@ -110,7 +110,7 @@
 
   <div class="form-row form-group">
     <div class="col-6 offset-4">
-      <app-file-uploader></app-file-uploader>
+      <app-file-uploader (fileUploadedEvent)="onImageFileUploadedEvent($event)"></app-file-uploader>
     </div>
   </div>
 
