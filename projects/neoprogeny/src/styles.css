@@ -22,11 +22,14 @@ h1, h2, h3 {
   background-color: #816b9a;
 }
 
-fa-icon {
-  color: #551165;
+/* Sections */
+header, footer, main {
+  margin: 0;
+  padding: 0;
+  border-style: double;
+  border-width: thin;
 }
 
-/* Sections */
 .container {
   min-height: 96vh;
   margin-top: 2vh;
@@ -35,20 +38,28 @@ fa-icon {
   align-items: stretch;
 }
 
-header, footer, main {
-  margin: 0;
-  padding: 0;
-  border-style: double;
-  border-width: thin;
-}
-
 /* Content */
 p {
   margin: 0.5em 1em;
 }
 
-fa-icon {
-  vertical-align: bottom;
+/* Inputs */
+input[type='file'].form-control-file {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 0.25em;
+  padding: 0.25em 0.25em 0.25em 0.75em;
+}
+
+.form-control-file-button {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  margin-top: 0.25em;
+  padding: 0.25em 1em;
+  cursor: pointer;
+  border-radius: 0.25em;
 }
 
 /* Buttons */

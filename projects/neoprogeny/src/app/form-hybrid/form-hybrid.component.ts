@@ -7,8 +7,6 @@ import {HybridService} from "../hybrid.service";
 
 import Swal from 'sweetalert2';
 
-declare var $: any;
-
 @Component({
   selector: 'app-detail-crud',
   templateUrl: './form-hybrid.component.html',
@@ -34,11 +32,6 @@ export class FormHybridComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    $(".custom-file-input").on("change", function () {
-      const fileName = $(this).val().split("\\").pop();
-      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-    });
-
     this.activatedRoute.params.subscribe(
       (params) => {
         this.hybridId = params.id;

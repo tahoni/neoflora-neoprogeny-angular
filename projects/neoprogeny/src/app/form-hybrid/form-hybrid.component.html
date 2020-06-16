@@ -6,7 +6,6 @@
     </div>
     <div class="col-6">
       <input [ngModel]="hybrid?.code" class="form-control code" id="code" name="code" required type="number"/>
-      <div class="invalid-feedback"></div>
     </div>
   </div>
 
@@ -27,7 +26,6 @@
       <label for="parentFather">
         <fa-icon [icon]="this.iconService.getMarsIcon()"></fa-icon>
       </label>
-      <div class="invalid-feedback"></div>
     </div>
   </div>
 
@@ -41,8 +39,9 @@
     </div>
     <div *ngFor="let seedType of this.legendService.getSeed()" class="form-row">
       <div class="col-1 offset-4">
-        <input [id]="seedType.code" [ngModel]="hybrid?.seed" [value]="seedType.code" class="form-control-sm" name="seed"
-               type="radio"/>
+        <input [id]="seedType.code" [ngModel]="hybrid?.seed" [value]="seedType.code"
+               class="form-control-sm"
+               name="seed" type="radio"/>
       </div>
       <div class="col-3">
         <label [for]="seedType.code">
@@ -100,19 +99,21 @@
       <div *ngIf="!hybrid?.image">
         <fa-icon [classes]="['image-icon', 'image-icon-main']"
                  [icon]="this.iconService.getPhotoIcon()"
-                 id="profilePhotoIccon" name="profilePhoto"></fa-icon>
+                 id="profilePhotoIccon"></fa-icon>
       </div>
       <div *ngIf="hybrid?.image">
         <img alt="{{hybrid?.code}} Photo" class="image image-main"
-             id="profilePhotoImage" name="profilePhoto" src="data:image/jpg;base64,{{hybrid?.image}}"/>
+             id="profilePhotoImage" src="data:image/jpg;base64,{{hybrid?.image}}"/>
       </div>
     </div>
+  </div>
 
-    <div class="col-6 offset-4">
-      <div class="custom-file">
-        <input class="custom-file-input" id="customFile" type="file">
-        <label class="custom-file-label" for="customFile">Choose file</label>
-      </div>
+  <div class="form-row form-group">
+    <div class="col-6 offset-4 button-wrap">
+      <label class="form-control-file-button btn-secondary" for="uploadProfilePhoto">Choose file</label>
+      <input class="form-control-file form-control" id="uploadProfilePhoto" type="file">
+      <span class="form-text text-muted"></span>
+      <span class="invalid-feedback"></span>
     </div>
   </div>
 
