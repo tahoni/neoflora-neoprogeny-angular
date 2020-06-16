@@ -9,30 +9,28 @@ import {FocusOnErrorDirective} from './focus-on-error.directive';
 import {TouchOnErrorDirective} from './touch-on-error.directive';
 
 import {AppComponent} from './app.component';
-import {HeaderComponent} from './header/header.component';
-import {FooterComponent} from './footer/footer.component';
+import {HeaderComponent} from './content/header/header.component';
+import {FooterComponent} from './content/footer/footer.component';
 import {BodyComponent} from './body/body.component';
 import {ContentComponent} from './content/content.component';
 
-import {NewComponent} from './new/new.component';
 import {LookupComponent} from './lookup/lookup.component';
-import {SearchSimpleComponent} from './search-simple/search-simple.component';
-import {SearchAdvancedComponent} from './search-advanced/search-advanced.component';
-import {ListComponent} from './list/list.component';
-import {ListHeadComponent} from './list-head/list-head.component';
-import {ListRowComponent} from './list-row/list-row.component';
-import {ViewHybridComponent} from './view-hybrid/view-hybrid.component';
-import {FormHybridComponent} from './form-hybrid/form-hybrid.component';
-import {SearchComponent} from './search/search.component';
+import {HybridNewComponent} from './hybrid/hybrid-new/hybrid-new.component';
+import {HybridSearchSimpleComponent} from './hybrid/hybrid-search/hybrid-search-simple/hybrid-search-simple.component';
+import {HybridSearchAdvancedComponent} from './hybrid/hybrid-search/hybrid-search-advanced/hybrid-search-advanced.component';
+import {HybridListComponent} from './hybrid/hybrid-list/hybrid-list.component';
+import {HybridListHeadComponent} from './hybrid/hybrid-list/hybrid-list-head/hybrid-list-head.component';
+import {HybridListRowComponent} from './hybrid/hybrid-list/hybrid-list-row/hybrid-list-row.component';
+import {HybridFormComponent} from './hybrid/hybrid-form/hybrid-form.component';
+import {HybridSearchComponent} from './hybrid/hybrid-search/hybrid-search.component';
 
-import {SummaryComponent} from './summary/summary.component';
-import {HybridDetailComponent} from './hybrid-detail/hybrid-detail.component';
-import {HybridViewComponent} from './hybrid-view/hybrid-view.component';
+import {HybridSummaryComponent} from './hybrid/hybrid-summary/hybrid-summary.component';
+import {HybridEditComponent} from './hybrid/hybrid-edit/hybrid-edit.component';
+import {HybridViewComponent} from './hybrid/hybrid-view/hybrid-view.component';
 
-import {SharedService} from "./shared.service";
 import {IconService} from "./icon.service";
 import {LegendService} from "./legend.service";
-import {HybridService} from "./hybrid.service";
+import {HybridService} from "./hybrid/hybrid.service";
 
 @NgModule({
   declarations: [
@@ -41,19 +39,18 @@ import {HybridService} from "./hybrid.service";
     FooterComponent,
     BodyComponent,
     ContentComponent,
-    NewComponent,
     LookupComponent,
-    SearchSimpleComponent,
-    SearchAdvancedComponent,
-    ListComponent,
-    ListHeadComponent,
-    ListRowComponent,
-    ViewHybridComponent,
-    FormHybridComponent,
-    SearchComponent,
-    SummaryComponent,
+    HybridNewComponent,
+    HybridSearchSimpleComponent,
+    HybridSearchAdvancedComponent,
+    HybridListComponent,
+    HybridListHeadComponent,
+    HybridListRowComponent,
+    HybridFormComponent,
+    HybridSearchComponent,
+    HybridSummaryComponent,
     HybridViewComponent,
-    HybridDetailComponent,
+    HybridEditComponent,
     FocusOnErrorDirective,
     TouchOnErrorDirective,
   ],
@@ -64,7 +61,6 @@ import {HybridService} from "./hybrid.service";
     FormsModule,
   ],
   providers: [
-    SharedService,
     IconService,
     LegendService,
     HybridService,
