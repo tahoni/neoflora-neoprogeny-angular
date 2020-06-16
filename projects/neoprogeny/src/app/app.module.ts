@@ -15,6 +15,9 @@ import {BodyComponent} from './body/body.component';
 import {ContentComponent} from './content/content.component';
 
 import {LookupComponent} from './lookup/lookup.component';
+import {SearchComponent} from './search/search.component';
+import {FileUploaderComponent} from './file-uploader/file-uploader.component';
+
 import {HybridNewComponent} from './hybrid/hybrid-new/hybrid-new.component';
 import {HybridSearchSimpleComponent} from './hybrid/hybrid-search/hybrid-search-simple/hybrid-search-simple.component';
 import {HybridSearchAdvancedComponent} from './hybrid/hybrid-search/hybrid-search-advanced/hybrid-search-advanced.component';
@@ -40,6 +43,8 @@ import {HybridService} from "./hybrid/hybrid.service";
     BodyComponent,
     ContentComponent,
     LookupComponent,
+    SearchComponent,
+    FileUploaderComponent,
     HybridNewComponent,
     HybridSearchSimpleComponent,
     HybridSearchAdvancedComponent,

@@ -30,6 +30,7 @@ fa-icon {
   color: #816b9a;
   font-weight: lighter;
 }
+
 /* Sections */
 header, footer, main {
   margin: 0;
@@ -51,24 +52,11 @@ p {
   margin: 0.5em 1em;
 }
 
-/* Inputs */
-input[type='file'].form-control-file {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: 0.25em;
-  padding: 0.25em 0.25em 0.25em 0.75em;
-}
+/* Forms */
 
-.form-control-file-button {
-  display: inline-block;
-  position: relative;
-  z-index: 10;
-  margin-top: 0.25em;
-  padding: 0.25em 1em;
-  cursor: pointer;
-  border-radius: 0.25em;
-}
+/* Static elements */
+
+/* Input elements */
 
 /* Buttons */
 .btn-primary {
@@ -81,10 +69,6 @@ input[type='file'].form-control-file {
   margin: 0.25rem 0.5rem;
   border-style: solid;
   border-width: thin;
-}
-
-.btn-search {
-  margin-bottom: -0.25rem;
 }
 
 /* Logo */

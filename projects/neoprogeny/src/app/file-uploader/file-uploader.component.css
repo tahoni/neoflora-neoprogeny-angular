@@ -1,0 +1,21 @@
+/* Component-specific styling */
+
+/* Input elements */
+input[type='file'].form-control-file {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 0.25em;
+  padding: 0.25em 0.25em 0.25em 0.75em;
+}
+
+/* Buttons */
+.form-control-file-button {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  margin-top: 0.25em;
+  padding: 0.25em 1em;
+  cursor: pointer;
+  border-radius: 0.25em;
+}

@@ -5,6 +5,7 @@ import {
   faImage,
   faLeaf,
   faMars,
+  faSearch,
   faSeedling,
   faStickyNote,
   faTimes,
@@ -28,6 +29,7 @@ export class IconService {
   private iconPhoto: IconDefinition = faImage;
   private iconComment: IconDefinition = faStickyNote;
   private iconMore: IconDefinition = faEllipsisH;
+  private iconSearch: IconDefinition = faSearch;
 
   constructor() {
   }
@@ -70,5 +72,9 @@ export class IconService {
 
   getMoreIcon() {
     return this.iconMore;
+  }
+
+  getSearchIcon() {
+    return this.iconSearch;
   }
 }

@@ -1,0 +1,16 @@
+/* Component-specific styling */
+
+/* Content */
+fa-icon {
+  display: inline-block;
+}
+
+/* Static elements */
+label {
+  margin-right: 1em;
+}
+
+/* Buttons */
+.btn-search {;
+  margin-left: 1em;
+}
