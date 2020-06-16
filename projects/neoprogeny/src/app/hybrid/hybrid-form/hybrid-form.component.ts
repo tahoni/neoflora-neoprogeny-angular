@@ -16,6 +16,13 @@ export class HybridFormComponent implements OnInit {
   hybrid: any;
   hybridId: number;
 
+  imageFileOptions = {
+    allowedFileTypes: ['image/png', 'image/jpg', 'image/jpeg'],
+    maxSize: 20971520,
+    maxHeight: 25600,
+    maxWidth: 25600,
+  }
+
   constructor(private activatedRoute: ActivatedRoute,
               public iconService: IconService, public legendService: LegendService,
               private hybridService: HybridService) {

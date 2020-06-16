@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-file-uploader',
@@ -8,7 +8,10 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class FileUploaderComponent implements OnInit {
 
   @Output()
-  public fileUploadedEvent = new EventEmitter<string>();
+  public fileUploadedEvent = new EventEmitter();
+
+  @Input()
+  private fileUploadOptions;
 
   constructor() {
   }
@@ -22,11 +25,42 @@ export class FileUploaderComponent implements OnInit {
       const me = this;
       const file = event.target.files[0];
       const reader = new FileReader();
+
       reader.readAsDataURL(file);
       reader.onload = function () {
-        me.fileUploadedEvent.next(reader.result.toString());
+
+        let success = true;
+        let errorMessage = '';
+
+        // Check the allowed file types, if any
+        if ((success) && (me.fileUploadOptions) && (me.fileUploadOptions.allowedFileTypes)) {
+          console.log(me.fileUploadOptions.allowedFileTypes);
+        }
+
+        // Check the maximum size, if any
+        if ((success) && (me.fileUploadOptions) && (me.fileUploadOptions.maxSize)) {
+          console.log(me.fileUploadOptions.maxSize);
+        }
+
+        // Check the maximum dimensions, if any
+        if ((success) && (me.fileUploadOptions) &&
+          (me.fileUploadOptions.maxHeight && me.fileUploadOptions.maxWidth)) {
+          console.log(me.fileUploadOptions.maxHeight + 'x' + me.fileUploadOptions.maxWidth);
+        }
+
+        // Populate the error message, if any
+        if (!success) {
+          console.log(errorMessage);
+        }
+
+        // Return the uploaded file in base64
+        if (success) {
+          me.fileUploadedEvent.next(reader.result.toString());
+        }
       };
+
       reader.onerror = function (error) {
+        // Populate the error message, if any
         console.log('Error: ', error);
       };
     }
