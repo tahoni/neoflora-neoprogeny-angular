@@ -9,14 +9,9 @@ import {IconService} from "../icon.service";
 })
 export class ViewHybridComponent implements OnInit {
 
-  iconService: IconService;
-  legendService: LegendService;
-
   @Input() item;
 
-  constructor(iconService: IconService, legendService: LegendService) {
-    this.iconService = iconService;
-    this.legendService = legendService;
+  constructor(private iconService: IconService, private legendService: LegendService) {
   }
 
   ngOnInit(): void {

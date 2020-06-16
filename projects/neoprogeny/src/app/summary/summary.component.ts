@@ -9,14 +9,11 @@ import {Subscription} from "rxjs";
 })
 export class SummaryComponent implements OnInit, OnDestroy {
 
-  hybridService: HybridService;
-
   hybridsChangedSubscription: Subscription;
 
   hybrids = [];
 
-  constructor(hybridService: HybridService) {
-    this.hybridService = hybridService;
+  constructor(private hybridService: HybridService) {
   }
 
   ngOnInit(): void {

@@ -14,21 +14,13 @@ import Swal from 'sweetalert2';
 })
 export class FormHybridComponent implements OnInit {
 
-  activatedRoute: ActivatedRoute;
-
-  iconService: IconService;
-  legendService: LegendService;
-  hybridService: HybridService;
-
-  hybridId: number;
   hybrid: any;
+  hybridId: number;
+  hybridPhoto: string = '';
 
-  constructor(activatedRoute: ActivatedRoute, iconService: IconService, legendService: LegendService,
-              hybridService: HybridService) {
-    this.activatedRoute = activatedRoute;
-    this.iconService = iconService;
-    this.legendService = legendService;
-    this.hybridService = hybridService;
+  constructor(private activatedRoute: ActivatedRoute,
+              private iconService: IconService, private legendService: LegendService,
+              private hybridService: HybridService) {
   }
 
   ngOnInit(): void {
@@ -36,10 +28,11 @@ export class FormHybridComponent implements OnInit {
       (params) => {
         this.hybridId = params.id;
         this.hybrid = this.hybridService.getHybrid(this.hybridId);
+        this.hybridPhoto = this.hybrid.image;
       });
   }
 
-  saveHybrid(hybridForm) {
+  save(hybridForm) {
     let success: boolean = true;
     let valid: boolean = hybridForm.valid;
     let changed: boolean = hybridForm.dirty;
@@ -66,7 +59,14 @@ export class FormHybridComponent implements OnInit {
     return success;
   }
 
-  cancelHybrid() {
+  cancel() {
+  }
+
+  uploadProfilePhoto(event, form) {
+    console.log(event.target);
+    console.log(event.target.valueOf());
+    console.log(event.target.name);
+    console.log(form.controls[event.target.name]);
   }
 
 }

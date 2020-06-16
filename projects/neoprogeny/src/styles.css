@@ -10,6 +10,10 @@ h1, h2, h3 {
   color: #551165;
 }
 
+fa-icon {
+  color: #551165;
+}
+
 .container {
   background-color: #e8e4ed;
 }
@@ -22,6 +26,10 @@ h1, h2, h3 {
   background-color: #816b9a;
 }
 
+.image-icon {
+  color: #816b9a;
+  font-weight: lighter;
+}
 /* Sections */
 header, footer, main {
   margin: 0;
