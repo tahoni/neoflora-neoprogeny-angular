@@ -106,6 +106,12 @@
              src="data:image/jpg;base64,{{hybrid?.image}}"/>
       </div>
     </div>
+    <div class="col-6 offset-4">
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="customFile">
+        <label class="custom-file-label" for="customFile">Choose file</label>
+      </div>
+    </div>
   </div>
 
   <div class="form-row form-group d-flex justify-content-center">
@@ -114,4 +120,14 @@
     <button (click)="cancelHybrid();" class="btn btn-secondary m-1" id="cancel" name="cancel">Kanselleer
     </button>
   </div>
+
+  <script>
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function() {
+      alert('Here!');
+      var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+  </script>
 </form>
+

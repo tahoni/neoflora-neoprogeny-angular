@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewComponent } from './view.component';
+import { HybridViewComponent } from './hybrid-view.component';
 
 describe('ViewComponent', () => {
-  let component: ViewComponent;
-  let fixture: ComponentFixture<ViewComponent>;
+  let component: HybridViewComponent;
+  let fixture: ComponentFixture<HybridViewComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ViewComponent ]
+      declarations: [ HybridViewComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ViewComponent);
+    fixture = TestBed.createComponent(HybridViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

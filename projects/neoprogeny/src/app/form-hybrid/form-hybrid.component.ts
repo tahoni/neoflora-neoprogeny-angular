@@ -8,10 +8,10 @@ import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-detail-crud',
-  templateUrl: './detail-hybrid.component.html',
-  styleUrls: ['./detail-hybrid.component.css']
+  templateUrl: './form-hybrid.component.html',
+  styleUrls: ['./form-hybrid.component.css']
 })
-export class DetailHybridComponent implements OnInit {
+export class FormHybridComponent implements OnInit {
 
   activatedRoute: ActivatedRoute;
 
@@ -20,6 +20,7 @@ export class DetailHybridComponent implements OnInit {
   legendService: LegendService;
   hybridService: HybridService;
 
+  hybridId: number;
   hybrid: any;
 
   constructor(activatedRoute: ActivatedRoute, sharedService: SharedService,
@@ -34,7 +35,8 @@ export class DetailHybridComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(
       (params) => {
-        this.hybrid = this.hybridService.getHybrid(params.id);
+        this.hybridId = params.id;
+        this.hybrid = this.hybridService.getHybrid(this.hybridId);
       });
   }
 

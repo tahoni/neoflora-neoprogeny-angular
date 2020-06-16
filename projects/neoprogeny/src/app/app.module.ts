@@ -22,12 +22,12 @@ import {ListComponent} from './list/list.component';
 import {ListHeadComponent} from './list-head/list-head.component';
 import {ListRowComponent} from './list-row/list-row.component';
 import {ViewHybridComponent} from './view-hybrid/view-hybrid.component';
-import {DetailHybridComponent} from './detail-hybrid/detail-hybrid.component';
+import {FormHybridComponent} from './form-hybrid/form-hybrid.component';
 import {SearchComponent} from './search/search.component';
 
 import {SummaryComponent} from './summary/summary.component';
-import {DetailComponent} from './detail/detail.component';
-import {ViewComponent} from './view/view.component';
+import {HybridDetailComponent} from './hybrid-detail/hybrid-detail.component';
+import {HybridViewComponent} from './hybrid-view/hybrid-view.component';
 
 import {SharedService} from "./shared.service";
 import {IconService} from "./icon.service";
@@ -49,11 +49,11 @@ import {HybridService} from "./hybrid.service";
     ListHeadComponent,
     ListRowComponent,
     ViewHybridComponent,
-    DetailHybridComponent,
+    FormHybridComponent,
     SearchComponent,
     SummaryComponent,
-    ViewComponent,
-    DetailComponent,
+    HybridViewComponent,
+    HybridDetailComponent,
     FocusOnErrorDirective,
     TouchOnErrorDirective,
   ],
