@@ -8,6 +8,4 @@ export class SharedService {
   constructor() {
   }
 
-  redirect(url: string) {
-  }
 }

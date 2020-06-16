@@ -96,19 +96,21 @@
         <fa-icon [icon]="this.iconService.getPhotoIcon()"></fa-icon>
         Foto</label>
     </div>
-    <div class="col-6">
+    <div class="col-6" id="profilePhoto">
       <div *ngIf="!hybrid?.image">
-        <fa-icon (click)="uploadHybridPhoto()" [classes]="['image-icon', 'image-icon-main']"
-                 [icon]="this.iconService.getPhotoIcon()" id="profilePhoto"></fa-icon>
+        <fa-icon [classes]="['image-icon', 'image-icon-main']"
+                 [icon]="this.iconService.getPhotoIcon()"
+                 id="profilePhotoIccon" name="profilePhoto"></fa-icon>
       </div>
       <div *ngIf="hybrid?.image">
-        <img (click)="uploadHybridPhoto()" alt="{{hybrid?.code}} Photo" class="image image-main"
-             src="data:image/jpg;base64,{{hybrid?.image}}"/>
+        <img alt="{{hybrid?.code}} Photo" class="image image-main"
+             id="profilePhotoImage" name="profilePhoto" src="data:image/jpg;base64,{{hybrid?.image}}"/>
       </div>
     </div>
+
     <div class="col-6 offset-4">
       <div class="custom-file">
-        <input type="file" class="custom-file-input" id="customFile">
+        <input class="custom-file-input" id="customFile" type="file">
         <label class="custom-file-label" for="customFile">Choose file</label>
       </div>
     </div>
@@ -120,14 +122,5 @@
     <button (click)="cancelHybrid();" class="btn btn-secondary m-1" id="cancel" name="cancel">Kanselleer
     </button>
   </div>
-
-  <script>
-    // Add the following code if you want the name of the file appear on select
-    $(".custom-file-input").on("change", function() {
-      alert('Here!');
-      var fileName = $(this).val().split("\\").pop();
-      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-    });
-  </script>
 </form>
 

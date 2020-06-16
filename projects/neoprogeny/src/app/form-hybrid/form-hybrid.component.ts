@@ -1,10 +1,13 @@
 import {Component, OnInit} from '@angular/core';
+
 import {LegendService} from "../legend.service";
 import {IconService} from "../icon.service";
 import {ActivatedRoute} from "@angular/router";
 import {HybridService} from "../hybrid.service";
-import {SharedService} from "../shared.service";
+
 import Swal from 'sweetalert2';
+
+declare var $: any;
 
 @Component({
   selector: 'app-detail-crud',
@@ -15,7 +18,6 @@ export class FormHybridComponent implements OnInit {
 
   activatedRoute: ActivatedRoute;
 
-  sharedService: SharedService;
   iconService: IconService;
   legendService: LegendService;
   hybridService: HybridService;
@@ -23,16 +25,20 @@ export class FormHybridComponent implements OnInit {
   hybridId: number;
   hybrid: any;
 
-  constructor(activatedRoute: ActivatedRoute, sharedService: SharedService,
-              iconService: IconService, legendService: LegendService, hybridService: HybridService) {
+  constructor(activatedRoute: ActivatedRoute, iconService: IconService, legendService: LegendService,
+              hybridService: HybridService) {
     this.activatedRoute = activatedRoute;
-    this.sharedService = sharedService;
     this.iconService = iconService;
     this.legendService = legendService;
     this.hybridService = hybridService;
   }
 
   ngOnInit(): void {
+    $(".custom-file-input").on("change", function () {
+      const fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+
     this.activatedRoute.params.subscribe(
       (params) => {
         this.hybridId = params.id;
@@ -68,10 +74,6 @@ export class FormHybridComponent implements OnInit {
   }
 
   cancelHybrid() {
-    this.sharedService.redirect('/');
   }
 
-  uploadHybridPhoto() {
-
-  }
 }
