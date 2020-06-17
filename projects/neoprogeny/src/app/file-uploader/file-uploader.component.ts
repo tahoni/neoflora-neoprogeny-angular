@@ -1,5 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
+import * as _ from 'lodash';
+
 @Component({
   selector: 'app-file-uploader',
   templateUrl: './file-uploader.component.html',
@@ -27,116 +29,96 @@ export class FileUploaderComponent implements OnInit {
       const reader = new FileReader();
 
       reader.readAsDataURL(file);
-      reader.onload = function () {
 
+      reader.onload = function () {
         let success = true;
         let errorMessage = '';
 
         // Check the allowed file types, if any
         if ((success) && (me.fileUploadOptions) && (me.fileUploadOptions.allowedFileTypes)) {
-          console.log(me.fileUploadOptions.allowedFileTypes);
+          success = me.verifyFileType(file, me.fileUploadOptions.allowedFileTypes);
+          if (!success) {
+            errorMessage = 'Wrong type';
+          }
         }
 
         // Check the maximum size, if any
         if ((success) && (me.fileUploadOptions) && (me.fileUploadOptions.maxSize)) {
-          console.log(me.fileUploadOptions.maxSize);
+          success = me.verifyFileSize(file, me.fileUploadOptions.maxSize)
+          if (!success) {
+            errorMessage = 'Too large';
+          }
         }
 
         // Check the maximum dimensions, if any
         if ((success) && (me.fileUploadOptions) &&
           (me.fileUploadOptions.maxHeight && me.fileUploadOptions.maxWidth)) {
-          console.log(me.fileUploadOptions.maxHeight + 'x' + me.fileUploadOptions.maxWidth);
+
+          me.verifyImageSize(reader.result.toString(),
+            me.fileUploadOptions.maxHeight, me.fileUploadOptions.maxWidth).then((result) => {
+
+            errorMessage = result ? '' : 'Too big';
+            me.onFileInputVerified(reader.result.toString(), errorMessage);
+            return;
+          });
         }
 
-        // Populate the error message, if any
-        if (!success) {
-          console.log(errorMessage);
-        }
-
-        // Return the uploaded file in base64
-        if (success) {
-          me.fileUploadedEvent.next(reader.result.toString());
-        }
-      };
+        me.onFileInputVerified(reader.result.toString(), errorMessage);
+      }
 
       reader.onerror = function (error) {
-        // Populate the error message, if any
-        console.log('Error: ', error);
+        // Populate the error message
+        const message = 'Error';
+        me.onFileInputVerified('', message);
       };
     }
   }
 
-}
+  verifyFileType(file: File, allowedFileTypes: string[]): boolean {
+    let result = true;
 
-/*
-import { Component, OnInit } from '@angular/core';
-import * as _ from 'lodash';
-
-@Component({
-    selector: 'app-hybrid-photo-base64',
-    templateUrl: './photo-base64.component.html',
-    styleUrls: ['./photo-base64.component.css']
-})
-export class PhotoBase64Component implements OnInit {
-
-    imageError: string;
-    isImageSaved: boolean;
-    cardImageBase64: string;
-
-    constructor() { }
-
-    ngOnInit() {
+    if (!_.includes(allowedFileTypes, file.type)) {
+      result = false;
     }
 
-    fileChangeEvent(fileInput: any) {
-        this.imageError = null;
-        if (fileInput.target.files && fileInput.target.files[0]) {
-            // Size Filter Bytes
-            const max_size = 20971520;
-            const allowed_types = ['image/png', 'image/jpeg'];
-            const max_height = 15200;
-            const max_width = 25600;
+    return result;
+  }
 
-            if (fileInput.target.files[0].size > max_size) {
-                this.imageError =
-                    'Maximum size allowed is ' + max_size / 1000 + 'Mb';
+  verifyFileSize(file: File, maxSize: number): boolean {
+    let result = true;
 
-                return false;
-            }
+    if (file.size > maxSize) {
+      result = false;
+    }
 
-            if (!_.includes(allowed_types, fileInput.target.files[0].type)) {
-                this.imageError = 'Only Images are allowed ( JPG | PNG )';
-                return false;
-            }
-            const reader = new FileReader();
-            reader.onload = (e: any) => {
-                const image = new Image();
-                image.src = e.target.result;
-                image.onload = rs => {
-                    const img_height = rs.currentTarget['height'];
-                    const img_width = rs.currentTarget['width'];
+    return result;
+  }
 
-                    console.log(img_height, img_width);
+  verifyImageSize(src: string, maxHeight: number, maxWidth: number): Promise<boolean> {
+    const image = new Image();
+    image.src = src;
+    return new Promise((resolve) => {
+      image.onload = ((rs) => {
+        const imageHeight = rs.currentTarget['height'];
+        const imageWidth = rs.currentTarget['width'];
 
-
-                    if (img_height > max_height && img_width > max_width) {
-                        this.imageError =
-                            'Maximum dimentions allowed ' +
-                            max_height +
-                            '*' +
-                            max_width +
-                            'px';
-                        return false;
-                    } else {
-                        const imgBase64Path = e.target.result;
-                        this.cardImageBase64 = imgBase64Path;
-                        this.isImageSaved = true;
-                        // this.previewImagePath = imgBase64Path;
-                    }
-                };
-            };
-
-            reader.readAsDataURL(fileInput.target.files[0]);
+        if (imageHeight > maxHeight && imageWidth > maxWidth) {
+          resolve(false);
+        } else {
+          resolve(true);
         }
+      })
+    });
+  }
+
+  onFileInputVerified(result: string, error: string) {
+    if (error) {
+      // Populate the error message, if any
+      console.log(error);
+    } else {
+      // Return the uploaded file in base64
+      this.fileUploadedEvent.next(result);
     }
- */
+  };
+
+}
