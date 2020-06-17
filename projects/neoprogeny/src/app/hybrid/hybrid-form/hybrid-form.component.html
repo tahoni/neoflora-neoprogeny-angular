@@ -91,7 +91,8 @@
 
   <div class="form-row form-group">
     <div class="col-12 offset-1">
-      <app-image-uploader (imageUploadedEvent)="onImageUploadedEvent($event)" [imageSrc]="hybrid?.image" imageAlt="{{hybrid?.code}} Photo"
+      <app-image-uploader (imageUploadedEvent)="onImageUploadedEvent($event)" [imageSrc]="hybrid?.image"
+                          imageAlt="{{hybrid?.code}} Photo"
                           imageClass="image-main"
                           imageIconClass="image-icon-main"></app-image-uploader>
     </div>

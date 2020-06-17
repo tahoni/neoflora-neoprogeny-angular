@@ -9,11 +9,13 @@ import * as _ from 'lodash';
 })
 export class FileUploaderComponent implements OnInit {
 
+  @Input()
+  fileUploadOptions;
+
   @Output()
   public fileUploadedEvent = new EventEmitter();
 
-  @Input()
-  private fileUploadOptions;
+  public fileUploadFeedback = '';
 
   constructor() {
   }
@@ -58,12 +60,11 @@ export class FileUploaderComponent implements OnInit {
             me.fileUploadOptions.maxHeight, me.fileUploadOptions.maxWidth).then((result) => {
 
             errorMessage = result ? '' : 'Too big';
-            me.onFileInputVerified(reader.result.toString(), errorMessage);
-            return;
+            return me.onFileInputVerified(reader.result.toString(), errorMessage);
           });
         }
 
-        me.onFileInputVerified(reader.result.toString(), errorMessage);
+        return me.onFileInputVerified(reader.result.toString(), errorMessage);
       }
 
       reader.onerror = function (error) {
@@ -111,13 +112,16 @@ export class FileUploaderComponent implements OnInit {
     });
   }
 
-  onFileInputVerified(result: string, error: string) {
+  onFileInputVerified(result: string, error: string): boolean {
     if (error) {
       // Populate the error message, if any
-      console.log(error);
+      this.fileUploadFeedback = 'Invalid';
+      return false;
     } else {
-      // Return the uploaded file in base64
+      // Return the uploaded file in base641
+      this.fileUploadFeedback = '';
       this.fileUploadedEvent.next(result);
+      return true;
     }
   };
 
