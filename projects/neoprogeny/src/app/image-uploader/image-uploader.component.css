@@ -1,1 +1,5 @@
 /* Component-specific styling */
+:host {
+  display: block;
+  width: 100%;
+}

@@ -5,7 +5,6 @@ import {IconService} from "../../icon.service";
 import {HybridService} from "../hybrid.service";
 
 import Swal from 'sweetalert2';
-import {ImageService} from "../../image.service";
 
 @Component({
   selector: 'app-hybrid-form',
@@ -18,8 +17,7 @@ export class HybridFormComponent implements OnInit {
   hybridId: number;
 
   constructor(private activatedRoute: ActivatedRoute, private hybridService: HybridService,
-              public iconService: IconService, public imageService: ImageService,
-              public legendService: LegendService) {
+              public iconService: IconService, public legendService: LegendService) {
   }
 
   ngOnInit(): void {
@@ -60,7 +58,7 @@ export class HybridFormComponent implements OnInit {
   onCancelClicked() {
   }
 
-  onImageFileUploadedEvent(image) {
+  onImageUploadedEvent(image) {
     this.hybrid.image = image;
   }
 
