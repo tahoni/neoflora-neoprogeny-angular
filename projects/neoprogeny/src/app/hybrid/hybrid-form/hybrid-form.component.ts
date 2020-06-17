@@ -30,19 +30,10 @@ export class HybridFormComponent implements OnInit {
   }
 
   onSubmit(hybridForm) {
-    let success = true;
-    let valid = hybridForm.valid;
-    let changed = hybridForm.dirty;
+    let success: boolean;
+    const valid = hybridForm.valid;
 
-    if (!valid) {
-      success = false;
-    }
-
-    if ((changed) && (valid)) {
-      console.log(hybridForm.value);
-      console.log(hybridForm.value.parent);
-      console.log(hybridForm.value.mother);
-      console.log(hybridForm.value.father);
+    if (valid) {
       const hybrid = {
         id: this.hybrid.id,
         code: hybridForm.value.code,
@@ -51,19 +42,24 @@ export class HybridFormComponent implements OnInit {
         description: hybridForm.value.description,
         seed: hybridForm.value.seed,
         offspring: hybridForm.value.offspring,
-        image: this.hybridImage,
+        image: this.hybrid.image,
         comment: hybridForm.value.comment,
       }
       success = this.hybridService.setHybrid(hybrid);
+
     }
 
-    if (success) {
-      Swal.fire('Success', 'Successful', 'success');
-      this.router.navigate([this.hybridService.getHybridRootPath()]);
-    } else if (!valid) {
-      Swal.fire('Error', 'Validation error', 'error')
+    if (valid) {
+      if (success) {
+        Swal.fire('Success', 'Successful', 'success');
+        this.router.navigate([this.hybridService.getHybridRootPath()]);
+
+      } else {
+        Swal.fire('Error', 'Unexpected error', 'error');
+      }
+
     } else {
-      Swal.fire('Error', 'Unexpected error', 'error');
+      Swal.fire('Error', 'Validation error', 'error')
     }
 
     return success;
