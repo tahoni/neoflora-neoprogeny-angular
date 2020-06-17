@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {
+  faCopyright,
   faEllipsisH,
   faGenderless,
   faImage,
@@ -10,8 +11,7 @@ import {
   faStickyNote,
   faTimes,
   faVenus,
-  faVenusMars,
-  IconDefinition
+  faVenusMars
 } from "@fortawesome/free-solid-svg-icons";
 
 @Injectable({
@@ -19,17 +19,18 @@ import {
 })
 export class IconService {
 
-  private iconDescription: IconDefinition = faLeaf;
-  private iconSeed: IconDefinition = faGenderless;
-  private iconOffspring: IconDefinition = faSeedling;
-  private iconMultiplication: IconDefinition = faTimes;
-  private iconVenusMars: IconDefinition = faVenusMars;
-  private iconVenus: IconDefinition = faVenus;
-  private iconMars: IconDefinition = faMars;
-  private iconPhoto: IconDefinition = faImage;
-  private iconComment: IconDefinition = faStickyNote;
-  private iconMore: IconDefinition = faEllipsisH;
-  private iconSearch: IconDefinition = faSearch;
+  private iconDescription = faLeaf;
+  private iconSeed = faGenderless;
+  private iconOffspring = faSeedling;
+  private iconVenusMars = faVenusMars;
+  private iconVenus = faVenus;
+  private iconMars = faMars;
+  private iconPhoto = faImage;
+  private iconComment = faStickyNote;
+  private iconCopyright = faCopyright;
+  private iconMultiplication = faTimes;
+  private iconMore = faEllipsisH;
+  private iconSearch = faSearch;
 
   constructor() {
   }
@@ -44,10 +45,6 @@ export class IconService {
 
   getOffspringIcon() {
     return this.iconOffspring;
-  }
-
-  getMultiplicationIcon() {
-    return this.iconMultiplication;
   }
 
   getVenusMarsIcon() {
@@ -68,6 +65,14 @@ export class IconService {
 
   getCommentIcon() {
     return this.iconComment
+  }
+
+  getMultiplicationIcon() {
+    return this.iconMultiplication;
+  }
+
+  getCopyrightIcon() {
+    return this.iconCopyright;
   }
 
   getMoreIcon() {

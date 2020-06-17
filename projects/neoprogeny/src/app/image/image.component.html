@@ -1,0 +1,8 @@
+<div *ngIf="!imageSrc">
+  <fa-icon [classes]="this.imageIconClasses"
+           [icon]="this.iconService.getPhotoIcon()"></fa-icon>
+</div>
+<div *ngIf="imageSrc">
+  <img [src]="imageSrc" [alt]="imageAlt"
+       [class]="this.imageClasses"/>
+</div>
