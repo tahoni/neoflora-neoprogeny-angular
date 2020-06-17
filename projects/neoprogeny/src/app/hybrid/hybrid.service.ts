@@ -9,14 +9,23 @@ export class HybridService {
 
   private hybridsChanged = new Subject<void>();
 
-  private hybridsRootPath = '/hybrid/summary';
+  private hybridsSummaryPath = '/hybrid/summary';
+  private hybridsEditPath = '/hybrid/edit';
+  private hybridsViewPath = '/hybrids/view';
+  private hybridsRootPath = this.hybridsSummaryPath;
 
   private hybrids = [
     {
       id: 1,
       code: '19001',
-      mother: '',
-      father: '',
+      mother: {
+        id: 0,
+        code: '',
+      },
+      father: {
+        id: 0,
+        code: '',
+      },
       description: 'Nommer 19001',
       seed: 'seed-none',
       offspring: 'offspring',
@@ -26,8 +35,14 @@ export class HybridService {
     {
       id: 2,
       code: '19002',
-      mother: '',
-      father: '',
+      mother: {
+        id: 0,
+        code: '',
+      },
+      father: {
+        id: 0,
+        code: '',
+      },
       description: 'Nommer 19002',
       seed: 'seed',
       offspring: 'offspring',
@@ -37,8 +52,14 @@ export class HybridService {
     {
       id: 3,
       code: '19003',
-      mother: '19001',
-      father: '19002',
+      mother: {
+        id: 1,
+        code: '19001',
+      },
+      father: {
+        id: 2,
+        code: '19002',
+      },
       description: 'Nommer 19003 (19001 x 19002)',
       seed: 'seed-dull',
       offspring: 'offspring-none',
@@ -53,6 +74,18 @@ export class HybridService {
 
   getHybridRootPath() {
     return this.hybridsRootPath;
+  }
+
+  getHybridsSummaryPath() {
+    return this.hybridsSummaryPath;
+  }
+
+  getHybridEditPath() {
+    return this.hybridsEditPath;
+  }
+
+  getHybridViewPath() {
+    return this.hybridsViewPath;
   }
 
   getHybridsChanged(): Observable<void> {
@@ -75,13 +108,13 @@ export class HybridService {
     let newHybrid: any;
     let existingHybrid: any;
 
-    if (hybrid.id > 0) {
-      existingHybrid = this.hybrids.find(it => it.id == hybrid.id)
+    if (hybrid.hybridId > 0) {
+      existingHybrid = this.hybrids.find(it => it.id == hybrid.hybridId)
     }
 
     newHybrid = {
-      id: hybrid.id,
-      code: hybrid.code ? hybrid.code : '',
+      id: hybrid.hybridId,
+      code: hybrid.hybridCode ? hybrid.hybridCode : '',
       mother: hybrid.mother ? hybrid.mother : '',
       father: hybrid.father ? hybrid.father : '',
       description: hybrid.description ? hybrid.description : '',

@@ -36,8 +36,8 @@ export class HybridFormComponent implements OnInit {
 
     if (valid) {
       const hybrid = {
-        id: this.hybrid.id,
-        code: hybridForm.value.code,
+        id: this.hybrid.hybridId,
+        code: hybridForm.value.hybridCode,
         mother: hybridForm.value.mother,
         father: hybridForm.value.father,
         description: hybridForm.value.description,
@@ -52,7 +52,7 @@ export class HybridFormComponent implements OnInit {
     if (valid) {
       if (success) {
         this.alertService.alertSuccess('Successful');
-        this.router.navigate([this.hybridService.getHybridRootPath()]);
+        this.router.navigate([this.hybridService.getHybridsSummaryPath()]);
 
       } else {
         this.alertService.alertError('Unexpected error');
@@ -66,7 +66,7 @@ export class HybridFormComponent implements OnInit {
   }
 
   onCancelClicked() {
-    this.router.navigate([this.hybridService.getHybridRootPath()]);
+    this.router.navigate([this.hybridService.getHybridsSummaryPath()]);
   }
 
   onImageUploadedEvent(image) {
