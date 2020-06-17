@@ -18,7 +18,7 @@ import {LookupComponent} from './lookup/lookup.component';
 import {SearchComponent} from './search/search.component';
 import {ImageComponent} from "./image/image/image.component";
 import {ImageDetailComponent} from './image/image-detail/image-detail.component';
-import {FileUploaderComponent} from './file-uploader/file-uploader.component';
+import {FileUploaderComponent} from './file/file-uploader/file-uploader.component';
 import {ImageUploaderComponent} from './image/image-uploader/image-uploader.component';
 
 import {HybridNewComponent} from './hybrid/hybrid-new/hybrid-new.component';
