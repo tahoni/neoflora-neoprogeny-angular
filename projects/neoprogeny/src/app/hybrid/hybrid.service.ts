@@ -15,10 +15,8 @@ export class HybridService {
     {
       id: 1,
       code: '19001',
-      parent: {
-        mother: '',
-        father: '',
-      },
+      mother: '',
+      father: '',
       description: 'Nommer 19001',
       seed: 'seed-none',
       offspring: 'offspring',
@@ -28,10 +26,8 @@ export class HybridService {
     {
       id: 2,
       code: '19002',
-      parent: {
-        mother: '',
-        father: '',
-      },
+      mother: '',
+      father: '',
       description: 'Nommer 19002',
       seed: 'seed',
       offspring: 'offspring',
@@ -41,10 +37,8 @@ export class HybridService {
     {
       id: 3,
       code: '19003',
-      parent: {
-        mother: '19001',
-        father: '19002',
-      },
+      mother: '19001',
+      father: '19002',
       description: 'Nommer 19003 (19001 x 19002)',
       seed: 'seed-dull',
       offspring: 'offspring-none',
@@ -88,15 +82,8 @@ export class HybridService {
     newHybrid = {
       id: hybrid.id,
       code: hybrid.code ? hybrid.code : '',
-      parent: (hybrid.parent.mother || hybrid.parent.father) ?
-        {
-          mother: hybrid.parent.mother ? hybrid.parent.mother : '',
-          father: hybrid.parent.father ? hybrid.parent.father : '',
-        } :
-        {
-          mother: '',
-          father: '',
-        },
+      mother: hybrid.mother ? hybrid.mother : '',
+      father: hybrid.father ? hybrid.father : '',
       description: hybrid.description ? hybrid.description : '',
       seed: hybrid.seed ? hybrid.seed : '',
       offspring: hybrid.offspring ? hybrid.offspring : '',

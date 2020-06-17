@@ -6,11 +6,11 @@
 
   <div class="d-flex d-column parent-column">
     <p>
-      <span *ngIf="(hybrid.parent.mother) && (hybrid.parent.father)">
+      <span *ngIf="(hybrid?.mother) && (hybrid?.father)">
         <fa-icon [icon]="iconService.getVenusIcon()"></fa-icon>
-        {{hybrid?.parent?.mother}}
+        {{hybrid?.mother}}
         <fa-icon [icon]="iconService.getMultiplicationIcon()"></fa-icon>
-        {{hybrid?.parent?.father}}
+        {{hybrid?.father}}
         <fa-icon [icon]="iconService.getMarsIcon()"></fa-icon>
       </span>
     </p>

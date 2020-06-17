@@ -18,7 +18,7 @@ export class HybridFormComponent implements OnInit {
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute,
               public iconService: IconService, public legendService: LegendService,
-  private hybridService: HybridService) {
+              private hybridService: HybridService) {
   }
 
   ngOnInit(): void {
@@ -32,24 +32,26 @@ export class HybridFormComponent implements OnInit {
   onSubmit(hybridForm) {
     let success = true;
     let valid = hybridForm.valid;
-    let changed  = hybridForm.dirty;
+    let changed = hybridForm.dirty;
 
     if (!valid) {
       success = false;
     }
 
     if ((changed) && (valid)) {
+      console.log(hybridForm.value);
+      console.log(hybridForm.value.parent);
+      console.log(hybridForm.value.mother);
+      console.log(hybridForm.value.father);
       const hybrid = {
         id: this.hybrid.id,
         code: hybridForm.value.code,
-        parent: {
-          mother: hybridForm.value.mother,
-          father: hybridForm.value.father,
-        },
+        mother: hybridForm.value.mother,
+        father: hybridForm.value.father,
         description: hybridForm.value.description,
         seed: hybridForm.value.seed,
         offspring: hybridForm.value.offspring,
-        image: this.hybrid.image,
+        image: this.hybridImage,
         comment: hybridForm.value.comment,
       }
       success = this.hybridService.setHybrid(hybrid);
