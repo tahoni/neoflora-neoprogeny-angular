@@ -11,19 +11,19 @@
 
   <div class="form-row form-group">
     <div class="col-3 offset-1">
-      <label for="parentMother">
+      <label for="mother">
         <fa-icon [icon]="iconService.getVenusMarsIcon()"></fa-icon>
         Kruising
       </label>
     </div>
     <div class="col-6 input-group">
-      <label class="m-0" for="parentMother">
+      <label class="m-0" for="mother">
         <fa-icon [icon]="iconService.getVenusIcon()"></fa-icon>
       </label>
-      <input [ngModel]="hybrid?.parent" class="form-control" id="parentMother" name="parent" required type="text"/>
+      <input [ngModel]="hybrid?.parent?.mother" class="form-control" id="mother" name="parent" type="text"/>
       <fa-icon [icon]="iconService.getMultiplicationIcon()"></fa-icon>
-      <input [ngModel]="hybrid?.parent" class="form-control" id="parentFather" name="parent" required type="text"/>
-      <label class="m-0" for="parentFather">
+      <input [ngModel]="hybrid?.parent?.father" class="form-control" id="father" name="parent" type="text"/>
+      <label class="m-0" for="father">
         <fa-icon [icon]="iconService.getMarsIcon()"></fa-icon>
       </label>
     </div>

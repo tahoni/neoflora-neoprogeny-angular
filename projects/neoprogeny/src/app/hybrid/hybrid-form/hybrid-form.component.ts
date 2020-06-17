@@ -42,12 +42,15 @@ export class HybridFormComponent implements OnInit {
       const hybrid = {
         id: this.hybrid.id,
         code: hybridForm.value.code,
-        parent: hybridForm.value.parent,
+        parent: {
+          mother: hybridForm.value.mother,
+          father: hybridForm.value.father,
+        },
         description: hybridForm.value.description,
         seed: hybridForm.value.seed,
         offspring: hybridForm.value.offspring,
         image: this.hybrid.image,
-        comment: hybridForm.value.comment
+        comment: hybridForm.value.comment,
       }
       success = this.hybridService.setHybrid(hybrid);
     }

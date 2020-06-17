@@ -15,7 +15,10 @@ export class HybridService {
     {
       id: 1,
       code: '19001',
-      parent: '',
+      parent: {
+        mother: '',
+        father: '',
+      },
       description: 'Nommer 19001',
       seed: 'seed-none',
       offspring: 'offspring',
@@ -25,7 +28,10 @@ export class HybridService {
     {
       id: 2,
       code: '19002',
-      parent: '',
+      parent: {
+        mother: '',
+        father: '',
+      },
       description: 'Nommer 19002',
       seed: 'seed',
       offspring: 'offspring',
@@ -35,7 +41,10 @@ export class HybridService {
     {
       id: 3,
       code: '19003',
-      parent: '19001 x 19002',
+      parent: {
+        mother: '19001',
+        father: '19002',
+      },
       description: 'Nommer 19003 (19001 x 19002)',
       seed: 'seed-dull',
       offspring: 'offspring-none',
@@ -69,8 +78,8 @@ export class HybridService {
   }
 
   setHybrid(hybrid: any): boolean {
-    let newHybrid: any = null;
-    let existingHybrid: any = null;
+    let newHybrid: any;
+    let existingHybrid: any;
 
     if (hybrid.id > 0) {
       existingHybrid = this.hybrids.find(it => it.id == hybrid.id)
@@ -79,7 +88,15 @@ export class HybridService {
     newHybrid = {
       id: hybrid.id,
       code: hybrid.code ? hybrid.code : '',
-      parent: hybrid.parent ? hybrid.parent : '',
+      parent: (hybrid.parent.mother || hybrid.parent.father) ?
+        {
+          mother: hybrid.parent.mother ? hybrid.parent.mother : '',
+          father: hybrid.parent.father ? hybrid.parent.father : '',
+        } :
+        {
+          mother: '',
+          father: '',
+        },
       description: hybrid.description ? hybrid.description : '',
       seed: hybrid.seed ? hybrid.seed : '',
       offspring: hybrid.offspring ? hybrid.offspring : '',
@@ -97,7 +114,7 @@ export class HybridService {
     return true;
   }
 
-  initHybrids(): void {
+  private initHybrids(): void {
     let hybrid: any;
     hybrid = this.hybrids.find(hybrid => hybrid.id == 2);
     hybrid.image =
