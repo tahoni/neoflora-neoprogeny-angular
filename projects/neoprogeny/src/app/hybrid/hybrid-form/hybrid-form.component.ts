@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {LegendService} from "../../legend.service";
 import {IconService} from "../../icon.service";
 import {HybridService} from "../hybrid.service";
@@ -16,8 +16,9 @@ export class HybridFormComponent implements OnInit {
   hybrid: any;
   hybridId: number;
 
-  constructor(private activatedRoute: ActivatedRoute, private hybridService: HybridService,
-              public iconService: IconService, public legendService: LegendService) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute,
+              public iconService: IconService, public legendService: LegendService,
+  private hybridService: HybridService) {
   }
 
   ngOnInit(): void {
@@ -29,12 +30,11 @@ export class HybridFormComponent implements OnInit {
   }
 
   onSubmit(hybridForm) {
-    let success: boolean = true;
-    let valid: boolean = hybridForm.valid;
-    let changed: boolean = hybridForm.dirty;
+    let success = true;
+    let valid = hybridForm.valid;
+    let changed  = hybridForm.dirty;
 
     if (!valid) {
-      Swal.fire('Error', 'Not valid', 'error')
       success = false;
     }
 
@@ -52,10 +52,20 @@ export class HybridFormComponent implements OnInit {
       success = this.hybridService.setHybrid(hybrid);
     }
 
+    if (success) {
+      Swal.fire('Success', 'Successful', 'success');
+      this.router.navigate([this.hybridService.getHybridRootPath()]);
+    } else if (!valid) {
+      Swal.fire('Error', 'Validation error', 'error')
+    } else {
+      Swal.fire('Error', 'Unexpected error', 'error');
+    }
+
     return success;
   }
 
   onCancelClicked() {
+    this.router.navigate([this.hybridService.getHybridRootPath()]);
   }
 
   onImageUploadedEvent(image) {

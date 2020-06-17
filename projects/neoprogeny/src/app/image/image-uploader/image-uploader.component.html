@@ -1,7 +1,7 @@
 <div class="form-row form-group">
   <div class="col-3">
     <label for="image">
-      <fa-icon [icon]="this.iconService.getPhotoIcon()"></fa-icon>
+      <fa-icon [icon]="iconService.getPhotoIcon()"></fa-icon>
       Foto</label>
   </div>
   <div class="col-6" id="image">
@@ -13,6 +13,6 @@
 <div class="form-row form-group">
   <div class="col-6 offset-3">
     <app-file-uploader (fileUploadedEvent)="onFileUploadedEvent($event)"
-                       [fileUploadOptions]="this.imageService.getImageFileOptions()"></app-file-uploader>
+                       [fileUploadOptions]="imageService.getImageFileOptions()"></app-file-uploader>
   </div>
 </div>

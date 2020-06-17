@@ -9,6 +9,8 @@ export class HybridService {
 
   private hybridsChanged = new Subject<void>();
 
+  private hybridsRootPath = '/hybrid/summary';
+
   private hybrids = [
     {
       id: 1,
@@ -46,12 +48,12 @@ export class HybridService {
     this.initHybrids();
   }
 
-  getHybridsChanged(): Observable<void> {
-    return this.hybridsChanged.asObservable();
+  getHybridRootPath() {
+    return this.hybridsRootPath;
   }
 
-  setHybridsChanged(): void {
-    this.hybridsChanged.next();
+  getHybridsChanged(): Observable<void> {
+    return this.hybridsChanged.asObservable();
   }
 
   getHybrids() {
@@ -59,7 +61,7 @@ export class HybridService {
   }
 
   getHybrid(id: number) {
-    let hybrid: any = {};
+    let hybrid = {};
     if (id > 0) {
       hybrid = this.hybrids.find(it => it.id == id);
     }
@@ -69,9 +71,11 @@ export class HybridService {
   setHybrid(hybrid: any): boolean {
     let newHybrid: any = null;
     let existingHybrid: any = null;
+
     if (hybrid.id > 0) {
       existingHybrid = this.hybrids.find(it => it.id == hybrid.id)
     }
+
     newHybrid = {
       id: hybrid.id,
       code: hybrid.code ? hybrid.code : '',
@@ -82,12 +86,13 @@ export class HybridService {
       image: hybrid.image ? hybrid.image : '',
       comment: hybrid.comment ? hybrid.comment : ''
     }
+
     if (existingHybrid) {
       this.hybrids.splice(this.hybrids.indexOf(existingHybrid), 1, newHybrid)
-
     } else {
       this.hybrids.push(hybrid);
     }
+
     this.hybridsChanged.next();
     return true;
   }

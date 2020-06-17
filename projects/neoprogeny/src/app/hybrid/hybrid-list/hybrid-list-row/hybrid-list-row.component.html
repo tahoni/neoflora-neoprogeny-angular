@@ -1,35 +1,41 @@
 <div class="d-flex d-row">
   <div class="d-flex d-column hybrid-column">
-    <p>
-      <span class="h-calla-icon"></span>
-      {{hybrid.code}}
-    </p>
+    <span class="h-calla-icon"></span>
+    {{hybrid.code}}
   </div>
+
   <div class="d-flex d-column parent-column">
     <p>
-      <span *ngIf="hybrid.parent != ''">
-      <fa-icon [icon]="this.iconService.getVenusMarsIcon()"></fa-icon>
+      <span *ngIf="hybrid.parent">
+      <fa-icon [icon]="iconService.getVenusMarsIcon()"></fa-icon>
       </span>
       {{hybrid.parent}}
     </p>
   </div>
+
   <div class="d-flex d-column seed-column">
     <p>
+      <span *ngIf="hybrid.seed">
       <fa-icon [classes]="['fa-lg']"
-               [icon]="this.iconService.getSeedIcon()"
+               [icon]="iconService.getSeedIcon()"
                [ngClass]="hybrid.seed"></fa-icon>
+      </span>
     </p>
   </div>
+
   <div class="d-flex d-column offspring-column">
     <p>
-      <fa-icon [icon]="this.iconService.getOffspringIcon()"
+      <span *ngIf="hybrid.offspring">
+      <fa-icon [icon]="iconService.getOffspringIcon()"
                [ngClass]="hybrid.offspring"></fa-icon>
+      </span>
     </p>
   </div>
+
   <div class="d-flex d-column more-column">
     <p>
       <a routerLink="/hybrid/edit/{{hybrid.id}}">
-        <fa-icon [classes]="['btn-icon']" [icon]="this.iconService.getMoreIcon()"></fa-icon>
+        <fa-icon [classes]="['btn-icon']" [icon]="iconService.getMoreIcon()"></fa-icon>
       </a>
     </p>
   </div>
