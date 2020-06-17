@@ -31,8 +31,8 @@ export class HybridFormComponent implements OnInit {
   }
 
   onSubmit(hybridForm) {
-    let success: boolean;
     const valid = hybridForm.valid;
+    let success: boolean;
 
     if (valid) {
       const hybrid = {
@@ -47,7 +47,6 @@ export class HybridFormComponent implements OnInit {
         comment: hybridForm.value.comment,
       }
       success = this.hybridService.setHybrid(hybrid);
-
     }
 
     if (valid) {
