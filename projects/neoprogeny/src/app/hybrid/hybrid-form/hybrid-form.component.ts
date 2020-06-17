@@ -1,10 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
+
 import {LegendService} from "../../legend.service";
 import {IconService} from "../../icon.service";
-import {HybridService} from "../hybrid.service";
+import {AlertService} from "../../alert.service";
 
-import Swal from 'sweetalert2';
+import {HybridService} from "../hybrid.service";
 
 @Component({
   selector: 'app-hybrid-form',
@@ -18,7 +19,7 @@ export class HybridFormComponent implements OnInit {
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute,
               public iconService: IconService, public legendService: LegendService,
-              private hybridService: HybridService) {
+              private alertService: AlertService, private hybridService: HybridService) {
   }
 
   ngOnInit(): void {
@@ -51,15 +52,15 @@ export class HybridFormComponent implements OnInit {
 
     if (valid) {
       if (success) {
-        Swal.fire('Success', 'Successful', 'success');
+        this.alertService.alertSuccess('Successful');
         this.router.navigate([this.hybridService.getHybridRootPath()]);
 
       } else {
-        Swal.fire('Error', 'Unexpected error', 'error');
+        this.alertService.alertError('Unexpected error');
       }
 
     } else {
-      Swal.fire('Error', 'Validation error', 'error')
+      this.alertService.alertError('Validation error');
     }
 
     return success;
