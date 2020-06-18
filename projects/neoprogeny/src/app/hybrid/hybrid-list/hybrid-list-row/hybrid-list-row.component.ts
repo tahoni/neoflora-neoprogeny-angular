@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {IconService} from "../../../icon.service";
+import {HybridService} from "../../hybrid.service";
 
 @Component({
   selector: 'app-hybrid-list-row',
@@ -10,7 +11,7 @@ export class HybridListRowComponent implements OnInit {
 
   @Input() hybrid;
 
-  constructor(public iconService: IconService) {
+  constructor(public iconService: IconService, public hybridService: HybridService) {
   }
 
   ngOnInit(): void {

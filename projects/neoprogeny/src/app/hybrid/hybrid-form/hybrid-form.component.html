@@ -20,9 +20,11 @@
       <label class="m-0" for="mother">
         <fa-icon [icon]="iconService.getVenusIcon()"></fa-icon>
       </label>
-      <input [ngModel]="hybrid?.mother?.code" class="form-control" id="mother" name="mother" type="text" [value]="hybrid?.mother?.code"/>
+      <input (dblclick)="onParentDblClicked($event, form)" [ngModel]="hybrid?.mother?.code" [value]="hybrid?.mother?.code" class="form-control"
+             id="mother" name="mother" type="text"/>
       <fa-icon [icon]="iconService.getMultiplicationIcon()"></fa-icon>
-      <input [ngModel]="hybrid?.father?.code" class="form-control" id="father" name="father" type="text" [value]="hybrid?.father?.code"/>
+      <input (dblclick)="onParentDblClicked($event, form)" [ngModel]="hybrid?.father?.code" [value]="hybrid?.father?.code" class="form-control"
+             id="father" name="father" type="text"/>
       <label class="m-0" for="father">
         <fa-icon [icon]="iconService.getMarsIcon()"></fa-icon>
       </label>

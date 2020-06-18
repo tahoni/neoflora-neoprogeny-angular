@@ -69,6 +69,13 @@ export class HybridFormComponent implements OnInit {
     this.router.navigate([this.hybridService.getHybridsSummaryPath()]);
   }
 
+  onParentDblClicked(event, hybridForm) {
+    let parent = event.target.name;
+    if ((this.hybridId > 0) && (event.target.value) && (!hybridForm.controls[parent].dirty)) {
+      this.router.navigate([this.hybridService.getHybridEditPath(), this.hybrid[parent].id])
+    }
+  }
+
   onImageUploadedEvent(image) {
     this.hybrid.image = image;
   }
