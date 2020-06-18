@@ -1,16 +1,16 @@
 <div class="d-flex d-row">
   <div class="d-flex d-column hybrid-column">
     <span class="h-calla-icon"></span>
-    <app-hybrid [hybrid]="hybrid"></app-hybrid>
+    <a routerLink="/hybrid/edit/{{hybrid.id}}">{{hybrid.code}}</a>
   </div>
 
   <div class="d-flex d-column parent-column">
     <p>
       <span *ngIf="(hybrid?.mother?.id) && (hybrid?.father?.id)">
         <fa-icon [icon]="iconService.getVenusIcon()"></fa-icon>
-        <app-hybrid [hybrid]="hybrid?.mother"></app-hybrid>
+        <a routerLink="/hybrid/edit/{{hybrid.mother.id}}">{{hybrid.mother?.code}}</a>
         <fa-icon [icon]="iconService.getMultiplicationIcon()"></fa-icon>
-        <app-hybrid [hybrid]="hybrid?.father"></app-hybrid>
+        <a routerLink="/hybrid/edit/{{hybrid.father?.id}}">{{hybrid.father.code}}</a>
         <fa-icon [icon]="iconService.getMarsIcon()"></fa-icon>
       </span>
     </p>

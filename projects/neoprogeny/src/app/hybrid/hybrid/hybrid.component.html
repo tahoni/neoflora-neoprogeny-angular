@@ -1,7 +1,0 @@
-<span *ngIf="isLink">
-  <a [routerLink]="routeHybridEdit">{{hybrid.code}}</a>
-</span>
-
-<span *ngIf="!isLink">
-  <input (dblclick)="onDblClick()" [value]="hybrid.code" class="form-control" id="mother" name="mother" type="text"/>
-</span>

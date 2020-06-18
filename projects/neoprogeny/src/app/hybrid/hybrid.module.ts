@@ -5,7 +5,6 @@ import {FormsModule} from "@angular/forms";
 
 import {SharedModule} from "../shared.module";
 
-import {HybridComponent} from './hybrid/hybrid.component';
 import {HybridFormComponent} from "./hybrid-form/hybrid-form.component";
 
 import {HybridNewComponent} from './hybrid-new/hybrid-new.component';
@@ -43,7 +42,6 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    HybridComponent,
     HybridNewComponent,
     HybridSearchSimpleComponent,
     HybridSearchAdvancedComponent,

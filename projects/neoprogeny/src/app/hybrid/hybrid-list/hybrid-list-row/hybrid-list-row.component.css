@@ -3,6 +3,21 @@
   display: block;
 }
 
+/* Content */
+fa-icon {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+/* Links */
+a:active,
+a:visited,
+a:hover,
+a:focus {
+  color: #551165;
+  text-decoration: none;
+}
+
 /* Tables */
 .d-row, .d-column {
   border: 1px solid white;

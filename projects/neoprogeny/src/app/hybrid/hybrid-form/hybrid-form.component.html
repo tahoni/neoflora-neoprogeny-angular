@@ -17,23 +17,15 @@
       </label>
     </div>
     <div class="col-6 input-group">
-      <div class="row">
-        <div class="col-6">
-          <label class="m-0" for="mother">
-            <fa-icon [icon]="iconService.getVenusIcon()"></fa-icon>
-          </label>
-          <app-hybrid [hybrid]="hybrid?.mother" [isLink]="false" id="mother"></app-hybrid>
-        </div>
-      </div>
-      <div class="col-1">
-        <fa-icon [icon]="iconService.getMultiplicationIcon()"></fa-icon>
-      </div>
-      <div class="col-6">
-        <app-hybrid [hybrid]="hybrid?.father" [isLink]="false" id="father"></app-hybrid>
-        <label class="m-0" for="father">
-          <fa-icon [icon]="iconService.getMarsIcon()"></fa-icon>
-        </label>
-      </div>
+      <label class="m-0" for="mother">
+        <fa-icon [icon]="iconService.getVenusIcon()"></fa-icon>
+      </label>
+      <input [ngModel]="hybrid?.mother?.code" class="form-control" id="mother" name="mother" type="text" [value]="hybrid?.mother?.code"/>
+      <fa-icon [icon]="iconService.getMultiplicationIcon()"></fa-icon>
+      <input [ngModel]="hybrid?.father?.code" class="form-control" id="father" name="father" type="text" [value]="hybrid?.father?.code"/>
+      <label class="m-0" for="father">
+        <fa-icon [icon]="iconService.getMarsIcon()"></fa-icon>
+      </label>
     </div>
   </div>
 

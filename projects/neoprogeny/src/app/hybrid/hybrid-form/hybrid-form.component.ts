@@ -36,8 +36,8 @@ export class HybridFormComponent implements OnInit {
 
     if (valid) {
       const hybrid = {
-        id: this.hybrid.hybridId,
-        code: hybridForm.value.hybridCode,
+        id: this.hybridId,
+        code: hybridForm.value.code,
         mother: hybridForm.value.mother,
         father: hybridForm.value.father,
         description: hybridForm.value.description,
