@@ -6,7 +6,8 @@ import {NgForm} from "@angular/forms";
 })
 export class FocusOnErrorDirective {
 
-  constructor(private form: NgForm) { }
+  constructor(private form: NgForm) {
+  }
 
   @HostListener('ngSubmit')
   onFormSubmit() {

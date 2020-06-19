@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
-import {TahoniModule} from 'tahoni';
+import {FocusOnErrorDirective, TahoniLibModule} from 'tahoni-lib';
 
 import {LookupComponent} from '../lookup/lookup.component';
 import {SearchComponent} from '../search/search.component';
@@ -27,11 +27,11 @@ import {LegendService} from "./legend.service";
   imports: [
     CommonModule,
     FontAwesomeModule,
-    TahoniModule,
+    TahoniLibModule,
   ],
   exports: [
     FontAwesomeModule,
-    TahoniModule,
+    FocusOnErrorDirective,
     LookupComponent,
     SearchComponent,
     ImageComponent,

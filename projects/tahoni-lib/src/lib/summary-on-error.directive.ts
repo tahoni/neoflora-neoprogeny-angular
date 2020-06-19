@@ -1,17 +1,15 @@
 import {Directive, HostListener} from '@angular/core';
 import {NgForm} from "@angular/forms";
-
 import Swal from 'sweetalert2';
-
 import {FormService} from "./shared/form.service";
-
 
 @Directive({
   selector: '[libSummaryOnError]'
 })
 export class SummaryOnErrorDirective {
 
-  constructor(private form: NgForm, private formService: FormService) { }
+  constructor(private form: NgForm, private formService: FormService) {
+  }
 
   @HostListener('ngSubmit')
   onFormSubmit() {
