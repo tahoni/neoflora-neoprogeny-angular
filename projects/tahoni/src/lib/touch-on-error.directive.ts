@@ -11,9 +11,9 @@ export class TouchOnErrorDirective {
 
   @HostListener('ngSubmit')
   onFormSubmit() {
-    // Find all invalid elements
+    // Find all invalid controls
     const invalidControls = Object.keys(this.form.controls).filter(it => this.form.controls[it].invalid);
-    // Mark all invalid elements as touched
+    // Mark all invalid controls as touched
     for (const it of invalidControls) {
       this.form.controls[it].markAsTouched();
     }

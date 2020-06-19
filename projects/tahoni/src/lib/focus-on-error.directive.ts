@@ -11,9 +11,9 @@ export class FocusOnErrorDirective {
 
   @HostListener('ngSubmit')
   onFormSubmit() {
-    // Find all invalid elements
+    // Find all invalid controls
     const invalidControls = Object.keys(this.form.controls).filter(it => this.form.controls[it].invalid);
-    // Set focus to the first invalid element
+    // Set focus to the first invalid control
     if (invalidControls.length > 0) {
       document.getElementById(invalidControls[0]).focus();
     }
