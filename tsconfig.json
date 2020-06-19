@@ -22,6 +22,14 @@
       "tahoni": [
         "dist/tahoni/tahoni",
         "dist/tahoni"
+      ],
+      "tahoni-lib": [
+        "dist/tahoni-lib/tahoni-lib",
+        "dist/tahoni-lib"
+      ],
+      "neoflora-lib": [
+        "dist/neoflora-lib/neoflora-lib",
+        "dist/neoflora-lib"
       ]
     }
   },

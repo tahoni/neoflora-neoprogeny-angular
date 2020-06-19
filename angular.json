@@ -413,6 +413,86 @@
           }
         }
       }
+    },
+    "tahoni-lib": {
+      "projectType": "library",
+      "root": "projects/tahoni-lib",
+      "sourceRoot": "projects/tahoni-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/tahoni-lib/tsconfig.lib.json",
+            "project": "projects/tahoni-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/tahoni-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/tahoni-lib/src/test.ts",
+            "tsConfig": "projects/tahoni-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/tahoni-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/tahoni-lib/tsconfig.lib.json",
+              "projects/tahoni-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "neoflora-lib": {
+      "projectType": "library",
+      "root": "projects/neoflora-lib",
+      "sourceRoot": "projects/neoflora-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/neoflora-lib/tsconfig.lib.json",
+            "project": "projects/neoflora-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/neoflora-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/neoflora-lib/src/test.ts",
+            "tsConfig": "projects/neoflora-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/neoflora-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/neoflora-lib/tsconfig.lib.json",
+              "projects/neoflora-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
