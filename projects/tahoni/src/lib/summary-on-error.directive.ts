@@ -1,10 +1,12 @@
-import { Directive } from '@angular/core';
+import {Directive} from '@angular/core';
+import {NgForm} from "@angular/forms";
 
 @Directive({
   selector: '[libSummaryOnError]'
 })
 export class SummaryOnErrorDirective {
 
-  constructor() { }
+  constructor(private ngForm: NgForm) {
+  }
 
 }

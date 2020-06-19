@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {IconService} from "../../icon.service";
-import {ImageService} from "../../image.service";
+import {IconService} from "../../shared/icon.service";
+import {ImageService} from "../../shared/image.service";
 
 @Component({
   selector: 'app-image-uploader',

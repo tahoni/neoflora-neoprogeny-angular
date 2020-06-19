@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 
-import {LegendService} from "../../legend.service";
-import {IconService} from "../../icon.service";
-import {AlertService} from "../../alert.service";
+import {LegendService} from "../../shared/legend.service";
+import {IconService} from "../../shared/icon.service";
+import {AlertService} from "../../shared/alert.service";
 
 import {HybridService} from "../hybrid.service";
 

@@ -1,10 +1,22 @@
-import { Directive } from '@angular/core';
+import {Directive, HostListener} from '@angular/core';
+import {NgForm} from "@angular/forms";
 
 @Directive({
   selector: '[libTouchOnError]'
 })
 export class TouchOnErrorDirective {
 
-  constructor() { }
+  constructor(private form: NgForm) {
+  }
+
+  @HostListener('ngSubmit')
+  onFormSubmit() {
+    // Find all invalid elements
+    const invalidControls = Object.keys(this.form.controls).filter(it => this.form.controls[it].invalid);
+    // Mark all invalid elements as touched
+    for (const it of invalidControls) {
+      this.form.controls[it].markAsTouched();
+    }
+  }
 
 }

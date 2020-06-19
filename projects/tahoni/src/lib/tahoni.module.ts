@@ -1,15 +1,22 @@
-import { NgModule } from '@angular/core';
-import { TahoniComponent } from './tahoni.component';
-import { TouchOnErrorDirective } from './touch-on-error.directive';
-import { FocusOnErrorDirective } from './focus-on-error.directive';
-import { SummaryOnErrorDirective } from './summary-on-error.directive';
+import {NgModule} from '@angular/core';
 
+import {FocusOnErrorDirective} from './focus-on-error.directive';
+import {TouchOnErrorDirective} from './touch-on-error.directive';
+import {SummaryOnErrorDirective} from './summary-on-error.directive';
 
 
 @NgModule({
-  declarations: [TahoniComponent, TouchOnErrorDirective, FocusOnErrorDirective, SummaryOnErrorDirective],
-  imports: [
+  declarations: [
+    FocusOnErrorDirective,
+    TouchOnErrorDirective,
+    SummaryOnErrorDirective
   ],
-  exports: [TahoniComponent]
+  imports: [],
+  exports: [
+    FocusOnErrorDirective,
+    TouchOnErrorDirective,
+    SummaryOnErrorDirective
+  ]
 })
-export class TahoniModule { }
+export class TahoniModule {
+}

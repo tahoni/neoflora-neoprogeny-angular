@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IconService} from "../../../icon.service";
+import {IconService} from "../../../shared/icon.service";
 import {HybridService} from "../../hybrid.service";
 
 @Component({

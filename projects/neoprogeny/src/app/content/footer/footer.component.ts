@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {IconService} from "../../icon.service";
+import {IconService} from "../../shared/icon.service";
 
 @Component({
   selector: 'app-footer',

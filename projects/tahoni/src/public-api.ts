@@ -2,6 +2,8 @@
  * Public API Surface of tahoni
  */
 
-export * from './lib/tahoni.service';
-export * from './lib/tahoni.component';
-export * from './lib/tahoni.module';
+export {TahoniModule} from './lib/tahoni.module';
+
+export {FocusOnErrorDirective} from './lib/focus-on-error.directive';
+export {TouchOnErrorDirective} from './lib/touch-on-error.directive';
+export {SummaryOnErrorDirective} from './lib/summary-on-error.directive';
