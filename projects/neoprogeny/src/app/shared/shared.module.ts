@@ -10,6 +10,8 @@ import {LookupComponent} from '../lookup/lookup.component';
 import {SearchComponent} from '../search/search.component';
 import {ImageComponent} from "../image/image/image.component";
 import {ImageDetailComponent} from '../image/image-detail/image-detail.component';
+import {ImageOverlayComponent} from "../image/image-overlay/image-overlay.component";
+
 import {FileUploaderComponent} from '../file/file-uploader/file-uploader.component';
 import {ImageUploaderComponent} from '../image/image-uploader/image-uploader.component';
 
@@ -19,6 +21,7 @@ import {ImageUploaderComponent} from '../image/image-uploader/image-uploader.com
     SearchComponent,
     ImageComponent,
     ImageDetailComponent,
+    ImageOverlayComponent,
     ImageUploaderComponent,
     FileUploaderComponent,
   ],
@@ -35,6 +38,7 @@ import {ImageUploaderComponent} from '../image/image-uploader/image-uploader.com
     SearchComponent,
     ImageComponent,
     ImageDetailComponent,
+    ImageOverlayComponent,
     ImageUploaderComponent,
     FileUploaderComponent,
   ],
