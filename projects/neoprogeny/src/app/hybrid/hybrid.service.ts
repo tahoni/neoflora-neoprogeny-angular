@@ -72,20 +72,12 @@ export class HybridService {
     this.initHybrids();
   }
 
-  getHybridRootPath() {
-    return this.hybridsRootPath;
-  }
-
   getHybridsSummaryPath() {
     return this.hybridsSummaryPath;
   }
 
   getHybridEditPath() {
     return this.hybridsEditPath;
-  }
-
-  getHybridViewPath() {
-    return this.hybridsViewPath;
   }
 
   getHybridsChanged(): Observable<void> {
