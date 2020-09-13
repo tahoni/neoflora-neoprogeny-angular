@@ -4,7 +4,7 @@ import {IconService} from "../../shared/icon.service";
 @Component({
     selector: 'app-image',
     templateUrl: './image.component.html',
-    styleUrls: ['./image.component.css']
+    styleUrls: ['./image.component.css', '../image.css']
 })
 export class ImageComponent implements OnInit {
 

@@ -10,7 +10,7 @@ import {HybridService} from "../hybrid.service";
 @Component({
   selector: 'app-hybrid-form',
   templateUrl: './hybrid-form.component.html',
-  styleUrls: ['./hybrid-form.component.css']
+  styleUrls: ['./hybrid-form.component.css', '../hybrid.css', '../../image/image.css']
 })
 export class HybridFormComponent implements OnInit {
 

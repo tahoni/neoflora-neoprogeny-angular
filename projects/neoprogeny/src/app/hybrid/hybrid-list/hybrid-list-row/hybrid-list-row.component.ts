@@ -5,7 +5,7 @@ import {HybridService} from "../../hybrid.service";
 @Component({
   selector: 'app-hybrid-list-row',
   templateUrl: './hybrid-list-row.component.html',
-  styleUrls: ['./hybrid-list-row.component.css']
+  styleUrls: ['./hybrid-list-row.component.css', '../../hybrid.css']
 })
 export class HybridListRowComponent implements OnInit {
 
