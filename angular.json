@@ -11,7 +11,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-library-assets:browser",
           "options": {
             "outputPath": "dist/neoflora",
             "index": "projects/neoflora/src/index.html",
@@ -25,6 +25,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
+              "dist/neoflora-lib/src/assets/css/styles.css",
+              "dist/neoflora-lib/src/assets/css/watermark.css",
               "projects/neoflora/src/styles.css"
             ],
             "scripts": [
@@ -62,7 +64,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-library-assets::dev-server",
           "options": {
             "browserTarget": "neoflora:build"
           },
@@ -91,6 +93,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
+              "dist/neoflora-lib/src/assets/css/styles.css",
+              "dist/neoflora-lib/src/assets/css/watermark.css",
               "projects/neoflora/src/styles.css"
             ],
             "scripts": [
@@ -132,7 +136,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-library-assets:browser",
           "options": {
             "outputPath": "dist/eneoflora",
             "index": "projects/eneoflora/src/index.html",
@@ -146,6 +150,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
+              "dist/neoflora-lib/src/assets/css/styles.css",
+              "dist/neoflora-lib/src/assets/css/watermark.css",
               "projects/eneoflora/src/styles.css"
             ],
             "scripts": [
@@ -183,7 +189,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-library-assets:dev-server",
           "options": {
             "browserTarget": "eneoflora:build"
           },
@@ -212,6 +218,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
+              "dist/neoflora-lib/src/assets/css/styles.css",
+              "dist/neoflora-lib/src/assets/css/watermark.css",
               "projects/eneoflora/src/styles.css"
             ],
             "scripts": [
