@@ -92,15 +92,15 @@ p {
 
 .calla-icon {
   background-color: #816b9a;
-  /*-webkit-mask-image: url("assets/img/icons/calla-icon.png");*/
+  -webkit-mask-image: url("../img/icons/calla-icon.png");
 }
 
 .h-calla-icon {
   background-color: #551165;
-  /*-webkit-mask-image: url("assets/img/icons/calla-icon.png");*/
+  -webkit-mask-image: url("../img/icons/calla-icon.png");
 }
 
 .white-calla-icon {
   background-color: white;
-  /*-webkit-mask-image: url("assets/img/icons/calla-icon.png");*/
+  -webkit-mask-image: url("../img/icons/calla-icon.png");
 }

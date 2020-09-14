@@ -253,7 +253,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-library-assets:browser",
           "options": {
             "outputPath": "dist/neoprogeny",
             "index": "projects/neoprogeny/src/index.html",
@@ -268,6 +268,8 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/sweetalert2/dist/sweetalert2.css",
+              "dist/neoflora-lib/src/assets/css/styles.css",
+              "dist/neoflora-lib/src/assets/css/watermark.css",
               "projects/neoprogeny/src/styles.css"
             ],
             "scripts": [
@@ -308,7 +310,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-library-assets:dev-server",
           "options": {
             "browserTarget": "neoprogeny:build"
           },
@@ -338,6 +340,8 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/sweetalert2/dist/sweetalert2.css",
+              "dist/neoflora-lib/src/assets/css/styles.css",
+              "dist/neoflora-lib/src/assets/css/watermark.css",
               "projects/neoprogeny/src/styles.css"
             ],
             "scripts": [
@@ -458,5 +462,5 @@
   "cli": {
     "analytics": "38504a16-e3a3-481b-a44f-1362ea904c04"
   },
-  "defaultProject": "neoprogeny"
+  "defaultProject": "eneoflora"
 }
