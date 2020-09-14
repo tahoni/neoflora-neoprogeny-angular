@@ -4,7 +4,7 @@ import {CommonModule} from '@angular/common';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 import {FocusOnErrorDirective, AlertService, TahoniLibModule} from 'tahoni-lib';
-import {IconService, LegendService, NeofloraLibModule} from "neoflora-lib";
+import {FooterComponent, HeaderComponent, IconService, LegendService, NeofloraLibModule} from "neoflora-lib";
 
 import {LookupComponent} from '../lookup/lookup.component';
 import {SearchComponent} from '../search/search.component';
@@ -34,6 +34,8 @@ import {ImageUploaderComponent} from '../image/image-uploader/image-uploader.com
   exports: [
     FontAwesomeModule,
     FocusOnErrorDirective,
+    HeaderComponent,
+    FooterComponent,
     LookupComponent,
     SearchComponent,
     ImageComponent,

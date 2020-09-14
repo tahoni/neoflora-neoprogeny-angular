@@ -5,16 +5,12 @@ import {AppRoutingModule} from './app-routing.module';
 import {SharedModule} from "./shared/shared.module";
 
 import {AppComponent} from './app.component';
-import {HeaderComponent} from './content/header/header.component';
-import {FooterComponent} from './content/footer/footer.component';
 import {BodyComponent} from './body/body.component';
 import {ContentComponent} from './content/content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
     BodyComponent,
     ContentComponent,
   ],

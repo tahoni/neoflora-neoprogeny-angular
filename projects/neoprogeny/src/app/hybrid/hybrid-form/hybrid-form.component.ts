@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 
-import {LegendService} from "../../shared/legend.service";
-import {IconService} from "../../shared/icon.service";
-import {AlertService} from "../../shared/alert.service";
+import {LegendService} from "neoflora-lib";
+import {IconService} from "neoflora-lib";
+import {AlertService} from "tahoni-lib";
 
 import {HybridService} from "../hybrid.service";
 

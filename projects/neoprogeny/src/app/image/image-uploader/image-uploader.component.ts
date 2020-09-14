@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {IconService} from "../../shared/icon.service";
-import {ImageService} from "../../shared/image.service";
+import {IconService} from "neoflora-lib";
+import {ImageService} from "neoflora-lib";
 
 @Component({
   selector: 'app-image-uploader',

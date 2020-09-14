@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from "@angular/core";
-import {IconService} from "../../shared/icon.service";
+import {IconService} from "neoflora-lib";
 
 @Component({
     selector: 'app-image',
