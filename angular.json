@@ -64,7 +64,7 @@
           }
         },
         "serve": {
-          "builder": "ngx-library-assets::dev-server",
+          "builder": "ngx-library-assets:dev-server",
           "options": {
             "browserTarget": "neoflora:build"
           },
