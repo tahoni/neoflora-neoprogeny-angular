@@ -1,5 +1,7 @@
 import {Injectable} from '@angular/core';
 
+declare var $: any;
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +13,7 @@ export class FormService {
   getValidationMessage(control: string) {
     // Find the invalid control
     let invalidMessage = '';
-    const invalidControl = document.getElementById(control);
+    const invalidControl = $('#' + control);
 
     // Get the validation message of the invalid control, if any
     if (invalidControl instanceof HTMLButtonElement) {

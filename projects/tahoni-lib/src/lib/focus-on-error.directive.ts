@@ -1,6 +1,8 @@
 import {Directive, HostListener} from '@angular/core';
 import {NgForm} from "@angular/forms";
 
+declare var $: any;
+
 @Directive({
   selector: '[libFocusOnError]'
 })
@@ -15,7 +17,7 @@ export class FocusOnErrorDirective {
     const invalidControls = Object.keys(this.form.controls).filter(it => this.form.controls[it].invalid);
     // Set focus to the first invalid control
     if (invalidControls.length > 0) {
-      document.getElementById(invalidControls[0]).focus();
+      $('#' + invalidControls[0]).focus();
     }
   }
 
