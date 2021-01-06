@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
-import {FocusOnErrorDirective, AlertService, TahoniLibModule} from 'tahoni-lib';
+import {FocusOnErrorDirective, AlertService, TahoniLibModule} from "tahoni-lib";
 import {FooterComponent, HeaderComponent, IconService, LegendService, NeofloraLibModule} from "neoflora-lib";
 
 import {LookupComponent} from '../lookup/lookup.component';

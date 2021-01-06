@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Observable, Subject} from "rxjs";
 import {cloneDeep} from 'lodash';
+import {HybridOffspringType, HybridSeedType, HybridType} from "./hybrid-types";
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class HybridService {
   private hybridsViewPath = '/hybrids/view';
   private hybridsRootPath = this.hybridsSummaryPath;
 
-  private hybrids = [
+  private hybrids: HybridType[] = [
     {
       id: 1,
       code: '19001',
@@ -27,8 +28,8 @@ export class HybridService {
         code: '',
       },
       description: 'Nommer 19001',
-      seed: 'seed-none',
-      offspring: 'offspring',
+      seed: HybridSeedType.seedNone,
+      offspring: HybridOffspringType.offspring,
       image: '',
       comment: '',
     },
@@ -44,8 +45,8 @@ export class HybridService {
         code: '',
       },
       description: 'Nommer 19002',
-      seed: 'seed',
-      offspring: 'offspring',
+      seed: HybridSeedType.seed,
+      offspring: HybridOffspringType.offspring,
       image: '',
       comment: '',
     },
@@ -61,8 +62,8 @@ export class HybridService {
         code: '19002',
       },
       description: 'Nommer 19003 (19001 x 19002)',
-      seed: 'seed-dull',
-      offspring: 'offspring-none',
+      seed: HybridSeedType.seedDull,
+      offspring: HybridOffspringType.offspringNone,
       image: '',
       comment: '',
     },
