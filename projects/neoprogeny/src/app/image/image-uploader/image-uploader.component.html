@@ -1,0 +1,18 @@
+<div class="form-row form-group">
+  <div class="col-3">
+    <label for="image">
+      <fa-icon [icon]="iconService.getPhotoIcon()"></fa-icon>
+      Foto</label>
+  </div>
+  <div class="col-6" id="image">
+    <app-image [imageAlt]="imageAlt" [imageSrc]="imageSrc" imageClass="image-main"
+               imageIconClass="image-icon-main"></app-image>
+  </div>
+</div>
+
+<div class="form-row form-group">
+  <div class="col-6 offset-3">
+    <app-file-uploader (fileUploadedEvent)="onFileUploadedEvent($event)"
+                       [fileUploadOptions]="imageService.getImageFileOptions()"></app-file-uploader>
+  </div>
+</div>

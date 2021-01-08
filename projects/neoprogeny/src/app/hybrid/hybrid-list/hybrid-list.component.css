@@ -1,0 +1,15 @@
+/* Component-specific styling */
+:host {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Child components */
+app-hybrid-list-row:nth-child(even) {
+  background-color: #816b9a;
+}
+
+app-hybrid-list-row:nth-child(odd) {
+  background-color: #9b89af;
+}

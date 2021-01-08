@@ -11,7 +11,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-library-assets:browser",
           "options": {
             "outputPath": "dist/neoflora",
             "index": "projects/neoflora/src/index.html",
@@ -24,9 +24,13 @@
               "projects/neoflora/src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "dist/neoflora-lib/src/assets/css/styles.css",
+              "dist/neoflora-lib/src/assets/css/watermark.css",
               "projects/neoflora/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
             "production": {
@@ -60,7 +64,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-library-assets:dev-server",
           "options": {
             "browserTarget": "neoflora:build"
           },
@@ -88,9 +92,13 @@
               "projects/neoflora/src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "dist/neoflora-lib/src/assets/css/styles.css",
+              "dist/neoflora-lib/src/assets/css/watermark.css",
               "projects/neoflora/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           }
         },
         "lint": {
@@ -128,7 +136,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-library-assets:browser",
           "options": {
             "outputPath": "dist/eneoflora",
             "index": "projects/eneoflora/src/index.html",
@@ -141,9 +149,13 @@
               "projects/eneoflora/src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "dist/neoflora-lib/src/assets/css/styles.css",
+              "dist/neoflora-lib/src/assets/css/watermark.css",
               "projects/eneoflora/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
             "production": {
@@ -177,7 +189,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-library-assets:dev-server",
           "options": {
             "browserTarget": "eneoflora:build"
           },
@@ -205,9 +217,13 @@
               "projects/eneoflora/src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "dist/neoflora-lib/src/assets/css/styles.css",
+              "dist/neoflora-lib/src/assets/css/watermark.css",
               "projects/eneoflora/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           }
         },
         "lint": {
@@ -245,7 +261,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-library-assets:browser",
           "options": {
             "outputPath": "dist/neoprogeny",
             "index": "projects/neoprogeny/src/index.html",
@@ -258,9 +274,17 @@
               "projects/neoprogeny/src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/sweetalert2/dist/sweetalert2.css",
+              "dist/neoflora-lib/src/assets/css/styles.css",
+              "dist/neoflora-lib/src/assets/css/watermark.css",
               "projects/neoprogeny/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js",
+              "node_modules/sweetalert2/dist/sweetalert2.all.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -294,7 +318,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-library-assets:dev-server",
           "options": {
             "browserTarget": "neoprogeny:build"
           },
@@ -322,9 +346,17 @@
               "projects/neoprogeny/src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/sweetalert2/dist/sweetalert2.css",
+              "dist/neoflora-lib/src/assets/css/styles.css",
+              "dist/neoflora-lib/src/assets/css/watermark.css",
               "projects/neoprogeny/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js",
+              "node_modules/sweetalert2/dist/sweetalert2.all.js"
+            ]
           }
         },
         "lint": {
@@ -353,9 +385,90 @@
           }
         }
       }
-    }},
+    },
+    "neoflora-lib": {
+      "projectType": "library",
+      "root": "projects/neoflora-lib",
+      "sourceRoot": "projects/neoflora-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/neoflora-lib/tsconfig.lib.json",
+            "project": "projects/neoflora-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/neoflora-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/neoflora-lib/src/test.ts",
+            "tsConfig": "projects/neoflora-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/neoflora-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/neoflora-lib/tsconfig.lib.json",
+              "projects/neoflora-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "tahoni-lib": {
+      "projectType": "library",
+      "root": "projects/tahoni-lib",
+      "sourceRoot": "projects/tahoni-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/tahoni-lib/tsconfig.lib.json",
+            "project": "projects/tahoni-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/tahoni-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/tahoni-lib/src/test.ts",
+            "tsConfig": "projects/tahoni-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/tahoni-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/tahoni-lib/tsconfig.lib.json",
+              "projects/tahoni-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "analytics": "38504a16-e3a3-481b-a44f-1362ea904c04"
   },
-  "defaultProject": "neoflora"
+  "defaultProject": "eneoflora"
 }

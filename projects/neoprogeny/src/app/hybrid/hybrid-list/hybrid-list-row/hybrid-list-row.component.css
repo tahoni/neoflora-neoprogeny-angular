@@ -1,0 +1,53 @@
+/* Component-specific styling */
+:host {
+  display: block;
+}
+
+/* Content */
+fa-icon {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+/* Links */
+a:active,
+a:visited,
+a:hover,
+a:focus {
+  color: #551165;
+  text-decoration: none;
+}
+
+/* Tables */
+.d-row, .d-column {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+.d-row {
+  margin: 0;
+  padding: 0;
+}
+
+.d-column {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Columns */
+.description-column {
+  text-align: start;
+  justify-content: start;
+}
+
+/* Icons */
+.calla-icon {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
