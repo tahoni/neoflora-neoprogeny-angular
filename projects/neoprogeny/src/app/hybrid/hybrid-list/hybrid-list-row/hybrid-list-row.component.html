@@ -1,0 +1,45 @@
+<div class="d-flex d-row">
+  <div class="d-flex d-column hybrid-column">
+    <span class="h-calla-icon"></span>
+    <a [routerLink]="[hybridService.getHybridEditPath(), hybrid.id]">{{hybrid.code}}</a>
+  </div>
+
+  <div class="d-flex d-column parent-column">
+    <p>
+      <span *ngIf="(hybrid?.mother?.id) && (hybrid?.father?.id)">
+        <fa-icon [icon]="iconService.getVenusIcon()"></fa-icon>
+        <a [routerLink]="[hybridService.getHybridEditPath(), hybrid.mother.id]">{{hybrid.mother?.code}}</a>
+        <fa-icon [icon]="iconService.getMultiplicationIcon()"></fa-icon>
+        <a [routerLink]="[hybridService.getHybridEditPath(), hybrid.father.id]">{{hybrid.father.code}}</a>
+        <fa-icon [icon]="iconService.getMarsIcon()"></fa-icon>
+      </span>
+    </p>
+  </div>
+
+  <div class="d-flex d-column seed-column">
+    <p>
+      <span *ngIf="hybrid.seed">
+      <fa-icon [classes]="['fa-lg']"
+               [icon]="iconService.getSeedIcon()"
+               [ngClass]="hybrid.seed"></fa-icon>
+      </span>
+    </p>
+  </div>
+
+  <div class="d-flex d-column offspring-column">
+    <p>
+      <span *ngIf="hybrid.offspring">
+      <fa-icon [icon]="iconService.getOffspringIcon()"
+               [ngClass]="hybrid.offspring"></fa-icon>
+      </span>
+    </p>
+  </div>
+
+  <div class="d-flex d-column more-column">
+    <p>
+      <a [routerLink]="[hybridService.getHybridEditPath(), hybrid.id]">
+        <fa-icon [classes]="['btn-icon']" [icon]="iconService.getMoreIcon()"></fa-icon>
+      </a>
+    </p>
+  </div>
+</div>

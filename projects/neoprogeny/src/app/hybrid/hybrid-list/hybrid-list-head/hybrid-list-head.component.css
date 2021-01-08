@@ -1,0 +1,27 @@
+/* Component-specific styling */
+:host {
+  display: block;
+}
+
+/* Colours */
+.d-column {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+/* Content */
+p {
+  font-weight: bold;
+}
+
+/* Tables */
+.d-row {
+  background-color: #551165;
+  margin: 0;
+  padding: 0;
+}
+
+.d-column {
+  color: white;
+  padding: 0.5em 0;
+}

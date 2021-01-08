@@ -1,0 +1,18 @@
+{
+  "short_name": "Neoflora",
+  "name": "Neoflora",
+  "icons": [
+  {
+    "src": "assets/img/icons/calla-icon-512.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  },
+  {
+    "src": "assets/img/icons/calla-icon-192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#9b89af",
+  "theme_color": "#9b89af"
+}
