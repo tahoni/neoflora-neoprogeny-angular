@@ -1,7 +1,7 @@
 import {Directive, HostListener} from '@angular/core';
 import {NgForm} from "@angular/forms";
 import Swal from 'sweetalert2';
-import {FormService} from "./shared/form.service";
+import {FormService} from "../shared/form.service";
 
 @Directive({
   selector: '[libSummaryOnError]'
