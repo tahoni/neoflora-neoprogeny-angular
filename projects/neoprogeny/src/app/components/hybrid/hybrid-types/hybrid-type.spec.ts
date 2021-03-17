@@ -1,4 +1,4 @@
-import { HybridType } from './hybrid-types';
+import { HybridType } from './hybrid-type';
 
 describe('HybridType', () => {
   it('should create an instance', () => {

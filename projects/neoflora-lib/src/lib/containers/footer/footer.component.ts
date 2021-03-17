@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {IconService} from "../../icon.service";
+import {IconService} from "../../services/icon.service";
 
 @Component({
   selector: 'lib-footer',
