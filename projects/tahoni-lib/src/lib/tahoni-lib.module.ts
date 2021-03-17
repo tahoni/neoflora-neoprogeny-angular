@@ -1,11 +1,11 @@
 import {NgModule} from '@angular/core';
 
-import {FocusOnErrorDirective} from './focus-on-error.directive';
-import {TouchOnErrorDirective} from './touch-on-error.directive';
-import {MessageOnErrorDirective} from './message-on-error.directive';
-import {SummaryOnErrorDirective} from './summary-on-error.directive';
+import {FocusOnErrorDirective} from './directives/focus-on-error.directive';
+import {TouchOnErrorDirective} from './directives/touch-on-error.directive';
+import {MessageOnErrorDirective} from './directives/message-on-error.directive';
+import {SummaryOnErrorDirective} from './directives/summary-on-error.directive';
 
-import {AlertService} from "./alert.service";
+import {AlertService} from "./services/alert.service";
 
 @NgModule({
   declarations: [

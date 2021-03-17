@@ -1,7 +1,10 @@
 import {Injectable} from '@angular/core';
 import {Observable, Subject} from "rxjs";
 import {cloneDeep} from 'lodash';
-import {HybridOffspringType, HybridSeedType, HybridType} from "./hybrid-types";
+
+import {HybridOffspringType} from "./hybrid-types/hybrid-offspring-type.enum";
+import {HybridSeedType} from "./hybrid-types/hybrid-seed-type.enum";
+import {HybridType} from "./hybrid-types/hybrid-type";
 
 @Injectable({
   providedIn: 'root'
