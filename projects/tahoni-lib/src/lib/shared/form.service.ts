@@ -13,6 +13,7 @@ export class FormService {
   getValidationMessage(control: string) {
     // Find the invalid control
     let invalidMessage = '';
+    // TODO: Remove XSS security vulnerability identified by CodeInspector
     const invalidControl = $('#' + control);
 
     // Get the validation message of the invalid control, if any
