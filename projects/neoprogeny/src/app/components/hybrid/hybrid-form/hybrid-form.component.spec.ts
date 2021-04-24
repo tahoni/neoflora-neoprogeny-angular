@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { HybridFormComponent } from './hybrid-form.component';
 
@@ -6,7 +6,7 @@ describe('DetailCrudComponent', () => {
   let component: HybridFormComponent;
   let fixture: ComponentFixture<HybridFormComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ HybridFormComponent ]
     })
