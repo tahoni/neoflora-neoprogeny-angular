@@ -1,2 +1,2 @@
 projects/*/karma.conf.js
-projects/*/e2e/src/app.e2e.spec.ts
+projects/*/e2e/src/app.e2e-spec.ts
