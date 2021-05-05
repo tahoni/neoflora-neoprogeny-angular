@@ -7,6 +7,8 @@ input[type='file'].form-control-file {
   left: 0;
   margin-left: 0.25em;
   padding: 0.25em 0.25em 0.25em 0.75em;
+  color: inherit;
+  background-image: inherit;
 }
 
 /* Buttons */

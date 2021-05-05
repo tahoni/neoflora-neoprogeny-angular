@@ -8,10 +8,17 @@
 }
 
 /* Input elements */
-input[type='text'].form-control {
+input,
+textarea {
+  color: inherit;
+  background-image: inherit !important;
+}
+
+input[type='text'].form-control,
+input[type='number'].form-control {
   margin-left: 1em;
   margin-right: 1em;
-  border-radius: 0.25em !important;
+  border-radius: 0.25em;
 }
 
 /* Legends */

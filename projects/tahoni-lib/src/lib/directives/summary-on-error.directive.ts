@@ -23,13 +23,13 @@ export class SummaryOnErrorDirective {
       // Find the validation message for the control
       const invalidMessage = this.formService.getValidationMessage(it);
       // Style the validation message for the control
-      const invalidHtmlMessage = it + '<span style="color: red">' + invalidMessage + '</span><br>';
+      const invalidHtmlMessage = it + '<span style="color: red">' + invalidMessage + '</span><br/>';
       validationMessage += invalidHtmlMessage;
     }
 
     // Display the list of validation messages for all invalid controls
     if (validationMessage) {
-      validationMessage = 'Please fix the following errors:<br>' + validationMessage;
+      validationMessage = 'Please fix the following errors:<br/>' + validationMessage;
     }
     Swal.fire('Error', validationMessage, 'error');
   }

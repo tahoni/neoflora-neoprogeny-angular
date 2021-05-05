@@ -17,17 +17,12 @@
       </label>
     </div>
     <div class="col-6 input-group">
-      <label class="m-0" for="mother">
-        <fa-icon [icon]="iconService.getVenusIcon()"></fa-icon>
-      </label>
-      <input [ngModel]="hybrid?.mother?.code" [value]="hybrid?.mother?.code" class="form-control"
-             id="mother" name="mother" type="text"/>
+      <input [ngModel]="hybrid?.mother?.code" [value]="hybrid?.mother?.code" class="form-control" aria-label="mother"
+           id="mother" name="mother" type="text"/>
       <fa-icon [icon]="iconService.getMultiplicationIcon()"></fa-icon>
-      <input [ngModel]="hybrid?.father?.code" [value]="hybrid?.father?.code" class="form-control"
+      <input [ngModel]="hybrid?.father?.code" [value]="hybrid?.father?.code" class="form-control" aria-label="father"
              id="father" name="father" type="text"/>
-      <label class="m-0" for="father">
-        <fa-icon [icon]="iconService.getMarsIcon()"></fa-icon>
-      </label>
+      <fa-icon [icon]="iconService.getMarsIcon()"></fa-icon>
     </div>
   </div>
 
@@ -42,14 +37,12 @@
     <div *ngFor="let seedType of legendService.getSeed()" class="form-row">
       <div class="col-1 offset-4">
         <input [id]="seedType.code" [ngModel]="hybrid?.seed" [value]="seedType.code"
-               class="form-control-sm"
+               class="form-control-sm" aria-label="[seedType.code]"
                name="seed" type="radio"/>
       </div>
       <div class="col-3">
-        <label [for]="seedType.code">
-          <fa-icon [classes]="[seedType.code]" [icon]="iconService.getSeedIcon()"></fa-icon>
-          &nbsp;
-          {{seedType.description}}</label>
+        <fa-icon [classes]="[seedType.code]" [icon]="iconService.getSeedIcon()"></fa-icon>
+        {{seedType.description}}
       </div>
     </div>
   </div>
@@ -66,15 +59,12 @@
     <div *ngFor="let offspringType of legendService.getOffspring()" class="form-row">
       <div class="col-1 offset-4">
         <input [id]="offspringType.code" [ngModel]="hybrid?.offspring" [value]="offspringType.code"
-               class="form-control-sm"
+               class="form-control-sm" aria-label="[hybrid.offspring]"
                name="offspring" type="radio"/>
       </div>
       <div class="col-3">
-        <label [for]="offspringType.code">
-          <fa-icon [class]="[offspringType.code]" [icon]="iconService.getOffspringIcon()"></fa-icon>
-          &nbsp;
-          {{offspringType.description}}
-        </label>
+        <fa-icon [class]="[offspringType.code]" [icon]="iconService.getOffspringIcon()"></fa-icon>
+        {{offspringType.description}}
       </div>
     </div>
   </div>

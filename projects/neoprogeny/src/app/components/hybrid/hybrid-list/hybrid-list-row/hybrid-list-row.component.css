@@ -10,12 +10,11 @@ fa-icon {
 }
 
 /* Links */
-a:active,
+a:link,
 a:visited,
 a:hover,
-a:focus {
-  color: #551165;
-  text-decoration: none;
+a:active {
+  color: #2F0A38;
 }
 
 /* Tables */
