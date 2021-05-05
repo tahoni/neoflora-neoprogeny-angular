@@ -11,7 +11,6 @@
 input,
 textarea {
   color: inherit;
-  background-image: inherit !important;
 }
 
 input[type='text'].form-control,
@@ -21,6 +20,10 @@ input[type='number'].form-control {
   border-radius: 0.25em;
 }
 
+/* Buttons */
+button:hover {
+  background-color: #380b42;
+}
 /* Legends */
 input[type='text'].code {
   margin-top: 1em;

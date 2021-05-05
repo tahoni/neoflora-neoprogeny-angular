@@ -8,7 +8,6 @@ input[type='file'].form-control-file {
   margin-left: 0.25em;
   padding: 0.25em 0.25em 0.25em 0.75em;
   color: inherit;
-  background-image: inherit;
 }
 
 /* Buttons */
@@ -20,4 +19,8 @@ input[type='file'].form-control-file {
   padding: 0.25em 1em;
   cursor: pointer;
   border-radius: 0.25em;
+}
+
+.form-control-file-button:hover {
+  background-color: #380b42;
 }
