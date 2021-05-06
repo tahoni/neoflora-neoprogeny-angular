@@ -1,6 +1,6 @@
-import {HybridOffspringType} from "./hybrid-offspring-type.enum";
-import {HybridSeedType} from "./hybrid-seed-type.enum";
-import {HybridBaseType} from "./hybrid-base-type";
+import {HybridOffspringType} from './hybrid-offspring-type.enum';
+import {HybridSeedType} from './hybrid-seed-type.enum';
+import {HybridBaseType} from './hybrid-base-type';
 
 export class HybridType {
   id: number;

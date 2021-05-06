@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IconService} from "neoflora-lib";
-import {HybridService} from "../../hybrid.service";
+import {IconService} from 'neoflora-lib';
+import {HybridService} from '../../hybrid.service';
 
 @Component({
   selector: 'app-hybrid-list-row',

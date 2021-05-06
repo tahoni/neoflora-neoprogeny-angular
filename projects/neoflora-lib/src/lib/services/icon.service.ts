@@ -12,7 +12,7 @@ import {
   faTimes,
   faVenus,
   faVenusMars
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 
 @Injectable({
   providedIn: 'root'

@@ -5,7 +5,7 @@ import {TouchOnErrorDirective} from './directives/touch-on-error.directive';
 import {MessageOnErrorDirective} from './directives/message-on-error.directive';
 import {SummaryOnErrorDirective} from './directives/summary-on-error.directive';
 
-import {AlertService} from "./services/alert.service";
+import {AlertService} from './services/alert.service';
 
 @NgModule({
   declarations: [

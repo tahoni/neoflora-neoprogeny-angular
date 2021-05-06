@@ -1,11 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute, Router} from '@angular/router';
 
-import {LegendService} from "neoflora-lib";
-import {IconService} from "neoflora-lib";
-import {AlertService} from "tahoni-lib";
+import {LegendService} from 'neoflora-lib';
+import {IconService} from 'neoflora-lib';
+import {AlertService} from 'tahoni-lib';
 
-import {HybridService} from "../hybrid.service";
+import {HybridService} from '../hybrid.service';
+import {HybridType} from '../hybrid-types/hybrid-type';
 
 @Component({
   selector: 'app-hybrid-form',
@@ -14,7 +15,7 @@ import {HybridService} from "../hybrid.service";
 })
 export class HybridFormComponent implements OnInit {
 
-  hybrid: any;
+  hybrid: HybridType;
   hybridId: number;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute,
@@ -52,6 +53,7 @@ export class HybridFormComponent implements OnInit {
     if (valid) {
       if (success) {
         this.alertService.alertSuccess('Successful');
+        // TODO: Promise returned from navigate() is ignored
         this.router.navigate([this.hybridService.getHybridsSummaryPath()]);
 
       } else {
@@ -66,6 +68,7 @@ export class HybridFormComponent implements OnInit {
   }
 
   onCancelClicked() {
+    // TODO: Promise returned from navigate() is ignored
     this.router.navigate([this.hybridService.getHybridsSummaryPath()]);
   }
 

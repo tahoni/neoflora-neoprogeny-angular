@@ -1,5 +1,5 @@
 import {Directive, HostListener} from '@angular/core';
-import {NgForm} from "@angular/forms";
+import {NgForm} from '@angular/forms';
 
 declare var $: any;
 

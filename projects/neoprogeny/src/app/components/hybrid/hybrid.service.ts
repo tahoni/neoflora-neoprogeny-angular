@@ -1,10 +1,10 @@
 import {Injectable} from '@angular/core';
-import {Observable, Subject} from "rxjs";
+import {Observable, Subject} from 'rxjs';
 import {cloneDeep} from 'lodash';
 
-import {HybridOffspringType} from "./hybrid-types/hybrid-offspring-type.enum";
-import {HybridSeedType} from "./hybrid-types/hybrid-seed-type.enum";
-import {HybridType} from "./hybrid-types/hybrid-type";
+import {HybridOffspringType} from './hybrid-types/hybrid-offspring-type.enum';
+import {HybridSeedType} from './hybrid-types/hybrid-seed-type.enum';
+import {HybridType} from './hybrid-types/hybrid-type';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +15,8 @@ export class HybridService {
 
   private hybridsSummaryPath = '/hybrid/summary';
   private hybridsEditPath = '/hybrid/edit';
-  private hybridsViewPath = '/hybrids/view';
-  private hybridsRootPath = this.hybridsSummaryPath;
+  // private hybridsViewPath = '/hybrids/view';
+  // private hybridsRootPath = this.hybridsSummaryPath;
 
   private hybrids: HybridType[] = [
     {
@@ -93,7 +93,7 @@ export class HybridService {
   }
 
   getHybrid(id: number) {
-    let hybrid = {};
+    let hybrid = new HybridType();
     if (id > 0) {
       hybrid = this.lookupHybridById(id);
     }
@@ -101,8 +101,8 @@ export class HybridService {
   }
 
   setHybrid(hybrid: any): boolean {
-    let newHybrid: any;
-    let existingHybrid: any;
+    let newHybrid: HybridType;
+    let existingHybrid: HybridType;
 
     if (hybrid.id > 0) {
       existingHybrid = this.lookupHybridById(hybrid.id);
@@ -111,8 +111,8 @@ export class HybridService {
     newHybrid = {
       id: hybrid.id,
       code: hybrid.code ? hybrid.code : '',
-      mother: hybrid.mother ? this.lookupHybridByCode(hybrid.mother) : '',
-      father: hybrid.father ? this.lookupHybridByCode(hybrid.father) : '',
+      mother: hybrid.mother ? this.lookupHybridByCode(hybrid.mother) : new HybridType(),
+      father: hybrid.father ? this.lookupHybridByCode(hybrid.father) : new HybridType(),
       description: hybrid.description ? hybrid.description : '',
       seed: hybrid.seed ? hybrid.seed : '',
       offspring: hybrid.offspring ? hybrid.offspring : '',
@@ -131,11 +131,11 @@ export class HybridService {
   }
 
   private lookupHybridById(id: number) {
-    return this.hybrids.find(it => it.id == id);
+    return this.hybrids.find(it => it.id === id);
   }
 
   private lookupHybridByCode(code: string) {
-    return this.hybrids.find(it => it.code == code);
+    return this.hybrids.find(it => it.code === code);
   }
 
   private initHybrids(): void {

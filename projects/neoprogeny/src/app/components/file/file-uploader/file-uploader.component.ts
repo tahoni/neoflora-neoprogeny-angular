@@ -32,6 +32,7 @@ export class FileUploaderComponent implements OnInit {
 
       reader.readAsDataURL(file);
 
+      // TODO: non-arrow functions are forbidden
       reader.onload = function () {
         let success = true;
         let errorMessage = '';
@@ -67,6 +68,7 @@ export class FileUploaderComponent implements OnInit {
         return me.onFileInputVerified(reader.result.toString(), errorMessage);
       }
 
+      // TODO: Unused parameter error
       reader.onerror = function (error) {
         // Populate the error message
         const message = 'Error';
@@ -100,6 +102,7 @@ export class FileUploaderComponent implements OnInit {
     image.src = src;
     return new Promise((resolve) => {
       image.onload = ((rs) => {
+        // TODO: object access via string literals is disallowed
         const imageHeight = rs.currentTarget['height'];
         const imageWidth = rs.currentTarget['width'];
 

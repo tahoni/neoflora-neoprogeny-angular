@@ -1,7 +1,7 @@
 import {Directive, HostListener} from '@angular/core';
-import {NgForm} from "@angular/forms";
+import {NgForm} from '@angular/forms';
 import Swal from 'sweetalert2';
-import {FormService} from "../shared/form.service";
+import {FormService} from '../shared/form.service';
 
 @Directive({
   selector: '[libSummaryOnError]'
@@ -31,6 +31,7 @@ export class SummaryOnErrorDirective {
     if (validationMessage) {
       validationMessage = 'Please fix the following errors:<br/>' + validationMessage;
     }
+    // TODO: Promise returned from fire() is ignored
     Swal.fire('Error', validationMessage, 'error');
   }
 
