@@ -16,7 +16,7 @@ import {HybridType} from '../hybrid-types/hybrid-type';
 export class HybridFormComponent implements OnInit {
 
   hybrid: HybridType;
-  hybridId: number;
+  hybridId: string;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute,
               public iconService: IconService, public legendService: LegendService,
@@ -27,7 +27,7 @@ export class HybridFormComponent implements OnInit {
     this.activatedRoute.params.subscribe(
       (params) => {
         this.hybridId = params.id;
-        this.hybrid = this.hybridService.getHybrid(this.hybridId);
+        this.hybrid = this.hybridService.getHybrid(Number(this.hybridId));
       });
   }
 
