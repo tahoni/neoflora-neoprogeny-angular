@@ -97,7 +97,8 @@ export class HybridService {
     if (id > 0) {
       hybrid = this.lookupHybridById(id);
     }
-    return cloneDeep(hybrid);
+    // TODO: copy hybrid
+    return hybrid;
   }
 
   setHybrid(hybrid: any): boolean {

@@ -43,8 +43,10 @@
                name="seed" type="radio"/>
       </div>
       <div class="col-3">
-        <fa-icon [classes]="[seedType.code]" [icon]="iconService.getSeedIcon()"></fa-icon>
-        {{seedType.description}}
+        <label [for]="seedType.code">
+          <fa-icon [class]="[seedType.code]" [icon]="iconService.getSeedIcon()"></fa-icon>
+          &nbsp;
+          {{seedType.description}}</label>
       </div>
     </div>
   </div>
@@ -65,8 +67,11 @@
                name="offspring" type="radio"/>
       </div>
       <div class="col-3">
-        <fa-icon [class]="[offspringType.code]" [icon]="iconService.getOffspringIcon()"></fa-icon>
-        {{offspringType.description}}
+        <label [for]="offspringType.code">
+          <fa-icon [class]="[offspringType.code]" [icon]="iconService.getOffspringIcon()"></fa-icon>
+          &nbsp;
+          {{offspringType.description}}
+        </label>
       </div>
     </div>
   </div>

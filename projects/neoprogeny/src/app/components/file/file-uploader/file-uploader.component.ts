@@ -1,7 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
-import * as _ from 'lodash';
-
 @Component({
   selector: 'app-file-uploader',
   templateUrl: './file-uploader.component.html',
@@ -80,7 +78,7 @@ export class FileUploaderComponent implements OnInit {
   verifyFileType(file: File, allowedFileTypes: string[]): boolean {
     let result = true;
 
-    if (!_.includes(allowedFileTypes, file.type)) {
+    if (!(allowedFileTypes.includes(file.type))) {
       result = false;
     }
 

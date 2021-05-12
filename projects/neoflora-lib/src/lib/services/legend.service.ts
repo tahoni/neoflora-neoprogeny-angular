@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 
+// TODO: read from db and enum
 @Injectable({
   providedIn: 'root'
 })
@@ -14,6 +15,7 @@ export class LegendService {
   private offspring = [
     {code: 'offspring', description: 'Nageslag'},
     {code: 'offspring-none', description: 'Geen nageslag'},
+    {code: 'offspring-germinate', description: 'Ontkiem'}
   ]
 
   constructor() {
