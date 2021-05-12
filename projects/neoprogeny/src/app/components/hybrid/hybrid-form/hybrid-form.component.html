@@ -35,11 +35,16 @@
           <fa-icon [icon]="iconService.getSeedIcon()"></fa-icon>
           Saad</label>
       </div>
-      <div class="col-6">
-        <select class="form-control" [ngModel]="hybrid?.seed" [value]="hybrid?.seed" id="seed">
-          <option></option>
-          <option *ngFor="let seedType of legendService.getSeed()" [value]="seedType.code">{{seedType.description}}</option>
-        </select>
+    </div>
+    <div *ngFor="let seedType of legendService.getSeed()" class="form-row">
+      <div class="col-1 offset-4">
+        <input [id]="seedType.code" [ngModel]="hybrid?.seed" [value]="seedType.code"
+               class="form-control-sm" aria-label="[seedType.code]"
+               name="seed" type="radio"/>
+      </div>
+      <div class="col-3">
+        <fa-icon [classes]="[seedType.code]" [icon]="iconService.getSeedIcon()"></fa-icon>
+        {{seedType.description}}
       </div>
     </div>
   </div>
@@ -52,11 +57,16 @@
           Nageslag
         </label>
       </div>
-      <div class="col-6">
-        <select class="form-control" [ngModel]="hybrid?.offspring" [value]="hybrid?.offspring" id="offspring">
-          <option></option>
-          <option *ngFor="let offspringType of legendService.getOffspring()" [value]="offspringType.code">{{offspringType.description}}</option>
-        </select>
+    </div>
+    <div *ngFor="let offspringType of legendService.getOffspring()" class="form-row">
+      <div class="col-1 offset-4">
+        <input [id]="offspringType.code" [ngModel]="hybrid?.offspring" [value]="offspringType.code"
+               class="form-control-sm" aria-label="[hybrid.offspring]"
+               name="offspring" type="radio"/>
+      </div>
+      <div class="col-3">
+        <fa-icon [class]="[offspringType.code]" [icon]="iconService.getOffspringIcon()"></fa-icon>
+        {{offspringType.description}}
       </div>
     </div>
   </div>
