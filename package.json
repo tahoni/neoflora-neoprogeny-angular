@@ -30,6 +30,7 @@
     "jquery-mask-plugin": "^1.14.16",
     "lodash": "^4.17.21",
     "ngx-library-assets": "^2.0.4",
+    "npm": "^7.13.0",
     "popper.js": "^1.16.1",
     "rxjs": "~6.6.7",
     "sanitize-html": "^2.3.3",

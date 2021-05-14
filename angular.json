@@ -11,7 +11,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "ngx-library-assets:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/neoflora",
             "index": "projects/neoflora/src/index.html",
@@ -136,7 +136,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "ngx-library-assets:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/eneoflora",
             "index": "projects/eneoflora/src/index.html",
@@ -261,7 +261,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "ngx-library-assets:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/neoprogeny",
             "index": "projects/neoprogeny/src/index.html",

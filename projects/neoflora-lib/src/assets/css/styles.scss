@@ -22,23 +22,34 @@ input {
   color: $text-color;
 }
 
-button:hover {
-  background-color: $button-hover-color;
-}
-
 fa-icon {
   color: $text-color;
 }
 
 .container {
-  background-color: #e8e4ed;
+  background-color: $container-color;
 }
 
-.btn-primary {
+.btn {
+  border-color: $button-border-color;
+}
+
+.btn:hover,
+.btn:active:hover,
+.btn:focus:hover {
+  background-color: $button-hover-color;
+  border-color: $button-border-color;
+}
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:focus {
   background-color: $primary-button-color;
 }
 
-.btn-secondary {
+.btn-secondary,
+.btn-secondary:active,
+.btn-secondary:focus {
   background-color: $secondary-button-color;
 }
 
