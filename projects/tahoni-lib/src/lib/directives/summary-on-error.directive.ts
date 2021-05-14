@@ -31,8 +31,7 @@ export class SummaryOnErrorDirective {
     if (validationMessage) {
       validationMessage = 'Please fix the following errors:<br/>' + validationMessage;
     }
-    // TODO: Promise returned from fire() is ignored
-    Swal.fire('Error', validationMessage, 'error');
+    Swal.fire('Error', validationMessage, 'error').then();
   }
 
 }

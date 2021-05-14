@@ -1,5 +1,3 @@
-<!-- TODO: Unresolved function/method -->
-<!-- TODO: Directive that provided attribute is out of the current Angular module's scope -->
 <form #form="ngForm" (ngSubmit)="onSubmit(form)" libFocusOnError class="was-validated" novalidate>
   <div class="form-row form-group">
     <div class="col-3 offset-1">
@@ -18,10 +16,11 @@
         Kruising
       </label>
     </div>
-    <div class="col-6 input-group">
+    <div class="col-6 input-group ancestors">
+      <fa-icon [icon]="iconService.getVenusIcon()"></fa-icon>
       <input [ngModel]="hybrid?.mother?.code" [value]="hybrid?.mother?.code" class="form-control" aria-label="mother"
            id="mother" name="mother" type="text"/>
-      <fa-icon [icon]="iconService.getMultiplicationIcon()"></fa-icon>
+      <span><fa-icon [icon]="iconService.getMultiplicationIcon()"></fa-icon></span>
       <input [ngModel]="hybrid?.father?.code" [value]="hybrid?.father?.code" class="form-control" aria-label="father"
              id="father" name="father" type="text"/>
       <fa-icon [icon]="iconService.getMarsIcon()"></fa-icon>

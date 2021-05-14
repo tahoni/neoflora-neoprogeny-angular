@@ -97,8 +97,7 @@ export class HybridService {
     if (id > 0) {
       hybrid = this.lookupHybridById(id);
     }
-    // TODO: copy hybrid
-    return hybrid;
+    return {...hybrid};
   }
 
   setHybrid(hybrid: any): boolean {

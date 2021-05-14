@@ -10,13 +10,11 @@ export class AlertService {
   }
 
   alertSuccess(message: string) {
-    // TODO: Promise returned from fire() is ignored
-    Swal.fire('Success', message, 'success');
+    Swal.fire('Success', message, 'success').then();
   }
 
-  // TODO: Promise returned from fire() is ignored
   alertError(message: string) {
-    Swal.fire('Error', message, 'error');
+    Swal.fire('Error', message, 'error').then();
   }
 
 }

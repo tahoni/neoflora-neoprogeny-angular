@@ -16,7 +16,7 @@ import {HybridType} from '../hybrid-types/hybrid-type';
 export class HybridFormComponent implements OnInit {
 
   hybrid: HybridType;
-  hybridId: string;
+  hybridId: number;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute,
               public iconService: IconService, public legendService: LegendService,
@@ -26,8 +26,8 @@ export class HybridFormComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(
       (params) => {
-        this.hybridId = params.id;
-        this.hybrid = this.hybridService.getHybrid(Number(this.hybridId));
+        this.hybridId = Number(params.id);
+        this.hybrid = this.hybridService.getHybrid(this.hybridId);
       });
   }
 
@@ -53,8 +53,7 @@ export class HybridFormComponent implements OnInit {
     if (valid) {
       if (success) {
         this.alertService.alertSuccess('Successful');
-        // TODO: Promise returned from navigate() is ignored
-        this.router.navigate([this.hybridService.getHybridsSummaryPath()]);
+        this.router.navigate([this.hybridService.getHybridsSummaryPath()]).then();
 
       } else {
         this.alertService.alertError('Unexpected error');
@@ -68,8 +67,7 @@ export class HybridFormComponent implements OnInit {
   }
 
   onCancelClicked() {
-    // TODO: Promise returned from navigate() is ignored
-    this.router.navigate([this.hybridService.getHybridsSummaryPath()]);
+    this.router.navigate([this.hybridService.getHybridsSummaryPath()]).then();
   }
 
   onImageUploadedEvent(image) {

@@ -9,14 +9,6 @@ fa-icon {
   margin-right: 0.5em;
 }
 
-/* Links */
-a:link,
-a:visited,
-a:hover,
-a:active {
-  color: #2F0A38;
-}
-
 /* Tables */
 .d-row, .d-column {
   border: 1px solid white;

@@ -1,21 +1,33 @@
 /* Global styling */
+@import "colors";
 
 /* Colours */
 body {
-  background-color: #9b89af;
-  color: #551165;
+  background-color: $background-color;
+  color: $text-color;
 }
 
 h1, h2, h3 {
-  color: #551165;
+  color: $text-color;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: $anchor-color;
 }
 
 input {
-  color: #551165;
+  color: $text-color;
+}
+
+button:hover {
+  background-color: $button-hover-color;
 }
 
 fa-icon {
-  color: #551165;
+  color: $text-color;
 }
 
 .container {
@@ -23,15 +35,15 @@ fa-icon {
 }
 
 .btn-primary {
-  background-color: #551165;
+  background-color: $primary-button-color;
 }
 
 .btn-secondary {
-  background-color: #816b9a;
+  background-color: $secondary-button-color;
 }
 
 .image-icon {
-  color: #816b9a;
+  color: $icon-color;
   font-weight: lighter;
 }
 
@@ -95,12 +107,12 @@ p {
 }
 
 .calla-icon {
-  background-color: #816b9a;
+  background-color: $icon-color;
   -webkit-mask-image: url("../img/icons/calla-icon.png");
 }
 
 .h-calla-icon {
-  background-color: #551165;
+  background-color: $text-color;
   -webkit-mask-image: url("../img/icons/calla-icon.png");
 }
 

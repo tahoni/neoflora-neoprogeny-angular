@@ -13,9 +13,8 @@ textarea {
   color: inherit;
 }
 
-input[type='text'].form-control,
-input[type='number'].form-control {
-  /* TODO: do only for x */
+.ancestors input[type='text'].form-control,
+.ancestors input[type='number'].form-control {
   margin-left: 1em;
   margin-right: 1em;
   border-radius: 0.25em;
@@ -25,6 +24,7 @@ input[type='number'].form-control {
 button:hover {
   background-color: #380b42;
 }
+
 /* Legends */
 input[type='text'].code {
   margin-top: 1em;

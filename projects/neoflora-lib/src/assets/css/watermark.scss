@@ -1,4 +1,5 @@
 /* Component-specific styling */
+@import "colors";
 
 /* Watermark */
 .watermarked {
@@ -26,7 +27,7 @@
 .watermarked::after {
   display: block;
   opacity: 0.0;
-  background-color: #551165;
+  background-color: $accent-color;
   content: "";
   position: absolute;
   height: 100%;

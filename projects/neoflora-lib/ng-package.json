@@ -2,7 +2,7 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/neoflora-lib",
   "assets": [
-    "src/assets/**/*.css",
+    "src/assets/**/*.scss",
     "src/assets/img/**/*.png"
   ],
   "lib": {

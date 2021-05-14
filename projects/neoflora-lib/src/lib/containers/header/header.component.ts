@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit {
   }
 
   redirectToRoot() {
-    // TODO: Promise returned from navigate() is ignored
-    this.router.navigate(['/']);
+    this.router.navigate(['/']).then();
   }
 }
