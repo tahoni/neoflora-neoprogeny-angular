@@ -25,8 +25,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
-              "dist/neoflora-lib/src/assets/css/styles.css",
-              "dist/neoflora-lib/src/assets/css/watermark.css",
+              "dist/neoflora-lib/src/assets/css/styles.scss",
+              "dist/neoflora-lib/src/assets/css/watermark.scss",
               "projects/neoflora/src/styles.css"
             ],
             "scripts": [
@@ -93,8 +93,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
-              "dist/neoflora-lib/src/assets/css/styles.css",
-              "dist/neoflora-lib/src/assets/css/watermark.css",
+              "dist/neoflora-lib/src/assets/css/styles.scss",
+              "dist/neoflora-lib/src/assets/css/watermark.scss",
               "projects/neoflora/src/styles.css"
             ],
             "scripts": [
@@ -150,8 +150,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
-              "dist/neoflora-lib/src/assets/css/styles.css",
-              "dist/neoflora-lib/src/assets/css/watermark.css",
+              "dist/neoflora-lib/src/assets/css/styles.scss",
+              "dist/neoflora-lib/src/assets/css/watermark.scss",
               "projects/eneoflora/src/styles.css"
             ],
             "scripts": [
@@ -218,8 +218,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
-              "dist/neoflora-lib/src/assets/css/styles.css",
-              "dist/neoflora-lib/src/assets/css/watermark.css",
+              "dist/neoflora-lib/src/assets/css/styles.scss",
+              "dist/neoflora-lib/src/assets/css/watermark.scss",
               "projects/eneoflora/src/styles.css"
             ],
             "scripts": [
@@ -276,8 +276,8 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/sweetalert2/dist/sweetalert2.css",
-              "dist/neoflora-lib/src/assets/css/styles.css",
-              "dist/neoflora-lib/src/assets/css/watermark.css",
+              "dist/neoflora-lib/src/assets/css/styles.scss",
+              "dist/neoflora-lib/src/assets/css/watermark.scss",
               "projects/neoprogeny/src/styles.css"
             ],
             "scripts": [
@@ -348,8 +348,8 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/sweetalert2/dist/sweetalert2.css",
-              "dist/neoflora-lib/src/assets/css/styles.css",
-              "dist/neoflora-lib/src/assets/css/watermark.css",
+              "dist/neoflora-lib/src/assets/css/styles.scss",
+              "dist/neoflora-lib/src/assets/css/watermark.scss",
               "projects/neoprogeny/src/styles.css"
             ],
             "scripts": [
