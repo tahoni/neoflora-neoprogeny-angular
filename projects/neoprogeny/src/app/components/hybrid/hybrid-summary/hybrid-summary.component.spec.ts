@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { HybridSummaryComponent } from './hybrid-summary.component';
 
@@ -6,7 +6,7 @@ describe('SummaryComponent', () => {
   let component: HybridSummaryComponent;
   let fixture: ComponentFixture<HybridSummaryComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ HybridSummaryComponent ]
     })

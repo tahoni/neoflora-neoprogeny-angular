@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { HybridListComponent } from './hybrid-list.component';
 
@@ -6,7 +6,7 @@ describe('ListComponent', () => {
   let component: HybridListComponent;
   let fixture: ComponentFixture<HybridListComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ HybridListComponent ]
     })

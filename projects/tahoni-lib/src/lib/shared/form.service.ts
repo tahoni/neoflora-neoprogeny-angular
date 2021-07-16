@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import {sanitizeHtml} from 'sanitize-html';
 
 declare var $: any;
 
@@ -10,10 +11,10 @@ export class FormService {
   constructor() {
   }
 
-  getValidationMessage(control: string) {
+  getValidationMessage(control: string): string {
     // Find the invalid control
     let invalidMessage = '';
-    const invalidControl = $('#' + control);
+    const invalidControl = $('#' + this.cleanHtml(control));
 
     // Get the validation message of the invalid control, if any
     if (invalidControl instanceof HTMLButtonElement) {
@@ -32,6 +33,14 @@ export class FormService {
 
     // Return the validation message of the invalid control
     return invalidMessage;
+  }
+
+  cleanHtml(source: string): string {
+    return sanitizeHtml(source, {
+      allowedTags: [],
+      allowedAttributes: {},
+      disallowedTagsMode: 'discard',
+    });
   }
 
 }

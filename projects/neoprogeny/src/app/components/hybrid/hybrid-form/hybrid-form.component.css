@@ -8,10 +8,21 @@
 }
 
 /* Input elements */
-input[type='text'].form-control {
+input,
+textarea {
+  color: inherit;
+}
+
+.ancestors input[type='text'].form-control,
+.ancestors input[type='number'].form-control {
   margin-left: 1em;
   margin-right: 1em;
-  border-radius: 0.25em !important;
+  border-radius: 0.25em;
+}
+
+/* Buttons */
+button:hover {
+  background-color: #380b42;
 }
 
 /* Legends */

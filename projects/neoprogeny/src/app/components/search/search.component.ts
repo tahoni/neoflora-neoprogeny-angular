@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {IconService} from "neoflora-lib";
+import {IconService} from 'neoflora-lib';
 
 @Component({
   selector: 'app-search',

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { HybridSearchSimpleComponent } from './hybrid-search-simple.component';
 
@@ -6,7 +6,7 @@ describe('SearchSimpleComponent', () => {
   let component: HybridSearchSimpleComponent;
   let fixture: ComponentFixture<HybridSearchSimpleComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ HybridSearchSimpleComponent ]
     })

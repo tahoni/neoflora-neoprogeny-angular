@@ -7,9 +7,9 @@
 
 /* Child components */
 app-hybrid-list-row:nth-child(even) {
-  background-color: #816b9a;
+  background-color: #9b89af;
 }
 
 app-hybrid-list-row:nth-child(odd) {
-  background-color: #9b89af;
+  background-color: #C2B3CB;
 }

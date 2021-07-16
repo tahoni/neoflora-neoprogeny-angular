@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IconService} from "neoflora-lib";
-import {HybridService} from "../../hybrid.service";
+import {IconService} from 'neoflora-lib';
+import {HybridService} from '../../hybrid.service';
+import {HybridType} from '../../hybrid-types/hybrid-type';
 
 @Component({
   selector: 'app-hybrid-list-row',
@@ -9,7 +10,7 @@ import {HybridService} from "../../hybrid.service";
 })
 export class HybridListRowComponent implements OnInit {
 
-  @Input() hybrid;
+  @Input() hybrid: HybridType;
 
   constructor(public iconService: IconService, public hybridService: HybridService) {
   }
