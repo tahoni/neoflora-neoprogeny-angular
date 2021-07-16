@@ -1,11 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute, Router} from '@angular/router';
 
-import {LegendService} from "neoflora-lib";
-import {IconService} from "neoflora-lib";
-import {AlertService} from "tahoni-lib";
+import {LegendService} from 'neoflora-lib';
+import {IconService} from 'neoflora-lib';
+import {AlertService} from 'tahoni-lib';
 
-import {HybridService} from "../hybrid.service";
+import {HybridService} from '../hybrid.service';
+import {HybridType} from '../hybrid-types/hybrid-type';
 
 @Component({
   selector: 'app-hybrid-form',
@@ -14,7 +15,7 @@ import {HybridService} from "../hybrid.service";
 })
 export class HybridFormComponent implements OnInit {
 
-  hybrid: any;
+  hybrid: HybridType;
   hybridId: number;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute,
@@ -25,7 +26,7 @@ export class HybridFormComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(
       (params) => {
-        this.hybridId = params.id;
+        this.hybridId = Number(params.id);
         this.hybrid = this.hybridService.getHybrid(this.hybridId);
       });
   }
@@ -52,7 +53,7 @@ export class HybridFormComponent implements OnInit {
     if (valid) {
       if (success) {
         this.alertService.alertSuccess('Successful');
-        this.router.navigate([this.hybridService.getHybridsSummaryPath()]);
+        this.router.navigate([this.hybridService.getHybridsSummaryPath()]).then();
 
       } else {
         this.alertService.alertError('Unexpected error');
@@ -66,7 +67,7 @@ export class HybridFormComponent implements OnInit {
   }
 
   onCancelClicked() {
-    this.router.navigate([this.hybridService.getHybridsSummaryPath()]);
+    this.router.navigate([this.hybridService.getHybridsSummaryPath()]).then();
   }
 
   onImageUploadedEvent(image) {

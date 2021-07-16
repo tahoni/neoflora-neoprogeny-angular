@@ -1,7 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
-import * as _ from 'lodash';
-
 @Component({
   selector: 'app-file-uploader',
   templateUrl: './file-uploader.component.html',
@@ -32,7 +30,7 @@ export class FileUploaderComponent implements OnInit {
 
       reader.readAsDataURL(file);
 
-      reader.onload = function () {
+      reader.onload = () => {
         let success = true;
         let errorMessage = '';
 
@@ -67,7 +65,7 @@ export class FileUploaderComponent implements OnInit {
         return me.onFileInputVerified(reader.result.toString(), errorMessage);
       }
 
-      reader.onerror = function (error) {
+      reader.onerror = () => {
         // Populate the error message
         const message = 'Error';
         me.onFileInputVerified('', message);
@@ -78,7 +76,7 @@ export class FileUploaderComponent implements OnInit {
   verifyFileType(file: File, allowedFileTypes: string[]): boolean {
     let result = true;
 
-    if (!_.includes(allowedFileTypes, file.type)) {
+    if (!(allowedFileTypes.includes(file.type))) {
       result = false;
     }
 
@@ -100,8 +98,9 @@ export class FileUploaderComponent implements OnInit {
     image.src = src;
     return new Promise((resolve) => {
       image.onload = ((rs) => {
-        const imageHeight = rs.currentTarget['height'];
-        const imageWidth = rs.currentTarget['width'];
+        const eventTarget = rs.currentTarget as HTMLImageElement;
+        const imageHeight = eventTarget.height;
+        const imageWidth = eventTarget.width;
 
         if (imageHeight > maxHeight && imageWidth > maxWidth) {
           resolve(false);

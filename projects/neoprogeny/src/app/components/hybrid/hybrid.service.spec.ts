@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import {HybridService} from "./hybrid.service";
+import {HybridService} from './hybrid.service';
 
 describe('HybridService', () => {
   let service: HybridService;

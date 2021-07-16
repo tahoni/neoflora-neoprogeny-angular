@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {HybridType} from '../hybrid-types/hybrid-type';
 
 @Component({
   selector: 'app-hybrid-list',
@@ -7,7 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class HybridListComponent implements OnInit {
 
-  @Input() hybrids;
+  @Input() hybrids: HybridType[];
 
   constructor() {
   }

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'lib-header',
@@ -15,6 +15,6 @@ export class HeaderComponent implements OnInit {
   }
 
   redirectToRoot() {
-    this.router.navigate(['/']);
+    this.router.navigate(['/']).then();
   }
 }

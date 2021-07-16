@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { HybridEditComponent } from './hybrid-edit.component';
 
@@ -6,7 +6,7 @@ describe('DetailComponent', () => {
   let component: HybridEditComponent;
   let fixture: ComponentFixture<HybridEditComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ HybridEditComponent ]
     })
