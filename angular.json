@@ -5,7 +5,14 @@
   "projects": {
     "neoflora": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "projects/neoflora",
       "sourceRoot": "projects/neoflora/src",
       "prefix": "app",
@@ -24,10 +31,10 @@
               "projects/neoflora/src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/bootstrap/scss/bootstrap.scss",
               "dist/neoflora-lib/src/assets/css/styles.scss",
               "dist/neoflora-lib/src/assets/css/watermark.scss",
-              "projects/neoflora/src/styles.css"
+              "projects/neoflora/src/styles.scss"
             ],
             "scripts": [
             ]
@@ -92,10 +99,10 @@
               "projects/neoflora/src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/bootstrap/scss/bootstrap.scss",
               "dist/neoflora-lib/src/assets/css/styles.scss",
               "dist/neoflora-lib/src/assets/css/watermark.scss",
-              "projects/neoflora/src/styles.css"
+              "projects/neoflora/src/styles.scss"
             ],
             "scripts": [
             ]
@@ -130,7 +137,14 @@
     },
     "eneoflora": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "projects/eneoflora",
       "sourceRoot": "projects/eneoflora/src",
       "prefix": "app",
@@ -149,10 +163,10 @@
               "projects/eneoflora/src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/bootstrap/scss/bootstrap.scss",
               "dist/neoflora-lib/src/assets/css/styles.scss",
               "dist/neoflora-lib/src/assets/css/watermark.scss",
-              "projects/eneoflora/src/styles.css"
+              "projects/eneoflora/src/styles.scss"
             ],
             "scripts": [
             ]
@@ -217,10 +231,10 @@
               "projects/eneoflora/src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/bootstrap/scss/bootstrap.scss",
               "dist/neoflora-lib/src/assets/css/styles.scss",
               "dist/neoflora-lib/src/assets/css/watermark.scss",
-              "projects/eneoflora/src/styles.css"
+              "projects/eneoflora/src/styles.scss"
             ],
             "scripts": [
             ]
@@ -255,7 +269,14 @@
     },
     "neoprogeny": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "projects/neoprogeny",
       "sourceRoot": "projects/neoprogeny/src",
       "prefix": "app",
@@ -274,16 +295,16 @@
               "projects/neoprogeny/src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/sweetalert2/dist/sweetalert2.css",
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "node_modules/sweetalert2/src/sweetalert2.scss",
               "dist/neoflora-lib/src/assets/css/styles.scss",
               "dist/neoflora-lib/src/assets/css/watermark.scss",
-              "projects/neoprogeny/src/styles.css"
+              "projects/neoprogeny/src/styles.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
               "node_modules/bootstrap/dist/js/bootstrap.js",
-              "node_modules/sweetalert2/dist/sweetalert2.all.js"
+              "node_modules/sweetalert2/src/sweetalert2.js"
             ]
           },
           "configurations": {
@@ -346,16 +367,16 @@
               "projects/neoprogeny/src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/sweetalert2/dist/sweetalert2.css",
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "node_modules/sweetalert2/src/sweetalert2.scss",
               "dist/neoflora-lib/src/assets/css/styles.scss",
               "dist/neoflora-lib/src/assets/css/watermark.scss",
-              "projects/neoprogeny/src/styles.css"
+              "projects/neoprogeny/src/styles.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
               "node_modules/bootstrap/dist/js/bootstrap.js",
-              "node_modules/sweetalert2/dist/sweetalert2.all.js"
+              "node_modules/sweetalert2/src/sweetalert2.js"
             ]
           }
         },
