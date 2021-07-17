@@ -1,17 +1,19 @@
 import {Injectable} from '@angular/core';
 import {
+  faCat,
   faCopyright,
   faEllipsisH,
   faGenderless,
   faImage,
   faLeaf,
   faMars,
+  faMouse,
   faSearch,
   faSeedling,
   faStickyNote,
   faTimes,
   faVenus,
-  faVenusMars
+  faVenusMars,
 } from '@fortawesome/free-solid-svg-icons';
 
 @Injectable({
@@ -31,6 +33,8 @@ export class IconService {
   private iconMultiplication = faTimes;
   private iconMore = faEllipsisH;
   private iconSearch = faSearch;
+
+  private iconsTahoni = [faCat, faMouse];
 
   constructor() {
   }
@@ -81,6 +85,10 @@ export class IconService {
 
   getSearchIcon() {
     return this.iconSearch;
+  }
+
+  getTahoniIcons() {
+    return this.iconsTahoni;
   }
 
 }
