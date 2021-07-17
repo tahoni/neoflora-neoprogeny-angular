@@ -4,7 +4,7 @@ import {HybridType} from '../hybrid-types/hybrid-type';
 @Component({
   selector: 'app-hybrid-list',
   templateUrl: './hybrid-list.component.html',
-  styleUrls: ['./hybrid-list.component.css']
+  styleUrls: ['./hybrid-list.component.scss']
 })
 export class HybridListComponent implements OnInit {
 

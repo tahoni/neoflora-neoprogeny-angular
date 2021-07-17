@@ -1,3 +1,6 @@
+/* Global styling */
+@import "../../../../../assets/css/colors";
+
 /* Component-specific styling */
 :host {
   display: block;
@@ -16,7 +19,7 @@ p {
 
 /* Tables */
 .d-row {
-  background-color: #551165;
+  background-color: $head-row-color;
   margin: 0;
   padding: 0;
 }

@@ -11,7 +11,7 @@ import {HybridType} from '../hybrid-types/hybrid-type';
 @Component({
   selector: 'app-hybrid-form',
   templateUrl: './hybrid-form.component.html',
-  styleUrls: ['./hybrid-form.component.css', '../hybrid.css', '../../image/image.css']
+  styleUrls: ['./hybrid-form.component.scss', '../hybrid.css', '../../image/image.css']
 })
 export class HybridFormComponent implements OnInit {
 

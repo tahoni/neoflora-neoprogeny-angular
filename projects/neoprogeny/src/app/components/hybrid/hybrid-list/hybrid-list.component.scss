@@ -1,3 +1,6 @@
+/* Global styling */
+@import "../../../../assets/css/colors";
+
 /* Component-specific styling */
 :host {
   display: block;
@@ -7,9 +10,9 @@
 
 /* Child components */
 app-hybrid-list-row:nth-child(even) {
-  background-color: #9b89af;
+  background-color: $even-row-color;
 }
 
 app-hybrid-list-row:nth-child(odd) {
-  background-color: #C2B3CB;
+  background-color: $odd-row-color;
 }
