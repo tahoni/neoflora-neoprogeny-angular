@@ -58,6 +58,10 @@ fa-icon {
   font-weight: lighter;
 }
 
+.copyright-icon {
+  color: $tahoni-color;
+}
+
 /* Sections */
 header, footer, main {
   margin: 0;
@@ -76,7 +80,7 @@ header, footer, main {
 
 /* Content */
 p {
-  margin: 0.5em 1em;
+  margin: 0.5rem 1rem;
 }
 
 /* Links */
@@ -104,30 +108,11 @@ p {
 .logo {
   box-sizing: border-box;
   height: 136px;
-  padding: 4px;
+  padding: 0.33rem;
   text-align: left;
 }
 
 /* Icons */
-.icon, .calla-icon, .h-calla-icon, .white-calla-icon {
-  display: inline-block;
-  width: 32px;
-  height: 34px;
-  padding: 2px;
-  margin: 2px;
-}
-
-.calla-icon {
-  background-color: $icon-color;
-  -webkit-mask-image: url("../img/icons/calla-icon.png");
-}
-
-.h-calla-icon {
-  background-color: $text-color;
-  -webkit-mask-image: url("../img/icons/calla-icon.png");
-}
-
-.white-calla-icon {
-  background-color: white;
-  -webkit-mask-image: url("../img/icons/calla-icon.png");
+.copyright-icon:first-child {
+  font-size: 2rem;
 }

@@ -1,6 +1,6 @@
 <div class="d-flex d-row">
   <div class="d-flex d-column hybrid-column">
-    <span class="h-calla-icon"></span>
+    <fa-icon [icon]="iconService.getDescriptionIcon()"></fa-icon>
     <a [routerLink]="[hybridService.getHybridEditPath(), hybrid.id]">{{hybrid.code}}</a>
   </div>
 

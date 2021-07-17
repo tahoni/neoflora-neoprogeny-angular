@@ -1,8 +1,10 @@
 <form #form="ngForm" (ngSubmit)="onSubmit(form)" libFocusOnError class="was-validated" novalidate>
   <div class="form-row form-group">
     <div class="col-3 offset-1">
-      <div class="calla-icon d-inline-block"></div>
-      <label for="code">Nommer</label>
+      <label for="code">
+        <fa-icon [icon]="iconService.getDescriptionIcon()">?</fa-icon>
+        Nommer
+      </label>
     </div>
     <div class="col-6">
       <input [ngModel]="hybrid?.code" class="form-control code" id="code" name="code" required type="number"/>

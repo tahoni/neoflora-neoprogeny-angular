@@ -1,9 +1,13 @@
-<div class="row">
-  <div class="col-md-2">
-    <div class="h-calla-icon"></div>
-  </div>
-  <div class="col-md-10 align-items-center justify-content-end" style="display: flex">
-    <div style="text-align: right"><h2><fa-icon [icon]="iconService.getCopyrightIcon()"></fa-icon>&nbsp;2021 tahoni</h2>
+<div class="row copyright">
+    <div class="col-md-2">
+        <fa-icon class="copyright-icon" *ngFor="let tahoniIcon of iconService.getTahoniIcons()" [icon]="tahoniIcon"></fa-icon>
     </div>
-  </div>
+    <div class="col-md-10 align-items-center justify-content-end" style="display: flex">
+        <div style="text-align: right">
+            <h2>
+                <fa-icon class="copyright-text" [icon]="iconService.getCopyrightIcon()"></fa-icon>
+                <span class="copyright-text">&nbsp;2021 tahoni</span>
+            </h2>
+        </div>
+    </div>
 </div>
