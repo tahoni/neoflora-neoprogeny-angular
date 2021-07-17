@@ -3,8 +3,8 @@
 /* Form */
 .form-group {
   margin-bottom: 0;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 /* Input elements */
@@ -15,9 +15,9 @@ textarea {
 
 .ancestors input[type='text'].form-control,
 .ancestors input[type='number'].form-control {
-  margin-left: 1em;
-  margin-right: 1em;
-  border-radius: 0.25em;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 0.25rem;
 }
 
 /* Buttons */
@@ -27,7 +27,7 @@ button:hover {
 
 /* Legends */
 input[type='text'].code {
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 
 /* Icons */

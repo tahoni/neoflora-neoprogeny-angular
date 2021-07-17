@@ -5,8 +5,8 @@ input[type='file'].form-control-file {
   position: absolute;
   top: 0;
   left: 0;
-  margin-left: 0.25em;
-  padding: 0.25em 0.25em 0.25em 0.75em;
+  margin-left: 0.25rem;
+  padding: 0.25rem 0.25rem 0.25rem 0.75rem;
   color: inherit;
 }
 
@@ -15,10 +15,10 @@ input[type='file'].form-control-file {
   display: inline-block;
   position: relative;
   z-index: 10;
-  margin-top: 0.25em;
-  padding: 0.25em 1em;
+  margin-top: 0.25rem;
+  padding: 0.25rem 1rem;
   cursor: pointer;
-  border-radius: 0.25em;
+  border-radius: 0.25rem;
 }
 
 .form-control-file-button:hover {
