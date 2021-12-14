@@ -6,6 +6,8 @@ import {MessageOnErrorDirective} from './directives/message-on-error.directive';
 import {SummaryOnErrorDirective} from './directives/summary-on-error.directive';
 
 import {AlertService} from './services/alert.service';
+import {CopyrightService} from './services/copyright.service';
+import {CopyrightComponent} from './components/copyright/copyright/copyright.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,7 @@ import {AlertService} from './services/alert.service';
     TouchOnErrorDirective,
     MessageOnErrorDirective,
     SummaryOnErrorDirective,
+    CopyrightComponent,
   ],
   imports: [],
   exports: [
@@ -23,6 +26,7 @@ import {AlertService} from './services/alert.service';
   ],
   providers: [
     AlertService,
+    CopyrightService,
   ]
 })
 export class TahoniLibModule {

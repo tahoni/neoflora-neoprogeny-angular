@@ -19,13 +19,17 @@
       </label>
     </div>
     <div class="col-6 input-group ancestors">
-      <fa-icon [icon]="iconService.getVenusIcon()"></fa-icon>
+      <label for="mother">
+        <fa-icon [icon]="iconService.getVenusIcon()"></fa-icon>
+      </label>
       <input [ngModel]="hybrid?.mother?.code" [value]="hybrid?.mother?.code" class="form-control" aria-label="mother"
            id="mother" name="mother" type="text"/>
       <span><fa-icon [icon]="iconService.getMultiplicationIcon()"></fa-icon></span>
       <input [ngModel]="hybrid?.father?.code" [value]="hybrid?.father?.code" class="form-control" aria-label="father"
              id="father" name="father" type="text"/>
-      <fa-icon [icon]="iconService.getMarsIcon()"></fa-icon>
+      <label for="father">
+        <fa-icon [icon]="iconService.getMarsIcon()"></fa-icon>
+      </label>
     </div>
   </div>
 
@@ -44,9 +48,11 @@
                name="seed" type="radio"/>
       </div>
       <div class="col-3">
+        <label [for]="seedType.code">
           <fa-icon [class]="[seedType.code]" [icon]="iconService.getSeedIcon()"></fa-icon>
           &nbsp;
           {{seedType.description}}
+        </label>
       </div>
     </div>
   </div>
@@ -67,9 +73,11 @@
                name="offspring" type="radio"/>
       </div>
       <div class="col-3">
+        <label [for]="offspringType.code">
           <fa-icon [class]="[offspringType.code]" [icon]="iconService.getOffspringIcon()"></fa-icon>
           &nbsp;
           {{offspringType.description}}
+        </label>
       </div>
     </div>
   </div>

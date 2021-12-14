@@ -1,6 +1,10 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/tahoni-lib",
+  "assets": [
+    "src/assets/css/**/*.scss",
+    "src/assets/css/**/*.css"
+  ],
   "lib": {
     "entryFile": "src/projects.ts"
   }

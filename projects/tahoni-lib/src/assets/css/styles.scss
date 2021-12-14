@@ -1,0 +1,12 @@
+/* Global styling */
+@import "/dist/tahoni-lib/src/assets/css/colors";
+
+/* Colours */
+.copyright-icon, .copyright-text {
+  color: $tahoni-color;
+}
+
+/* Icons */
+.copyright-icon:first-child {
+  font-size: 2rem;
+}

@@ -1,5 +1,5 @@
 /* Global styling */
-@import "colors";
+@import "/dist/neoflora-lib/src/assets/css/colors";
 
 /* Colours */
 body {
@@ -58,10 +58,6 @@ fa-icon {
   font-weight: lighter;
 }
 
-.copyright-icon {
-  color: $tahoni-color;
-}
-
 /* Sections */
 header, footer, main {
   margin: 0;
@@ -113,6 +109,3 @@ p {
 }
 
 /* Icons */
-.copyright-icon:first-child {
-  font-size: 2rem;
-}
