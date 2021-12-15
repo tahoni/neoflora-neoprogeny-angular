@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {IconService} from '../../services/icon.service';
+import {CopyrightComponent} from 'tahoni-lib'
 
 @Component({
   selector: 'lib-footer',
@@ -8,7 +8,7 @@ import {IconService} from '../../services/icon.service';
 })
 export class FooterComponent implements OnInit {
 
-  constructor(public iconService: IconService) {
+  constructor() {
   }
 
   ngOnInit(): void {
