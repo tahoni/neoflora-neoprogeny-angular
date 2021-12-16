@@ -32,6 +32,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
+              "dist/tahoni-lib/src/assets/css/colors.scss",
+              "dist/neoflora-lib/src/assets/css/colors.scss",
               "dist/neoflora-lib/src/assets/css/styles.scss",
               "dist/neoflora-lib/src/assets/css/watermark.scss",
               "projects/neoflora/src/styles.scss"
@@ -100,6 +102,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
+              "dist/tahoni-lib/src/assets/css/colors.scss",
+              "dist/neoflora-lib/src/assets/css/colors.scss",
               "dist/neoflora-lib/src/assets/css/styles.scss",
               "dist/neoflora-lib/src/assets/css/watermark.scss",
               "projects/neoflora/src/styles.scss"
@@ -164,6 +168,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
+              "dist/tahoni-lib/src/assets/css/colors.scss",
+              "dist/neoflora-lib/src/assets/css/colors.scss",
               "dist/neoflora-lib/src/assets/css/styles.scss",
               "dist/neoflora-lib/src/assets/css/watermark.scss",
               "projects/eneoflora/src/styles.scss"
@@ -232,6 +238,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
+              "dist/tahoni-lib/src/assets/css/colors.scss",
+              "dist/neoflora-lib/src/assets/css/colors.scss",
               "dist/neoflora-lib/src/assets/css/styles.scss",
               "dist/neoflora-lib/src/assets/css/watermark.scss",
               "projects/eneoflora/src/styles.scss"
@@ -297,6 +305,8 @@
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
               "node_modules/sweetalert2/src/sweetalert2.scss",
+              "dist/tahoni-lib/src/assets/css/colors.scss",
+              "dist/neoflora-lib/src/assets/css/colors.scss",
               "dist/neoflora-lib/src/assets/css/styles.scss",
               "dist/neoflora-lib/src/assets/css/watermark.scss",
               "projects/neoprogeny/src/styles.scss"
@@ -369,6 +379,8 @@
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
               "node_modules/sweetalert2/src/sweetalert2.scss",
+              "dist/tahoni-lib/src/assets/css/colors.scss",
+              "dist/neoflora-lib/src/assets/css/colors.scss",
               "dist/neoflora-lib/src/assets/css/styles.scss",
               "dist/neoflora-lib/src/assets/css/watermark.scss",
               "projects/neoprogeny/src/styles.scss"
@@ -491,5 +503,5 @@
   "cli": {
     "analytics": "38504a16-e3a3-481b-a44f-1362ea904c04"
   },
-  "defaultProject": "eneoflora"
+  "defaultProject": "neoprogeny"
 }
