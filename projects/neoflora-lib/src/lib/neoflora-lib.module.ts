@@ -10,18 +10,17 @@ import {IconService} from './services/icon.service';
 import {LegendService} from './services/legend.service';
 import {ImageService} from './services/image.service';
 
-import {TahoniLibModule, CopyrightComponent} from 'tahoni-lib';
-
+import {CopyrightComponent, CopyrightService, TahoniLibModule} from 'tahoni-lib';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     CommonModule,
     FontAwesomeModule,
-    CopyrightComponent,
+    TahoniLibModule,
   ],
   exports: [
     HeaderComponent,
@@ -31,7 +30,7 @@ import {TahoniLibModule, CopyrightComponent} from 'tahoni-lib';
     IconService,
     LegendService,
     ImageService,
-    TahoniLibModule,
+    CopyrightService,
   ]
 })
 export class NeofloraLibModule {

@@ -4,6 +4,10 @@
     {
       "name": "neoflora-lib",
       "assetsRoot": false
+    },
+    {
+      "name": "tahoni-lib",
+      "assetsRoot": false
     }
   ]
 }

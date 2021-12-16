@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {CopyrightComponent} from 'tahoni-lib'
 
 @Component({
   selector: 'lib-footer',

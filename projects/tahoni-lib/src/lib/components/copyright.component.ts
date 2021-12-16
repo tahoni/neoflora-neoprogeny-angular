@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+
 import {CopyrightService} from '../services/copyright.service';
 
 @Component({

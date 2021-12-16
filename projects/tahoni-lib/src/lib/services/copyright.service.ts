@@ -10,6 +10,9 @@ export class CopyrightService {
   private copyrightLogo = [faCat, faMouse];
   private copyrightText = '2021 tahoni';
 
+  constructor() {
+  }
+
   getCopyrightSymbol() {
     return this.copyrightSymbol;
   }
