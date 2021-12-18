@@ -2,6 +2,13 @@
 @import "../../assets/css/colors";
 
 /* Component-specific styling */
+:host {
+  display: block;
+}
+
+.copyright-text {
+  font-size: 1rem;
+}
 
 /* Colours */
 .copyright-icon, .copyright-text {
