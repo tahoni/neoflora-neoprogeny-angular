@@ -31,10 +31,10 @@
               "projects/neoflora/src/assets"
             ],
             "styles": [
-              "projects/neoflora/src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/@tahoni/neoflora-lib/assets/css/styles.scss",
               "node_modules/@tahoni/neoflora-lib/assets/css/watermark.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "projects/neoflora/src/styles.scss"
             ],
             "scripts": []
           },
@@ -102,10 +102,10 @@
               "projects/neoflora/src/assets"
             ],
             "styles": [
-              "projects/neoflora/src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/@tahoni/neoflora-lib/assets/css/styles.scss",
               "node_modules/@tahoni/neoflora-lib/assets/css/watermark.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "projects/neoflora/src/styles.scss"
             ],
             "scripts": []
           }
@@ -140,10 +140,10 @@
               "projects/e-neoflora/src/assets"
             ],
             "styles": [
-              "projects/e-neoflora/src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/@tahoni/neoflora-lib/assets/css/styles.scss",
               "node_modules/@tahoni/neoflora-lib/assets/css/watermark.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "projects/e-neoflora/src/styles.scss"
             ],
             "scripts": []
           },
@@ -211,10 +211,10 @@
               "projects/e-neoflora/src/assets"
             ],
             "styles": [
-              "projects/e-neoflora/src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/@tahoni/neoflora-lib/assets/css/styles.scss",
               "node_modules/@tahoni/neoflora-lib/assets/css/watermark.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "projects/e-neoflora/src/styles.scss"
             ],
             "scripts": []
           }
@@ -249,10 +249,10 @@
               "projects/neoprogeny/src/assets"
             ],
             "styles": [
-              "projects/neoprogeny/src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/@tahoni/neoflora-lib/assets/css/styles.scss",
               "node_modules/@tahoni/neoflora-lib/assets/css/watermark.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "projects/neoprogeny/src/styles.scss"
             ],
             "scripts": []
           },
@@ -320,10 +320,10 @@
               "projects/neoprogeny/src/assets"
             ],
             "styles": [
-              "projects/neoprogeny/src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/@tahoni/neoflora-lib/assets/css/styles.scss",
               "node_modules/@tahoni/neoflora-lib/assets/css/watermark.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "projects/neoprogeny/src/styles.scss"
             ],
             "scripts": []
           }
@@ -331,5 +331,5 @@
       }
     }
   },
-  "defaultProject": "neoflora"
+  "defaultProject": "e-neoflora"
 }
