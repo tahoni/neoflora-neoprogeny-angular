@@ -1,6 +1,6 @@
 {
   "name": "neoflora-neoprogeny",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -18,12 +18,15 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "@tahoni/neoflora-lib": "^1.0.18",
+    "@tahoni/tahoni-lib": "^1.0.10",
+    "bootstrap": "^5.1.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.2.2",
+    "@angular-devkit/build-angular": "~13.2.3",
     "@angular/cli": "~13.2.2",
     "@angular/compiler-cli": "~13.2.0",
     "@types/jasmine": "~3.10.0",
