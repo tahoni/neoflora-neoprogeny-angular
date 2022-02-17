@@ -1,2 +1,2 @@
-export class App {
+export class AppConstants {
 }
