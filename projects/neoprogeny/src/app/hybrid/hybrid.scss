@@ -1,0 +1,51 @@
+/* Columns */
+.seed-column, .offspring-column, .more-column {
+  flex: 2;
+}
+
+.hybrid-column {
+  flex: 2;
+  order: 1;
+}
+
+.parent-column {
+  flex: 6;
+  order: 2;
+}
+
+.seed-column {
+  order: 3;
+}
+
+.offspring-column {
+  order: 4;
+}
+
+.more-column {
+  order: 5;
+}
+
+/* Legends */
+.seed, .seed-none, .seed-dull {
+  font-weight: bold;
+}
+
+.offspring, .offspring-none, .offspring-germinate {
+  font-weight: bold;
+}
+
+.seed-none, .offspring-none {
+  color: red;
+}
+
+.seed-dull, .offspring-germinate {
+  color: orange;
+}
+
+.seed, .offspring {
+  color: green;
+}
+
+/* Text */
+.description, .note {
+}

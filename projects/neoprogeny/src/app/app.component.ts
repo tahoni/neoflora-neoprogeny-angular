@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'neoprogeny';
+  private readonly _title = 'Neoprogeny';
+
+  get title(): string {
+    return this._title;
+  }
 }

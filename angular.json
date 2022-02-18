@@ -32,8 +32,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/@tahoni/neoflora-lib/assets/css/colors.scss",
               "node_modules/@tahoni/neoflora-lib/assets/css/styles.scss",
-              "node_modules/@tahoni/neoflora-lib/assets/css/watermark.scss",
               "projects/neoflora/src/styles.scss"
             ],
             "scripts": []
@@ -103,8 +103,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/@tahoni/neoflora-lib/assets/css/colors.scss",
               "node_modules/@tahoni/neoflora-lib/assets/css/styles.scss",
-              "node_modules/@tahoni/neoflora-lib/assets/css/watermark.scss",
               "projects/neoflora/src/styles.scss"
             ],
             "scripts": []
@@ -141,8 +141,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/@tahoni/neoflora-lib/assets/css/colors.scss",
               "node_modules/@tahoni/neoflora-lib/assets/css/styles.scss",
-              "node_modules/@tahoni/neoflora-lib/assets/css/watermark.scss",
               "projects/e-neoflora/src/styles.scss"
             ],
             "scripts": []
@@ -212,8 +212,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/@tahoni/neoflora-lib/assets/css/colors.scss",
               "node_modules/@tahoni/neoflora-lib/assets/css/styles.scss",
-              "node_modules/@tahoni/neoflora-lib/assets/css/watermark.scss",
               "projects/e-neoflora/src/styles.scss"
             ],
             "scripts": []
@@ -250,8 +250,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/@tahoni/neoflora-lib/assets/css/colors.scss",
               "node_modules/@tahoni/neoflora-lib/assets/css/styles.scss",
-              "node_modules/@tahoni/neoflora-lib/assets/css/watermark.scss",
               "projects/neoprogeny/src/styles.scss"
             ],
             "scripts": []
@@ -321,8 +321,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/@tahoni/neoflora-lib/assets/css/colors.scss",
               "node_modules/@tahoni/neoflora-lib/assets/css/styles.scss",
-              "node_modules/@tahoni/neoflora-lib/assets/css/watermark.scss",
               "projects/neoprogeny/src/styles.scss"
             ],
             "scripts": []

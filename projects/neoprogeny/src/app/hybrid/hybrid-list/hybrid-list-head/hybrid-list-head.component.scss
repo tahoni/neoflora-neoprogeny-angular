@@ -1,0 +1,35 @@
+@import "node_modules/@tahoni/neoflora-lib/assets/css/colors";
+
+/* Component */
+:host {
+  display: block;
+}
+
+/* Colours */
+.d-row {
+  background-color: $head-row-color;
+}
+
+.d-column {
+  color: white;
+}
+
+/* Text */
+p {
+  font-weight: bold;
+}
+
+/* Tables */
+.d-row {
+  margin: 0;
+  padding: 0;
+}
+
+.d-column {
+  padding: 0.5rem 0;
+}
+
+.d-column {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
