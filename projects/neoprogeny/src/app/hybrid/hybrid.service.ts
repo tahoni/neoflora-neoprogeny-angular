@@ -17,11 +17,11 @@ export class HybridService {
     this.hybridList = HybridService.initHybridList();
   }
 
-  get hybridSummaryPath(): string {
+  getHybridSummaryPath(): string {
     return this._hybridSummaryPath;
   }
 
-  get hybridEditPath(): string {
+  getHybridEditPath(): string {
     return this._hybridEditPath;
   }
 
@@ -33,7 +33,7 @@ export class HybridService {
     return this.hybridList.slice();
   }
 
-  getHybridById(id: number) {
+  getHybridById(id: number): Hybrid | null {
     if (!id) {
       return null;
     }
@@ -43,10 +43,10 @@ export class HybridService {
       return null;
     }
 
-    return {...hybrid};
+    return {...hybrid} as Hybrid;
   }
 
-  getHybridByCode(code: string) {
+  getHybridByCode(code: string): Hybrid | null {
     if (!code) {
       return null;
     }
@@ -56,7 +56,7 @@ export class HybridService {
       return null;
     }
 
-    return {...hybrid};
+    return {...hybrid} as Hybrid;
   }
 
   setHybrid(newHybrid: any): void {

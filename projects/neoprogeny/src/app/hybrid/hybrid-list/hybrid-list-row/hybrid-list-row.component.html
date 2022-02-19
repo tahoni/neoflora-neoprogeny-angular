@@ -2,16 +2,16 @@
 <div class="d-flex d-row">
   <div class="d-flex d-column hybrid-column">
     <fa-icon [icon]="iconService.descriptionIcon"></fa-icon>
-    <a [routerLink]="[hybridService.hybridEditPath, hybrid?.id]">{{hybrid?.code}}</a>
+    <a [routerLink]="[hybridService.getHybridEditPath(), hybrid?.id]">{{hybrid?.code}}</a>
   </div>
 
   <div class="d-flex d-column parent-column">
     <p>
       <span *ngIf="(hybrid?.mother?.id) && (hybrid?.father?.id)">
         <fa-icon [icon]="iconService.venusIcon"></fa-icon>
-        <a [routerLink]="[hybridService.hybridEditPath, hybrid?.mother?.id]">{{hybrid?.mother?.code}}</a>
+        <a [routerLink]="[hybridService.getHybridEditPath(), hybrid?.mother?.id]">{{hybrid?.mother?.code}}</a>
         <fa-icon [icon]="iconService.multiplicationIcon"></fa-icon>
-        <a [routerLink]="[hybridService.hybridEditPath, hybrid?.father?.id]">{{hybrid?.father?.code}}</a>
+        <a [routerLink]="[hybridService.getHybridEditPath(), hybrid?.father?.id]">{{hybrid?.father?.code}}</a>
         <fa-icon [icon]="iconService.marsIcon"></fa-icon>
       </span>
     </p>
@@ -38,7 +38,7 @@
 
   <div class="d-flex d-column more-column">
     <p>
-      <a [routerLink]="[hybridService.hybridEditPath, hybrid?.id]" title="More {{hybrid?.code}}">
+      <a [routerLink]="[hybridService.getHybridEditPath(), hybrid?.id]" title="More {{hybrid?.code}}">
         <fa-icon [classes]="['btn-icon']" [icon]="iconService.moreIcon" ></fa-icon>
       </a>
     </p>
