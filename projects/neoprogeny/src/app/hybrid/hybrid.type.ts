@@ -1,6 +1,6 @@
 import {Photo} from "../types/photo.type";
-import {getSeed, Seed} from "../types/seed.type";
-import {getOffspring, Offspring} from "../types/offspring.type";
+import {getSeed, SeedType} from "../types/seed.type";
+import {getOffspring, OffspringType} from "../types/offspring.type";
 
 export class Hybrid {
   private _id: number;
@@ -8,8 +8,8 @@ export class Hybrid {
   private _mother: Hybrid | null;
   private _father: Hybrid | null;
   private _description: string | null;
-  private _seed: Seed | null;
-  private _offspring: Offspring | null;
+  private _seed: SeedType | null;
+  private _offspring: OffspringType | null;
   private _photo: Photo | null;
   private _comment: string | null;
 

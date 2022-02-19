@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {Seed} from "../types/seed.type";
 
 @Injectable({
   providedIn: 'root'
@@ -7,11 +8,11 @@ export class LegendService {
 
   constructor() { }
 
-  getSeedLegends(): [] {
-    return [];
+  getSeedLegends(): string[] {
+    return Object.keys(Seed);
   }
 
-  getOffspringLegends(): [] {
-    return [];
+  getOffspringLegends(): string[] {
+    return Object.keys(Seed);
   }
 }

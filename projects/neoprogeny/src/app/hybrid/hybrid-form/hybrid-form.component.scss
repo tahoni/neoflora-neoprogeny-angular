@@ -1,10 +1,3 @@
-@import "node_modules/@tahoni/neoflora-lib/assets/css/colors.scss";
-
-/* Colours */
-button:hover {
-  background-color: $button-hover-color;
-}
-
 /* Form */
 .form-group {
   margin-bottom: 0;
@@ -13,11 +6,6 @@ button:hover {
 }
 
 /* Input elements */
-input,
-textarea {
-  color: inherit;
-}
-
 .ancestors input[type='text'].form-control,
 .ancestors input[type='number'].form-control {
   margin-left: 1rem;

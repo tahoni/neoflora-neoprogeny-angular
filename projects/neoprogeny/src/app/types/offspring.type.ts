@@ -10,10 +10,10 @@ const OffspringLegend = {
   OFFSPRING: 'Nageslag',
 } as const;
 
-export type Offspring = typeof Offspring[keyof typeof Offspring];
+export type OffspringType = typeof Offspring[keyof typeof Offspring];
 export type OffspringLegend = typeof OffspringLegend[keyof typeof OffspringLegend];
 
-export function getOffspring(value: string): Offspring | null {
+export function getOffspring(value: string): OffspringType | null {
   switch (value.toLowerCase()) {
     case 'offspring-none': return Offspring.OFFSPRING_NONE;
     case 'offspring-germinate': return Offspring.OFFSPRING_GERMINATE;
