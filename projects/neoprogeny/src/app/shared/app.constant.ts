@@ -4,11 +4,11 @@ import {Photo} from "../types/photo.type";
 export class AppConstants {
   private static readonly _hybridList = [
     new Hybrid(1, '19001', null, null, 'Nommer 19001',
-      'SEED_NONE', 'OFFSPRING'),
+      'seed-none', 'offspring'),
     new Hybrid(2, '19002', null, null, 'Nommer 19002',
-      'SEED', 'OFFSPRING'),
+      'seed', 'offspring-germinate'),
     new Hybrid(3, '19003', null, null, 'Nommer 19003 (19001 x 19002)',
-      'SEED_DULL', 'OFFSPRING_NONE')
+      'seed-dull', 'offspring-none')
   ]
 
   static {
