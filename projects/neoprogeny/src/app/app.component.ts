@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  private readonly _title = 'Neoprogeny';
+  title = 'neoprogeny';
 
-  get title(): string {
-    return this._title;
+  private readonly _heading = 'Neoprogeny';
+
+  get heading(): string {
+    return this._heading;
   }
 }

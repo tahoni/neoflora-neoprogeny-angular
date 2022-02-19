@@ -1,6 +1,6 @@
-import {Seed} from "../types/seed.type";
-import {Offspring} from "../types/offspring.type";
 import {Photo} from "../types/photo.type";
+import {getSeed, Seed} from "../types/seed.type";
+import {getOffspring, Offspring} from "../types/offspring.type";
 
 export class Hybrid {
   private _id: number;
@@ -14,19 +14,18 @@ export class Hybrid {
   private _comment: string | null;
 
   constructor(id: number, code: string, mother: Hybrid | null = null, father: Hybrid | null = null,
-              description: string | null = null, seed: Seed | null = null, offspring: Offspring | null = null,
+              description: string | null = null, seed: string | null = null, offspring: string | null = null,
               photo: Photo | null = null, comment: string | null = null) {
     this._id = id;
     this._code = code;
     this._mother = mother;
     this._father = father;
     this._description = description;
-    this._seed = seed;
-    this._offspring = offspring;
+    this._seed = seed ? getSeed(seed) : null;
+    this._offspring = offspring ? getOffspring(offspring) : null;
     this._photo = photo;
     this._comment = comment;
   }
-
 
   get id(): number {
     return this._id;
@@ -69,24 +68,20 @@ export class Hybrid {
   }
 
   get seed(): string {
-    return this._seed ? this._seed.valueOf() : '';
+    return this._seed ? this._seed : '';
   }
 
-/*
   set seed(value: string) {
-    this._seed = value;
+    this._seed = value ?  getSeed(value) : null;
   }
-*/
 
   get offspring(): string {
-    return this._offspring ? this._offspring?.valueOf() : '';
+    return this._offspring ? this._offspring : '';
   }
 
-/*
-  set offspring(value: Offspring | null) {
-    this._offspring = value;
+  set offspring(value: string) {
+    this._offspring = value ? getOffspring(value) :  null;
   }
-*/
 
   get photo(): Photo | null {
     return this._photo;
