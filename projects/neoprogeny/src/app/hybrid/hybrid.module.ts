@@ -8,6 +8,7 @@ import { HybridListHeadComponent } from './hybrid-list/hybrid-list-head/hybrid-l
 import { HybridListRowComponent } from './hybrid-list/hybrid-list-row/hybrid-list-row.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {AppRoutingModule} from "../app-routing.module";
+import {HybridRoutingModule} from "./hybrid-routing.module";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {AppRoutingModule} from "../app-routing.module";
   imports: [
     CommonModule,
     FontAwesomeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HybridRoutingModule,
   ],
   providers: [
     HybridService,
