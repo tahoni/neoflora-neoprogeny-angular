@@ -1,19 +1,21 @@
-import { Injectable } from '@angular/core';
-import {getSeedLegend, Seed, SeedLegend} from "../types/seed.type";
-import {getOffspring, getOffspringLegend, OffspringLegend} from "../types/offspring";
+import {Injectable} from '@angular/core';
+import {getSeed, getSeedLegend, Seed} from "../types/seed.type";
+import {getOffspring, getOffspringLegend, Offspring} from "../types/offspring";
 
 @Injectable({
   providedIn: 'root'
 })
 export class LegendService {
 
-  constructor() { }
-
-  getSeedLegends(): string[] {
-    return Object.keys(SeedLegend);
+  constructor() {
   }
 
-  getOffspringLegends(): string[] {
-    return Object.keys(OffspringLegend);
-  }
+  getSeedLegends = () => Object.keys(Seed);
+  getSeedType = (value: string) => getSeed(value);
+  getSeedLegend = (value: string) => getSeedLegend(value)
+
+  getOffspringLegends = () => Object.keys(Offspring);
+  getOffspringType = (value: string) => getOffspring(value);
+  getOffspringLegend = (value: string) => getOffspringLegend(value)
+
 }

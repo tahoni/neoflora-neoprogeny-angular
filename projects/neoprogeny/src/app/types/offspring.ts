@@ -1,5 +1,3 @@
-import {Seed, SeedLegend} from "./seed.type";
-
 export const Offspring = {
   OFFSPRING_NONE: 'offspring-none',
   OFFSPRING_GERMINATE: 'offspring-germinate',
@@ -15,12 +13,5 @@ export const OffspringLegend = {
 export type Offspring = typeof Offspring[keyof typeof Offspring];
 export type OffspringLegend = typeof OffspringLegend[keyof typeof OffspringLegend];
 
-export function getOffspring(value: string): Offspring | null {
-  const offspring = Object.keys(Offspring).find(it => it.valueOf() == value);
-  return offspring as Offspring;
-}
-
-export function getOffspringLegend(value: string): OffspringLegend | null {
-  const offspringLegend = Object.keys(OffspringLegend).find(it => it.valueOf() == value);
-  return offspringLegend as OffspringLegend;
-}
+export const getOffspring = (value: string) => new Map(Object.entries(Offspring)).get(value);
+export const getOffspringLegend = (value: string) => new Map(Object.entries(OffspringLegend)).get(value);

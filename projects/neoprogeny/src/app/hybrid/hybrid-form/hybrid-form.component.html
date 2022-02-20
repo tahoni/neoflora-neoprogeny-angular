@@ -47,15 +47,15 @@
       </div>
       <div *ngFor="let seedType of legendService.getSeedLegends()" class="form-row">
         <div class="col-1 offset-4">
-          <input [id]="seedType.code" [ngModel]="hybrid?.seed" [value]="seedType.code"
-                 class="form-control-sm" aria-label="[seedType.code]"
+          <input [id]="seedType" [ngModel]="hybrid?.seed" [value]="legendService.getSeedType(seedType)"
+                 class="form-control-sm" aria-label="[hybrid.seed]"
                  name="seed" type="radio"/>
         </div>
         <div class="col-3">
-          <label [for]="seedType.code">
-            <fa-icon [class]="[seedType.code]" [icon]="iconService.seedIcon"></fa-icon>
+          <label [for]="seedType">
+            <fa-icon [class]="[legendService.getSeedType(seedType)]" [icon]="iconService.seedIcon"></fa-icon>
             &nbsp;
-            {{seedType.description}}
+            {{legendService.getSeedLegend(seedType)}}
           </label>
         </div>
       </div>
@@ -70,17 +70,17 @@
           </label>
         </div>
       </div>
-      <div *ngFor="let offspringType of legendService.getOffspring()" class="form-row">
+      <div *ngFor="let offspringType of legendService.getOffspringLegends()" class="form-row">
         <div class="col-1 offset-4">
-          <input [id]="offspringType.code" [ngModel]="hybrid?.offspring" [value]="offspringType.code"
+          <input [id]="offspringType" [ngModel]="hybrid?.offspring" [value]="legendService.getOffspringType(offspringType)"
                  class="form-control-sm" aria-label="[hybrid.offspring]"
                  name="offspring" type="radio"/>
         </div>
         <div class="col-3">
-          <label [for]="offspringType.code">
-            <fa-icon [class]="[offspringType.code]" [icon]="iconService.offspringIcon"></fa-icon>
+          <label [for]="offspringType">
+            <fa-icon [class]="[legendService.getOffspringType(offspringType)]" [icon]="iconService.offspringIcon"></fa-icon>
             &nbsp;
-            {{offspringType.description}}
+            {{legendService.getOffspringLegend(offspringType)}}
           </label>
         </div>
       </div>

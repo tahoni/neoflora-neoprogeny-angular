@@ -13,12 +13,5 @@ export const SeedLegend = {
 export type Seed = typeof Seed[keyof typeof Seed];
 export type SeedLegend = typeof SeedLegend[keyof typeof SeedLegend];
 
-export function getSeed(value: string): Seed | null {
-  const seed = Object.keys(Seed).find(it => it.valueOf() == value);
-  return seed as Seed;
-}
-
-export function getSeedLegend(value: string): SeedLegend | null {
-  const seed = Object.keys(Seed).find(it => it.valueOf() == value);
-  return seed as SeedLegend;
-}
+export const getSeed = (value: string) => new Map(Object.entries(Seed)).get(value);
+export const getSeedLegend = (value: string) => new Map(Object.entries(SeedLegend)).get(value);
