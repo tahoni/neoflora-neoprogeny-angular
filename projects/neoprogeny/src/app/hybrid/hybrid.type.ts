@@ -1,6 +1,6 @@
 import {Photo} from "../types/photo.type";
-import {getSeed, SeedType} from "../types/seed.type";
-import {getOffspring, OffspringType} from "../types/offspring.type";
+import {Seed} from "../types/seed.type";
+import {Offspring} from "../types/offspring";
 
 export class Hybrid {
   private _id: number;
@@ -8,94 +8,94 @@ export class Hybrid {
   private _mother: Hybrid | null;
   private _father: Hybrid | null;
   private _description: string | null;
-  private _seed: SeedType | null;
-  private _offspring: OffspringType | null;
+  private _seed: Seed | null;
+  private _offspring: Offspring | null;
   private _photo: Photo | null;
   private _comment: string | null;
 
   constructor(id: number, code: string, mother: Hybrid | null = null, father: Hybrid | null = null,
-              description: string | null = null, seed: string | null = null, offspring: string | null = null,
+              description: string | null = null, seed: Seed | null = null, offspring: Offspring | null = null,
               photo: Photo | null = null, comment: string | null = null) {
     this._id = id;
     this._code = code;
     this._mother = mother;
     this._father = father;
     this._description = description;
-    this._seed = seed ? getSeed(seed) : null;
-    this._offspring = offspring ? getOffspring(offspring) : null;
+    this._seed = seed;
+    this._offspring = offspring;
     this._photo = photo;
     this._comment = comment;
   }
 
-  get id(): number {
+  get id() {
     return this._id;
   }
 
-  set id(value: number) {
+  set id(value) {
     this._id = value;
   }
 
-  get code(): string {
+  get code() {
     return this._code;
   }
 
-  set code(value: string) {
+  set code(value) {
     this._code = value;
   }
 
-  get mother(): Hybrid | null {
+  get mother() {
     return this._mother;
   }
 
-  set mother(value: Hybrid | null) {
+  set mother(value) {
     this._mother = value;
   }
 
-  get father(): Hybrid | null {
+  get father() {
     return this._father;
   }
 
-  set father(value: Hybrid | null) {
+  set father(value) {
     this._father = value;
   }
 
-  get description(): string | null {
+  get description() {
     return this._description;
   }
 
-  set description(value: string | null) {
+  set description(value) {
     this._description = value;
   }
 
-  get seed(): string {
-    return this._seed ? this._seed : '';
+  get seed() {
+    return this._seed;
   }
 
-  set seed(value: string) {
-    this._seed = value ?  getSeed(value) : null;
+  set seed(value) {
+    this._seed = value;
   }
 
-  get offspring(): string {
-    return this._offspring ? this._offspring : '';
+  get offspring() {
+    return this._offspring;
   }
 
-  set offspring(value: string) {
-    this._offspring = value ? getOffspring(value) :  null;
+  set offspring(value) {
+    this._offspring = value;
   }
 
-  get photo(): Photo | null {
+  get photo() {
     return this._photo;
   }
 
-  set photo(value: Photo | null) {
+  set photo(value) {
     this._photo = value;
   }
 
-  get comment(): string | null {
+  get comment() {
     return this._comment;
   }
 
-  set comment(value: string | null) {
+  set comment(value) {
     this._comment = value;
   }
 }

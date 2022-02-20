@@ -21,7 +21,7 @@
       <span *ngIf="hybrid?.seed">
       <fa-icon [classes]="['fa-lg']"
                [icon]="iconService.seedIcon"
-               [ngClass]="hybrid ? hybrid.seed : ''"></fa-icon>
+               [ngClass]="hybrid && hybrid.seed ? hybrid.seed : ''"></fa-icon>
       </span>
     </p>
   </div>
@@ -30,7 +30,7 @@
     <p>
       <span *ngIf="hybrid?.offspring">
       <fa-icon [icon]="iconService.offspringIcon"
-               [ngClass]="hybrid ? hybrid.offspring : ''"></fa-icon>
+               [ngClass]="hybrid && hybrid.offspring ? hybrid.offspring : ''"></fa-icon>
       </span>
     </p>
   </div>

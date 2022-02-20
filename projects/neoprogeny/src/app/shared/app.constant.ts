@@ -1,15 +1,16 @@
 import {Hybrid} from "../hybrid/hybrid.type";
+import { Offspring } from "../types/offspring";
 import {Photo} from "../types/photo.type";
 import {Seed} from "../types/seed.type";
 
 export class AppConstants {
   private static readonly _hybridList = [
     new Hybrid(1, '19001', null, null, 'Nommer 19001',
-      Seed.SEED_NONE, 'offspring'),
+      Seed.SEED_NONE, Offspring.OFFSPRING),
     new Hybrid(2, '19002', null, null, 'Nommer 19002',
-      Seed.SEED, 'offspring-germinate'),
+      Seed.SEED, Offspring.OFFSPRING_GERMINATE),
     new Hybrid(3, '19003', null, null, 'Nommer 19003 (19001 x 19002)',
-      Seed.SEED_DULL, 'offspring-none')
+      Seed.SEED_DULL, Offspring.OFFSPRING_NONE)
   ]
 
   static {
