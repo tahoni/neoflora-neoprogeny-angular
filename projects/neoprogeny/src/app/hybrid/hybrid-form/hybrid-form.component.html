@@ -1,4 +1,4 @@
-<form #form="ngForm" (ngSubmit)="submit()" libFocusOnError class="was-validated" novalidate>
+<form #form="ngForm" (ngSubmit)="submit()" class="was-validated" libFocusOnError novalidate>
   <div class="form-row form-group">
     <div class="d-flex d-row col-12">
       <div class="col-3 offset-1">
@@ -22,13 +22,13 @@
         </label>
       </div>
       <div class="col-6 input-group ancestors">
-        <label for="mother">
+        <label>
           <fa-icon [icon]="iconService.venusIcon"></fa-icon>
         </label>
-        <input [ngModel]="hybrid?.mother?.code" [value]="hybrid?.mother?.code" class="form-control" aria-label="mother"
+        <input [ngModel]="hybrid?.mother?.code" [value]="hybrid?.mother?.code" aria-label="mother" class="form-control"
                id="mother" name="mother" type="text"/>
         <span><fa-icon [icon]="iconService.multiplicationIcon"></fa-icon></span>
-        <input [ngModel]="hybrid?.father?.code" [value]="hybrid?.father?.code" class="form-control" aria-label="father"
+        <input [ngModel]="hybrid?.father?.code" [value]="hybrid?.father?.code" aria-label="father" class="form-control"
                id="father" name="father" type="text"/>
         <label for="father">
           <fa-icon [icon]="iconService.marsIcon"></fa-icon>
@@ -37,21 +37,22 @@
     </div>
   </div>
 
-    <div class="form-group">
-      <div class="form-row">
-        <div class="col-3 offset-1">
-          <label for="seed">
-            <fa-icon [icon]="iconService.seedIcon"></fa-icon>
-            Saad</label>
-        </div>
+  <div class="form-group">
+    <div class="form-row">
+      <div class="col-3 offset-1">
+        <label for="seed">
+          <fa-icon [icon]="iconService.seedIcon"></fa-icon>
+          Saad</label>
       </div>
-      <div *ngFor="let seedType of legendService.getSeedLegends()" class="form-row">
+    </div>
+    <div *ngFor="let seedType of legendService.getSeedLegends()">
+      <div class="d-flex d-row col-12">
         <div class="col-1 offset-4">
           <input [id]="seedType" [ngModel]="hybrid?.seed" [value]="legendService.getSeedType(seedType)"
-                 class="form-control-sm" aria-label="[hybrid.seed]"
+                 class="form-control-sm"
                  name="seed" type="radio"/>
         </div>
-        <div class="col-3">
+        <div class="col-7">
           <label [for]="seedType">
             <fa-icon [class]="[legendService.getSeedType(seedType)]" [icon]="iconService.seedIcon"></fa-icon>
             &nbsp;
@@ -60,31 +61,36 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="form-group">
-      <div class="form-row">
-        <div class="col-3 offset-1">
-          <label for="offspring">
-            <fa-icon [icon]="iconService.offspringIcon"></fa-icon>
-            Nageslag
-          </label>
-        </div>
+  <div class="form-group">
+    <div class="form-row">
+      <div class="col-3 offset-1">
+        <label for="offspring">
+          <fa-icon [icon]="iconService.offspringIcon"></fa-icon>
+          Nageslag
+        </label>
       </div>
-      <div *ngFor="let offspringType of legendService.getOffspringLegends()" class="form-row">
+    </div>
+    <div *ngFor="let offspringType of legendService.getOffspringLegends()">
+      <div class="d-flex d-row col-12">
         <div class="col-1 offset-4">
-          <input [id]="offspringType" [ngModel]="hybrid?.offspring" [value]="legendService.getOffspringType(offspringType)"
-                 class="form-control-sm" aria-label="[hybrid.offspring]"
+          <input [id]="offspringType" [ngModel]="hybrid?.offspring"
+                 [value]="legendService.getOffspringType(offspringType)"
+                 class="form-control-sm"
                  name="offspring" type="radio"/>
         </div>
-        <div class="col-3">
+        <div class="col-7">
           <label [for]="offspringType">
-            <fa-icon [class]="[legendService.getOffspringType(offspringType)]" [icon]="iconService.offspringIcon"></fa-icon>
+            <fa-icon [class]="[legendService.getOffspringType(offspringType)]"
+                     [icon]="iconService.offspringIcon"></fa-icon>
             &nbsp;
             {{legendService.getOffspringLegend(offspringType)}}
           </label>
         </div>
       </div>
     </div>
+  </div>
 
   <div class="form-row form-group">
     <div class="d-flex d-row col-12">
