@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {getSeed, getSeedLegend, Seed} from "../types/seed.type";
-import {getOffspring, getOffspringLegend, Offspring} from "../types/offspring";
+import {getOffspring, getOffspringLegend, Offspring} from "../types/offspring.type";
 
 @Injectable({
   providedIn: 'root'

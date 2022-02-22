@@ -1,5 +1,5 @@
 import {Hybrid} from "../hybrid/hybrid.type";
-import { Offspring } from "../types/offspring";
+import { Offspring } from "../types/offspring.type";
 import {Photo} from "../types/photo.type";
 import {Seed} from "../types/seed.type";
 

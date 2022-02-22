@@ -1,10 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import {Hybrid} from "../hybrid.type";
+import {NgForm} from '@angular/forms';
 import {ActivatedRoute, Router} from "@angular/router";
 import {HybridService} from "../hybrid.service";
 import {IconService} from "@tahoni/neoflora-lib";
 import {LegendService} from "../../utils/legend.service";
-import { NgForm } from '@angular/forms';
+import {AlertService} from "@tahoni/tahoni-lib";
+import {Hybrid} from "../hybrid.type";
 
 @Component({
   selector: 'app-hybrid-form',
@@ -14,20 +15,22 @@ import { NgForm } from '@angular/forms';
 export class HybridFormComponent implements OnInit {
   iconService: IconService;
   legendService: LegendService;
+  alertService: AlertService;
+  hybridId: number = 0;
+  hybrid: Hybrid | null = null;
   private router: Router;
   private activatedRoute: ActivatedRoute;
   private hybridService: HybridService;
 
-  hybridId: number = 0;
-  hybrid: Hybrid | null = null;
-
   constructor(router: Router, activatedRoute: ActivatedRoute, hybridService: HybridService,
-              iconService: IconService, legendService: LegendService) {
+              iconService: IconService, legendService: LegendService, alertService: AlertService) {
+    this.iconService = iconService;
+    this.legendService = legendService;
+    this.alertService = alertService;
+
     this.router = router;
     this.activatedRoute = activatedRoute;
     this.hybridService = hybridService;
-    this.iconService = iconService;
-    this.legendService = legendService;
   }
 
   ngOnInit(): void {
@@ -39,7 +42,10 @@ export class HybridFormComponent implements OnInit {
       });
   }
 
-  submit = (form: NgForm) => true;
+  submit = (form: NgForm) => {
+    const valid = form.valid;
+    this.alertService.alertSuccess("" + valid);
+  };
   cancel = () => {
     this.router.navigate([this.hybridService.getHybridSummaryPath()]).then();
   }
