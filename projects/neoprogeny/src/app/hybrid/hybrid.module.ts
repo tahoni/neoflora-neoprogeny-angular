@@ -11,9 +11,9 @@ import {AppRoutingModule} from "../app-routing.module";
 import {HybridRoutingModule} from "./hybrid-routing.module";
 import {FormsModule} from "@angular/forms";
 import {TahoniLibModule} from "@tahoni/tahoni-lib";
-import { HybridEditComponent } from './hybrid-edit/hybrid-edit.component';
-import { HybridViewComponent } from './hybrid-view/hybrid-view.component';
-import { HybridSearchComponent } from './hybrid-search/hybrid-search.component';
+import {HybridEditComponent} from './hybrid-edit/hybrid-edit.component';
+import {HybridViewComponent} from './hybrid-view/hybrid-view.component';
+import {HybridSearchComponent} from './hybrid-search/hybrid-search.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +26,14 @@ import { HybridSearchComponent } from './hybrid-search/hybrid-search.component';
     HybridViewComponent,
     HybridSearchComponent,
   ],
-  imports: [
-    CommonModule,
-    FontAwesomeModule,
-    AppRoutingModule,
-    HybridRoutingModule,
-    FormsModule,
-    TahoniLibModule,
-  ],
+    imports: [
+        CommonModule,
+        FontAwesomeModule,
+        AppRoutingModule,
+        HybridRoutingModule,
+        FormsModule,
+        TahoniLibModule,
+    ],
   providers: [
     HybridService,
   ],
