@@ -44,8 +44,13 @@ export class HybridFormComponent implements OnInit {
 
   submit = (form: NgForm) => {
     const valid = form.valid;
-    this.alertService.alertSuccess("" + valid);
+    if (!valid) {
+      return false;
+    }
+    this.router.navigate([this.hybridService.getHybridSummaryPath()]).then();
+    return valid;
   };
+
   cancel = () => {
     this.router.navigate([this.hybridService.getHybridSummaryPath()]).then();
   }
