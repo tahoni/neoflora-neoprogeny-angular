@@ -8,12 +8,16 @@ import {ContentComponent} from './form/content/content.component';
 import {NeofloraLibModule} from "@tahoni/neoflora-lib";
 import {HybridModule} from "./hybrid/hybrid.module";
 import {TahoniLibModule} from "@tahoni/tahoni-lib";
+import { ImageComponent } from './image/image.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BodyComponent,
     ContentComponent,
+    ImageComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
