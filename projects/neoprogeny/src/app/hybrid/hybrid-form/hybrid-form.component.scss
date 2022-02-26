@@ -8,12 +8,12 @@
 /* Input elements */
 .ancestors input[type='text'].form-control,
 .ancestors input[type='number'].form-control {
+  width: 90%;
   margin-left: 1rem;
   margin-right: 1rem;
   border-radius: 0.25rem;
 }
 
-/* Legends */
 input[type='text'].code {
   margin-top: 1rem;
 }
