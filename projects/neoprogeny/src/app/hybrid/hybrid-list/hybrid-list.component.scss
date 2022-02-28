@@ -4,8 +4,6 @@
 /* Component */
 :host {
   display: block;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 /* Child components */
@@ -15,4 +13,26 @@ app-hybrid-list-row:nth-child(even) {
 
 app-hybrid-list-row:nth-child(odd) {
   background-color: $odd-row-color;
+}
+
+/* Tables */
+.d-row, .d-column {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+.d-row {
+  margin: 0;
+  padding: 0;
+}
+
+.d-column {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Icons */
+fa-icon {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }

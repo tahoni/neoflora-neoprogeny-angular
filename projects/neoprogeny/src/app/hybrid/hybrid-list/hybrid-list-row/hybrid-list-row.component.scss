@@ -4,19 +4,7 @@
 }
 
 /* Tables */
-.d-row, .d-column {
-  border: 1px solid white;
-  border-collapse: collapse;
-}
-
-.d-row {
-  margin: 0;
-  padding: 0;
-}
-
 .d-column {
-  margin: 0;
-  padding: 0;
   text-align: center;
   align-content: center;
   justify-content: center;
@@ -28,10 +16,4 @@
 .description-column {
   text-align: start;
   justify-content: start;
-}
-
-/* Icons */
-fa-icon {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 }

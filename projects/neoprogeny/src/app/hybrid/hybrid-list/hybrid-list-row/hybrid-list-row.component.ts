@@ -6,7 +6,7 @@ import {IconService} from "@tahoni/neoflora-lib";
 @Component({
   selector: 'app-hybrid-list-row',
   templateUrl: './hybrid-list-row.component.html',
-  styleUrls: ['./hybrid-list-row.component.scss', '../../hybrid.scss']
+  styleUrls: ['./hybrid-list-row.component.scss', '../hybrid-list.component.scss', '../../hybrid.scss']
 })
 export class HybridListRowComponent implements OnInit {
 

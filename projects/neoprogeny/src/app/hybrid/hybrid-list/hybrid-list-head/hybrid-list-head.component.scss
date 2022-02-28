@@ -14,22 +14,22 @@
   color: white;
 }
 
+fa-icon {
+  color: white;
+}
+
 /* Text */
 p {
   font-weight: bold;
 }
 
 /* Tables */
-.d-row {
-  margin: 0;
-  padding: 0;
-}
-
 .d-column {
   padding: 0.5rem 0;
 }
 
-.d-column {
-  border: 1px solid white;
-  border-collapse: collapse;
+/* Columns */
+.more-column {
+  text-align: center;
+  justify-content: center;
 }
