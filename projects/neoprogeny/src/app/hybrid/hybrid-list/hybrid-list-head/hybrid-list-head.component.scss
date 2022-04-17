@@ -1,0 +1,35 @@
+@import "node_modules/@tahoni/neoflora-lib/assets/css/colors";
+
+/* Component */
+:host {
+  display: block;
+}
+
+/* Colours */
+.d-row {
+  background-color: $head-row-color;
+}
+
+.d-column {
+  color: white;
+}
+
+fa-icon {
+  color: white;
+}
+
+/* Text */
+p {
+  font-weight: bold;
+}
+
+/* Tables */
+.d-column {
+  padding: 0.5rem 0;
+}
+
+/* Legends */
+.more-column {
+  text-align: center;
+  justify-content: center;
+}
