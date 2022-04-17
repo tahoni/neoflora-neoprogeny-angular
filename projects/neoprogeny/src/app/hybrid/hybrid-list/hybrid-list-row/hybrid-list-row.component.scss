@@ -1,0 +1,19 @@
+/* Component */
+:host {
+  display: block;
+}
+
+/* Tables */
+.d-column {
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Columns */
+.description-column {
+  text-align: start;
+  justify-content: start;
+}

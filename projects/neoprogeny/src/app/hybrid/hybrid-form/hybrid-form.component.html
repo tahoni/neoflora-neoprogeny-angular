@@ -1,0 +1,171 @@
+<form #form="ngForm" (ngSubmit)="submit(form)" class="was-validated" novalidate>
+  <div class="form-row form-group">
+    <div class="d-flex d-row col-12">
+      <div class="col-3 offset-1">
+        <label for="code">
+          <fa-icon [icon]="iconService.descriptionIcon"></fa-icon>
+          Nommer
+        </label>
+      </div>
+      <div class="col-6">
+        <input [ngModel]="hybrid?.code" class="form-control code" id="code" name="code" required type="number"/>
+        <div class="invalid-feedback">Die kruising nommer is noodsaaklik</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row form-group">
+    <div class="d-flex d-row col-12">
+      <div class="col-3 offset-1">
+        <label for="mother">
+          <fa-icon [icon]="iconService.venusMarsIcon"></fa-icon>
+          Kruising
+        </label>
+      </div>
+      <div class="col-6 input-group ancestors">
+        <span>
+          <label for="mother">
+            <fa-icon [icon]="iconService.venusIcon"></fa-icon>
+          </label>
+        </span>
+        <div class="col-3">
+          <input [ngModel]="hybrid?.mother?.code" [value]="hybrid?.mother?.code" aria-label="mother"
+                 class="form-control"
+                 id="mother" name="mother" type="text"/>
+        </div>
+        <span><label><fa-icon [icon]="iconService.multiplicationIcon"></fa-icon></label></span>
+        <div class="col-3">
+          <input [ngModel]="hybrid?.father?.code" [value]="hybrid?.father?.code" aria-label="father"
+                 class="form-control"
+                 id="father" name="father" type="text"/>
+        </div>
+          <span><label for="father">
+            <fa-icon [icon]="iconService.marsIcon"></fa-icon>
+          </label></span>
+        </div>
+      </div>
+    </div>
+
+  <div class="form-group">
+    <div class="form-row">
+      <div class="col-3 offset-1">
+        <label for="seed">
+          <fa-icon [icon]="iconService.seedIcon"></fa-icon>
+          Saad</label>
+      </div>
+    </div>
+    <div class="d-flex d-row col-12">
+      <div class="col-1 offset-4">
+        <input class="form-control-sm" id="seed"
+               name="seed"
+               type="radio" value=""/>
+      </div>
+      <div class="col-7">
+        <label for="seed">
+          NVT
+        </label>
+      </div>
+    </div>
+    <div *ngFor="let seedType of legendService.getSeedLegends()">
+      <div class="d-flex d-row col-12">
+        <div class="col-1 offset-4">
+          <input [id]="seedType" [ngModel]="hybrid?.seed" [value]="legendService.getSeedType(seedType)"
+                 class="form-control-sm"
+                 name="seed" type="radio"/>
+        </div>
+        <div class="col-7">
+          <label [for]="seedType">
+            <fa-icon [class]="[legendService.getSeedType(seedType)]" [icon]="iconService.seedIcon"></fa-icon>
+            &nbsp;
+            {{legendService.getSeedLegend(seedType)}}
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="form-row">
+      <div class="col-3 offset-1">
+        <label for="offspring">
+          <fa-icon [icon]="iconService.offspringIcon"></fa-icon>
+          Nageslag
+        </label>
+      </div>
+    </div>
+    <div class="d-flex d-row col-12">
+      <div class="col-1 offset-4">
+        <input class="form-control-sm" id="offspring"
+               name="offspring"
+               type="radio" value=""/>
+      </div>
+      <div class="col-7">
+        <label for="offspring">
+          NVT
+        </label>
+      </div>
+    </div>
+    <div *ngFor="let offspringType of legendService.getOffspringLegends()">
+      <div class="d-flex d-row col-12">
+        <div class="col-1 offset-4">
+          <input [id]="offspringType" [ngModel]="hybrid?.offspring"
+                 [value]="legendService.getOffspringType(offspringType)"
+                 class="form-control-sm"
+                 name="offspring" type="radio"/>
+        </div>
+        <div class="col-7">
+          <label [for]="offspringType">
+            <fa-icon [class]="[legendService.getOffspringType(offspringType)]"
+                     [icon]="iconService.offspringIcon"></fa-icon>
+            &nbsp;
+            {{legendService.getOffspringLegend(offspringType)}}
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row form-group">
+    <div class="d-flex d-row col-12">
+      <div class="col-3 offset-1">
+        <label for="comment">
+          <fa-icon [icon]="iconService.commentIcon"></fa-icon>
+          Opmerkings</label>
+      </div>
+      <div class="col-6">
+      <textarea [ngModel]="hybrid?.comment" class="note form-control" id="comment" name="comment"
+                rows="3"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!--
+    <div class="form-row form-group">
+      <div class="col-12 offset-1">
+        <app-image-uploader (imageUploadedEvent)="onImageUploadedEvent($event)" [imageSrc]="hybrid?.image"
+                            imageAlt="{{hybrid?.code}} Photo"
+                            imageClass="image-main"
+                            imageIconClass="image-icon-main"></app-image-uploader>
+      </div>
+    </div>
+  -->
+
+  <!-- <div class="form-row form-group">
+    <div class="col-3 offset-1">
+      <label for="profilePhoto">
+        <fa-icon [icon]="iconService.getPhotoIcon()"></fa-icon>
+        Foto</label>
+    </div>
+    <div class="col-6" id="profilePhoto">
+      <app-image [imageSrc]="hybrid?.image" imageAlt="{{hybrid?.code}} Photo" imageClass="image-main"
+                 imageIconClass="image-icon-main"></app-image>
+    </div>
+  </div> -->
+
+  <div class="form-row form-group d-flex justify-content-center">
+    <button class="btn btn-primary m-1" id="save" name="save" type="submit">Stoor Kruising
+    </button>
+    <button (click)="cancel()" class="btn btn-secondary m-1" id="cancel" name="cancel" type="button">Kanselleer
+    </button>
+  </div>
+</form>
