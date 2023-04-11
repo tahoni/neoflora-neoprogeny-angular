@@ -4,8 +4,8 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NeofloraLibModule} from "@tahoni/neoflora-lib";
-import {BodyComponent} from "./form/body/body.component";
-import {ContentComponent} from "./form/content/content.component";
+import {BodyComponent} from "./pages/body/body.component";
+import {ContentComponent} from "./pages/content/content.component";
 
 @NgModule({
   declarations: [
