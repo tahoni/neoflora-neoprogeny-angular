@@ -1,10 +1,10 @@
-import {Injectable} from '@angular/core';
-import {Observable, Subject} from "rxjs";
-import {AppConstants} from "../../shared/app.constant";
-import {Hybrid} from "../../types/hybrid.type";
+import { Injectable } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
+import { AppConstants } from '../../shared/app.constants';
+import { Hybrid } from '../../types/hybrid.type';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HybridService {
   private hybridsChanged = new Subject<void>();
@@ -20,7 +20,8 @@ export class HybridService {
   getHybridSummaryPath = (): string => this._hybridSummaryPath;
   getHybridEditPath = (): string => this._hybridEditPath;
 
-  getHybridsChanged  = (): Observable<void> => this.hybridsChanged.asObservable();
+  getHybridsChanged = (): Observable<void> =>
+    this.hybridsChanged.asObservable();
 
   getAllHybrids = (): Hybrid[] => this.hybridList.slice();
 
@@ -34,8 +35,8 @@ export class HybridService {
       return null;
     }
 
-    return {...hybrid} as Hybrid;
-  }
+    return { ...hybrid } as Hybrid;
+  };
 
   getHybridByCode = (code: string): Hybrid | null => {
     if (!code) {
@@ -47,8 +48,8 @@ export class HybridService {
       return null;
     }
 
-    return {...hybrid} as Hybrid;
-  }
+    return { ...hybrid } as Hybrid;
+  };
 
   setHybrid = (newHybrid: any): void => {
     let hybrid: Hybrid;
@@ -58,20 +59,25 @@ export class HybridService {
       existingHybrid = this.lookupHybridById(newHybrid.id);
     }
 
-    hybrid = {...newHybrid}
+    hybrid = { ...newHybrid };
 
     if (existingHybrid) {
-      this.hybridList.splice(this.hybridList.indexOf(existingHybrid), 1, newHybrid)
+      this.hybridList.splice(
+        this.hybridList.indexOf(existingHybrid),
+        1,
+        newHybrid
+      );
     } else {
       this.hybridList.push(hybrid);
     }
 
     this.hybridsChanged.next();
-  }
+  };
 
   private static initHybridList = (): Hybrid[] => AppConstants.hybridList;
 
-  private lookupHybridById = (id: number): Hybrid | undefined => this.hybridList.find(it => it.id == id);
-  private lookupHybridByCode = (code: string): Hybrid | undefined => this.hybridList.find(it => it.code == code);
+  private lookupHybridById = (id: number): Hybrid | undefined =>
+    this.hybridList.find((it) => it.id == id);
+  private lookupHybridByCode = (code: string): Hybrid | undefined =>
+    this.hybridList.find((it) => it.code == code);
 }
-
