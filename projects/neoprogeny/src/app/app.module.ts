@@ -7,11 +7,11 @@ import {TahoniLibModule} from "@tahoni/tahoni-lib";
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {BodyComponent} from './pages/body/body.component';
-import {ContentComponent} from './pages/content/content.component';
-import {HybridModule} from "./hybrid/hybrid.module";
-import {ImageComponent} from './image/image.component';
-import {SearchComponent} from './search/search.component';
+import {BodyComponent} from './core/pages/body/body.component';
+import {ContentComponent} from './core/pages/content/content.component';
+import {HybridModule} from "./features/hybrid/hybrid.module";
+import {ImageComponent} from './features/image/image.component';
+import {SearchComponent} from './features/search/search.component';
 
 @NgModule({
   declarations: [

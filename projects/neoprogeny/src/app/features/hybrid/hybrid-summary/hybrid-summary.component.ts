@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from "rxjs";
 import {HybridService} from "../hybrid.service";
-import {Hybrid} from "../hybrid.type";
+import {Hybrid} from "../../../types/hybrid.type";
 
 @Component({
   selector: 'app-hybrid-summary',

@@ -7,7 +7,7 @@ import {HybridListComponent} from './hybrid-list/hybrid-list.component';
 import {HybridListHeadComponent} from './hybrid-list/hybrid-list-head/hybrid-list-head.component';
 import {HybridListRowComponent} from './hybrid-list/hybrid-list-row/hybrid-list-row.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
-import {AppRoutingModule} from "../app-routing.module";
+import {AppRoutingModule} from "../../app-routing.module";
 import {HybridRoutingModule} from "./hybrid-routing.module";
 import {FormsModule} from "@angular/forms";
 import {TahoniLibModule} from "@tahoni/tahoni-lib";

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Hybrid} from "../../hybrid.type";
+import {Hybrid} from "../../../../types/hybrid.type";
 import {HybridService} from "../../hybrid.service";
 import {IconService} from "@tahoni/neoflora-lib";
 

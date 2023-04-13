@@ -1,6 +1,6 @@
-import {Photo} from "../types/photo.type";
-import {Seed} from "../types/seed.type";
-import {Offspring} from "../types/offspring.type";
+import {Photo} from "./photo.type";
+import {Seed} from "./seed.type";
+import {Offspring} from "./offspring.type";
 
 export class Hybrid {
   id: number;

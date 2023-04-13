@@ -3,9 +3,9 @@ import {NgForm} from '@angular/forms';
 import {ActivatedRoute, Router} from "@angular/router";
 import {HybridService} from "../hybrid.service";
 import {IconService} from "@tahoni/neoflora-lib";
-import {LegendService} from "../../utils/legend.service";
+import {LegendService} from "../../../utils/legend.service";
 import {AlertService} from "@tahoni/tahoni-lib";
-import {Hybrid} from "../hybrid.type";
+import {Hybrid} from "../../../types/hybrid.type";
 
 @Component({
   selector: 'app-hybrid-form',

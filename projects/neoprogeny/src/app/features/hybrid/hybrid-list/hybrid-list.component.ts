@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Hybrid} from "../hybrid.type";
+import {Hybrid} from "../../../types/hybrid.type";
 
 @Component({
   selector: 'app-hybrid-list',

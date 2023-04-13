@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Observable, Subject} from "rxjs";
-import {AppConstants} from "../shared/app.constant";
-import {Hybrid} from "./hybrid.type";
+import {AppConstants} from "../../shared/app.constant";
+import {Hybrid} from "../../types/hybrid.type";
 
 @Injectable({
   providedIn: 'root'
