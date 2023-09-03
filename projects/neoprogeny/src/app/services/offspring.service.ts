@@ -1,10 +1,8 @@
-import {Injectable} from '@angular/core';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
-import {OffspringType} from "../types/offspring.type";
+import { Injectable } from '@angular/core';
+import { OffspringType } from '../types/offspring.type';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class OffspringService {
   private offspringList: OffspringType[];
